@@ -200,6 +200,7 @@ body:has(article[id^="screening-"]:not([hidden])) .hh-header,body:has(article[id
 </defs></svg>
 
 <!--
+VERSION 2.26 (01.10.2026): Direktlinks zu allen Hauptthemen fuer QR-Codes: #fragebogen, #information, #screening, #infoblatt zeigen die Sprachauswahl, deren Links direkt auf das jeweilige Thema fuehren; HTML-Export setzt Links auf #topics zurueck.
 VERSION 2.25 (30.09.2026): Husten-Icon ersetzt: Gesicht von vorn mit zusammengekniffenen Augen, offenem Mund und Hustenpartikeln (Health Icons, MIT-Lizenz), keine Hand mehr.
 VERSION 2.24 (30.09.2026): Husten-Icon ueberarbeitet: krankes Gesicht (geschlossenes Auge, gerunzelte Braue), Faust vor dem Mund, Hustenstriche.
 VERSION 2.23 (30.09.2026): Thorax-Icon vereinfacht (glockenfoermiger Brustkorb, Brustbein, Rippen, Rippenbogen, Wirbelhinweis) passend zum Stil der anderen Icons; Icon fuer "Informationen zur Tuberkulose" jetzt hustender Kopf statt Lunge.
@@ -9466,6 +9467,11 @@ function showLanguage(){
  document.getElementById('language-picker').hidden=!!info;
  pages.forEach(p=>p.hidden=!info||p.id!==activeId);
  document.querySelectorAll('.topic-page').forEach(p=>p.hidden=!info||p.id!==activeId);
+ const TOPIC_PICK={fragebogen:['#','die Übersetzungshilfe zum Fragebogen für Kontaktpersonen'],information:['#information/','die Informationen zum QuantiFERON®-Test (Bluttest) und zur vorbeugenden Behandlung'],screening:['#screening/','die Informationen zum Tuberkulosescreening (Röntgenuntersuchung der Lunge)'],infoblatt:['#infoblatt/','die Informationen zur Tuberkulose']};
+ const topicPick=!info&&Object.prototype.hasOwnProperty.call(TOPIC_PICK,route)?TOPIC_PICK[route]:null;
+ document.querySelectorAll('#language-picker .language-button').forEach(a=>a.setAttribute('href',(topicPick?topicPick[0]:'#topics/')+a.dataset.language));
+ const pickerIntro=document.querySelector('#language-picker .intro');
+ if(pickerIntro){if(!pickerIntro.dataset.defaultText)pickerIntro.dataset.defaultText=pickerIntro.textContent;pickerIntro.textContent=topicPick?'Wählen Sie eine Sprache. Danach finden Sie '+topicPick[1]+'.':pickerIntro.dataset.defaultText;}
  document.documentElement.lang=info?code:'de';
  document.documentElement.dir=info?info.dir:'ltr';
  document.getElementById('brand-title').textContent=info?info.center:UI.de.center;
@@ -9516,6 +9522,8 @@ function exportHTML(){
  copy.querySelectorAll('.editor-tools').forEach(e=>e.hidden=true);
  copy.querySelectorAll('.editor-link').forEach(e=>e.hidden=false);
  copy.querySelectorAll('.language-page').forEach(e=>e.hidden=true);copy.querySelector('#landing').hidden=true;copy.querySelector('#language-picker').hidden=false;copy.querySelectorAll('.topic-page').forEach(e=>e.hidden=true);
+ copy.querySelectorAll('#language-picker .language-button').forEach(e=>e.setAttribute('href','#topics/'+e.dataset.language));
+ const copyIntro=copy.querySelector('#language-picker .intro');if(copyIntro&&copyIntro.dataset.defaultText){copyIntro.textContent=copyIntro.dataset.defaultText;copyIntro.removeAttribute('data-default-text');}
  copy.querySelector('title').textContent='Tuberkulose · Fragebogen und Informationen · 36 Sprachen';
  copy.querySelector('#brand-title').textContent=UI.de.center;copy.querySelector('#brand-sub').textContent=UI.de.dept;copy.querySelector('#footer-center').textContent=UI.de.center;
  copy.querySelector('#status').hidden=true;
