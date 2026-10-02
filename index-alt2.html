@@ -191,10 +191,6 @@ body:has(article[id^="screening-"]:not([hidden])) .hh-header,body:has(article[id
 .screening-page .screening-list,.screening-page .screening-steps{margin:4px 0}
 }
 </style>
-<style>
-.result-list{margin:6px 0 16px;padding-inline-start:24px}
-.result-list li{margin:7px 0}
-</style>
 </head><body>
 <!-- Icon ic-cough: Coughing aus Health Icons (github.com/resolvetosavelives/healthicons), MIT-Lizenz, Copyright 2021 Resolve to Save Lives --><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <symbol id="ic-form" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 11.5h6M9 14.5h6M9 17.5h3.5"/></symbol>
@@ -204,15 +200,7 @@ body:has(article[id^="screening-"]:not([hidden])) .hh-header,body:has(article[id
 </defs></svg>
 
 <!--
-VERSION 2.35 (01.10.2026): QuantiFERON-Seite, Abschnitt "Eine Behandlung kann die Erkrankung verhindern": Halbsatz "bietet aber keinen vollstaendigen Schutz" (bzw. Entsprechung) gestrichen (36 Sprachen).
-VERSION 2.34 (01.10.2026): QuantiFERON-Seite, Abschnitt "Der richtige Zeitpunkt ist wichtig": "vorzugsweise" gestrichen (Kontaktpersonen ab 15 Jahren werden acht Wochen nach dem letzten moeglichen ansteckenden Kontakt getestet); Satz "Warten Sie dann nicht bis zum geplanten Bluttest" ersetzt durch "Das Tuberkulose-Zentrum fuehrt den Bluttest dann schon frueher durch" (36 Sprachen).
-VERSION 2.33 (01.10.2026): Bilder zu den vier Themenbereichen wieder eingesetzt, jetzt die neuen gesichtslosen Illustrationen (Beratung am Tablet, Blutabnahme mit Praxisraum, Roentgen, Aufklaerung zur Lunge; das 4:3-Blutabnahme-Bild mittig auf 2:1 zugeschnitten), als WebP eingebettet (je ca. 15-35 KB statt PNG); Kacheln mit Bild und Icon-Siegel, Banner oben auf den Themenseiten (im Druck ausgeblendet). Texte unveraendert aus 2.32.
-VERSION 2.32 (01.10.2026): Bilder zu den Themenbereichen wieder entfernt (Themenkacheln und Themenseiten); Textaenderungen zum QuantiFERON-Test sowie Icons und Kachelfarben bleiben unveraendert.
-VERSION 2.31 (01.10.2026): Bilder ueberarbeitet: realistischere, aber flache Figuren mit Oberarm, Ellbogen, Unterarm und Hand (Finger, Daumen), an den Koerper angesetzt; Kleidungsdetails (Kragen, Revers, Kapuzenkordeln, Kittel, Stethoskop); Gesichter mit Augaepfeln, Nase und Lippen.
-VERSION 2.30 (01.10.2026): QuantiFERON-Seite: erste Roentgenaufnahme bei positivem Test im Gesundheitsamt; enge Kontaktpersonen (Haushaltskontakte) erhalten zusaetzlich sofort ein Roentgenbild im Gesundheitsamt (neuer Absatz bei "Der richtige Zeitpunkt"); 36 Sprachen.
-VERSION 2.29 (01.10.2026): QuantiFERON-Seite, Ergebnis "Positiv": Hinweis ergaenzt, dass ein positives Ergebnis noch nicht bedeutet, dass man Tuberkulose hat, dass aber vor Beginn einer vorbeugenden Behandlung eine bestehende Erkrankung mit einem Roentgenbild ausgeschlossen werden muss (36 Sprachen).
-VERSION 2.28 (01.10.2026): QuantiFERON-Seite: Ablauf nach dem Bluttest neu (negativ: letzter Kontakt mind. 8 Wochen = keine weiteren Massnahmen, sonst zweiter QFT; positiv: Roentgenaufnahme, ggf. Auswurfuntersuchung, vorbeugende Behandlung beim niedergelassenen Pneumologen, Roentgenkontrolle nach Behandlungsende bzw. innerhalb eines Jahres, ggf. erneute Einladung durch das Gesundheitsamt), 36 Sprachen. Bilder neu als erwachsene Innenraum-Illustrationen (Beratungsraum, Blutabnahme, Roentgenraum, Aerztegespraech) ohne Hamburg-Panorama.
-VERSION 2.27 (01.10.2026): Bilder zu den vier Themenbereichen (Illustrationen, WebP, einmalig als CSS-Variablen eingebettet): auf den Themenkacheln und als Banner oben auf den Themenseiten; im Druck ausgeblendet.
+VERSION 2.26 (01.10.2026): Direktlinks zu allen Hauptthemen fuer QR-Codes: #fragebogen, #information, #screening, #infoblatt zeigen die Sprachauswahl, deren Links direkt auf das jeweilige Thema fuehren; HTML-Export setzt Links auf #topics zurueck.
 VERSION 2.25 (30.09.2026): Husten-Icon ersetzt: Gesicht von vorn mit zusammengekniffenen Augen, offenem Mund und Hustenpartikeln (Health Icons, MIT-Lizenz), keine Hand mehr.
 VERSION 2.24 (30.09.2026): Husten-Icon ueberarbeitet: krankes Gesicht (geschlossenes Auge, gerunzelte Braue), Faust vor dem Mund, Hustenstriche.
 VERSION 2.23 (30.09.2026): Thorax-Icon vereinfacht (glockenfoermiger Brustkorb, Brustbein, Rippen, Rippenbogen, Wirbelhinweis) passend zum Stil der anderen Icons; Icon fuer "Informationen zur Tuberkulose" jetzt hustender Kopf statt Lunge.
@@ -2864,16 +2852,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Für den Test wird Blut aus einer Vene abgenommen. Im Labor wird geprüft, ob Abwehrzellen auf bestimmte Bestandteile der Tuberkulose-Bakterien reagieren. Solche Bluttests heißen IGRA. Es werden weder Bakterien in Ihren Körper eingebracht noch Bakterien direkt im Blut nachgewiesen. Eine frühere Tuberkulose-Impfung (BCG) macht diesen Test nicht positiv.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Der richtige Zeitpunkt ist wichtig</h2>
-<p>Nach einer Ansteckung kann es bis zu acht Wochen dauern, bis der Test reagiert. Bei Kontaktpersonen ab 15 Jahren ohne besondere Risiken wird deshalb acht Wochen nach dem letzten möglichen ansteckenden Kontakt getestet. Ein früher durchgeführter negativer Test muss gegebenenfalls wiederholt werden.</p>
-<p>Bei Beschwerden, bei Kindern oder bei einer geschwächten Immunabwehr ist eine frühere ärztliche Abklärung nötig. Das Tuberkulose-Zentrum führt den Bluttest dann schon früher durch. Für Kinder unter fünf Jahren kann bereits vor dem Nachweis einer Infektion eine vorbeugende Medikamentengabe erforderlich sein.</p>
-
-<p><strong>Enge Kontaktpersonen (Haushaltskontakte):</strong> Bei engen Kontaktpersonen, zum Beispiel Personen im selben Haushalt, wird auch sofort eine Röntgenaufnahme der Lunge im Gesundheitsamt durchgeführt.</p>
+<p>Nach einer Ansteckung kann es bis zu acht Wochen dauern, bis der Test reagiert. Bei Kontaktpersonen ab 15 Jahren ohne besondere Risiken wird deshalb vorzugsweise acht Wochen nach dem letzten möglichen ansteckenden Kontakt getestet. Ein früher durchgeführter negativer Test muss gegebenenfalls wiederholt werden.</p>
+<p>Bei Beschwerden, bei Kindern oder bei einer geschwächten Immunabwehr ist eine frühere ärztliche Abklärung nötig. Warten Sie dann nicht bis zum geplanten Bluttest. Für Kinder unter fünf Jahren kann bereits vor dem Nachweis einer Infektion eine vorbeugende Medikamentengabe erforderlich sein.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Was Ihr Ergebnis bedeutet</h2>
-<p><strong>Negativ:</strong></p>
-<ul class="result-list"><li>Liegt der letzte Kontakt mindestens 8 Wochen zurück, sind keine weiteren Maßnahmen nötig.</li><li>Liegt der letzte Kontakt weniger als 8 Wochen zurück, wird nach Ablauf der 8 Wochen ein zweiter QuantiFERON®-Test durchgeführt.</li></ul>
-<p><strong>Positiv:</strong> Das bedeutet noch nicht, dass Sie Tuberkulose haben. Zur Sicherheit muss aber vor Beginn einer vorbeugenden Behandlung mit einem Röntgenbild ausgeschlossen werden, dass bereits eine Erkrankung besteht.</p>
-<ul class="result-list"><li>Es folgt eine Röntgenaufnahme der Lunge im Gesundheitsamt und, wenn nötig, eine Untersuchung des Auswurfs.</li><li>Danach wird eine vorbeugende Behandlung bei einer niedergelassenen Lungenfachärztin oder einem niedergelassenen Lungenfacharzt (Pneumologe) empfohlen.</li><li>Eine weitere Röntgenkontrolle wird nach Abschluss der vorbeugenden Behandlung oder innerhalb eines Jahres nach dem letzten Kontakt empfohlen.</li><li>Wurde diese Kontrolluntersuchung nicht ambulant durchgeführt, lädt Sie das Gesundheitsamt gegebenenfalls erneut dazu ein.</li></ul>
+<p><strong>Negativ:</strong> Es wurde keine entsprechende Immunreaktion nachgewiesen. Bei richtigem Testzeitpunkt und ohne besondere Risiken sind meist keine weiteren Untersuchungen erforderlich. Eine sehr frische Infektion oder eine Tuberkulose-Erkrankung lässt sich durch einen negativen Test allein jedoch nicht sicher ausschließen.</p>
+<p><strong>Positiv:</strong> Eine Infektion ist wahrscheinlich. Der Test zeigt weder, wann oder bei wem Sie sich angesteckt haben, noch ob Sie erkrankt oder ansteckend sind. Es folgen eine ärztliche Untersuchung und in der Regel ein Röntgenbild der Lunge; bei auffälligen Befunden sind weitere Untersuchungen nötig.</p>
 <p><strong>Nicht auswertbar:</strong> Der Test erlaubt keine verlässliche Aussage. Gründe können die Blutprobe oder eine abgeschwächte Immunreaktion sein. Meist wird eine neue Blutprobe untersucht; manchmal sind andere Untersuchungen erforderlich.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Infiziert bedeutet nicht erkrankt</h2>
@@ -2881,7 +2865,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Die meisten infizierten Menschen erkranken nicht an Tuberkulose. Das Risiko ist in den ersten zwei Jahren nach einer Ansteckung am höchsten. Vor allem kleine Kinder und Menschen mit geschwächter Immunabwehr haben ein erhöhtes Erkrankungsrisiko.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Eine Behandlung kann die Erkrankung verhindern</h2>
-<p>Nach nachgewiesener Infektion im Rahmen einer Kontaktuntersuchung wird in der Regel eine vorbeugende Behandlung empfohlen, sofern keine Gründe dagegensprechen. Zuvor muss eine Tuberkulose-Erkrankung ausgeschlossen werden. Die Behandlung senkt das Erkrankungsrisiko deutlich. Die vorbeugende Behandlung wird in der Regel durch einen niedergelassenen Lungenfacharzt durchgeführt.</p>
+<p>Nach nachgewiesener Infektion im Rahmen einer Kontaktuntersuchung wird in der Regel eine vorbeugende Behandlung empfohlen, sofern keine Gründe dagegensprechen. Zuvor muss eine Tuberkulose-Erkrankung ausgeschlossen werden. Die Behandlung senkt das Erkrankungsrisiko deutlich, bietet aber keinen vollständigen Schutz. Die vorbeugende Behandlung wird in der Regel durch einen niedergelassenen Lungenfacharzt durchgeführt.</p>
 <p>Je nach persönlicher Situation kommen beispielsweise Rifampicin für vier Monate, Rifampicin zusammen mit Isoniazid für drei Monate oder Isoniazid für neun Monate infrage. Die Auswahl hängt unter anderem von anderen Medikamenten, Vorerkrankungen und möglichen Resistenzen der Erreger ab. Gemeinsam mit Ihnen werden Nutzen und mögliche Nebenwirkungen abgewogen.</p>
 <p>Nehmen Sie die Medikamente wie vereinbart ein und halten Sie die Kontrolltermine ein. Bei auffälligen Beschwerden während der Behandlung wenden Sie sich an das Behandlungsteam. Auch wenn Sie keine vorbeugende Behandlung erhalten, besprechen wir die erforderlichen Kontrollen mit Ihnen.</p>
 </section>
@@ -2910,16 +2894,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Blood is taken from a vein. In the laboratory, the sample is tested to see whether immune cells react to certain components of tuberculosis bacteria. Blood tests of this kind are called IGRAs. No bacteria are introduced into your body, and the test does not detect bacteria directly in your blood. Previous tuberculosis vaccination (BCG) does not make this test positive.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>The timing matters</h2>
-<p>After infection, it can take up to eight weeks for the test to react. Contacts aged 15 or older without particular risks are therefore tested eight weeks after their last possible infectious contact. A negative test performed earlier may need to be repeated.</p>
-<p>If you have symptoms, are a child or have a weakened immune system, earlier medical assessment is necessary. The Tuberculosis Centre will then carry out the blood test earlier. Children under five may need preventive medication even before an infection can be detected.</p>
-
-<p><strong>Close contacts (household contacts):</strong> For close contacts, for example people living in the same household, a chest X-ray is also taken at the health department right away.</p>
+<p>After infection, it can take up to eight weeks for the test to react. Contacts aged 15 or older without particular risks are therefore preferably tested eight weeks after their last possible infectious contact. A negative test performed earlier may need to be repeated.</p>
+<p>If you have symptoms, are a child or have a weakened immune system, earlier medical assessment is necessary. In these cases, do not wait until the scheduled blood test. Children under five may need preventive medication even before an infection can be detected.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>What your result means</h2>
-<p><strong>Negative:</strong></p>
-<ul class="result-list"><li>If the last contact was at least 8 weeks ago, no further measures are needed.</li><li>If the last contact was less than 8 weeks ago, a second QuantiFERON® test is carried out once the 8 weeks have passed.</li></ul>
-<p><strong>Positive:</strong> This does not yet mean that you have tuberculosis. To be safe, however, an already existing disease must be ruled out with a chest X-ray before preventive treatment is started.</p>
-<ul class="result-list"><li>A chest X-ray is taken at the health department and, if necessary, your sputum is examined.</li><li>After that, preventive treatment by a lung specialist (pulmonologist) in private practice is recommended.</li><li>A further follow-up chest X-ray is recommended after the preventive treatment has been completed or within one year after the last contact.</li><li>If this follow-up examination has not been carried out as an outpatient, the health department may invite you to it again.</li></ul>
+<p><strong>Negative:</strong> No corresponding immune response was detected. If the test was performed at the right time and there are no particular risks, further examinations are usually not needed. However, a negative test alone cannot reliably exclude a very recent infection or tuberculosis disease.</p>
+<p><strong>Positive:</strong> Infection is likely. The test does not show when or from whom you became infected, nor whether you have the disease or are infectious. A medical examination and usually a chest X-ray follow; abnormal findings require further examinations.</p>
 <p><strong>Indeterminate:</strong> The test does not provide a reliable answer. This may be due to the blood sample or a weakened immune response. Usually, a new blood sample is tested; sometimes other examinations are needed.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Being infected does not mean having the disease</h2>
@@ -2927,7 +2907,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Most infected people do not develop tuberculosis disease. The risk is highest during the first two years after infection. Young children and people with weakened immune systems have a particularly high risk of developing the disease.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Treatment can prevent the disease</h2>
-<p>After infection has been confirmed during a contact investigation, preventive treatment is generally recommended unless there are reasons against it. Tuberculosis disease must first be excluded. Treatment significantly reduces the risk of developing the disease. Preventive treatment is usually provided by a lung specialist in outpatient practice.</p>
+<p>After infection has been confirmed during a contact investigation, preventive treatment is generally recommended unless there are reasons against it. Tuberculosis disease must first be excluded. Treatment significantly reduces the risk of developing the disease but does not provide complete protection. Preventive treatment is usually provided by a lung specialist in outpatient practice.</p>
 <p>Depending on your individual situation, options include, for example, rifampicin for four months, rifampicin together with isoniazid for three months, or isoniazid for nine months. The choice depends, among other things, on other medicines, existing medical conditions and possible drug resistance of the bacteria. The benefits and possible side effects will be discussed with you.</p>
 <p>Take the medicines as agreed and attend your follow-up appointments. If you notice unusual symptoms during treatment, contact the treatment team. Even if you do not receive preventive treatment, we will discuss the necessary follow-up examinations with you.</p>
 </section>
@@ -2956,16 +2936,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Du sang est prélevé dans une veine. Au laboratoire, on vérifie si les cellules immunitaires réagissent à certains composants des bactéries de la tuberculose. Ces tests sanguins sont appelés IGRA. Aucune bactérie n’est introduite dans votre corps et le test ne recherche pas directement des bactéries dans le sang. Une vaccination antérieure contre la tuberculose (BCG) ne rend pas ce test positif.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Le moment du test est important</h2>
-<p>Après une contamination, il peut s’écouler jusqu’à huit semaines avant que le test ne réagisse. Les personnes contacts âgées de 15 ans ou plus, sans risque particulier, sont donc testées huit semaines après leur dernier contact potentiellement contaminant. Un test négatif réalisé plus tôt peut devoir être répété.</p>
-<p>En cas de symptômes, chez les enfants ou en cas d’affaiblissement des défenses immunitaires, une évaluation médicale plus précoce est nécessaire. Le Centre de la tuberculose réalise alors le test sanguin plus tôt. Chez les enfants de moins de cinq ans, un traitement médicamenteux préventif peut être nécessaire avant même qu’une infection soit détectable.</p>
-
-<p><strong>Contacts étroits (personnes du même foyer) :</strong> Pour les contacts étroits, par exemple les personnes vivant dans le même foyer, une radiographie des poumons est également réalisée immédiatement au service de santé publique.</p>
+<p>Après une contamination, il peut s’écouler jusqu’à huit semaines avant que le test ne réagisse. Les personnes contacts âgées de 15 ans ou plus, sans risque particulier, sont donc de préférence testées huit semaines après leur dernier contact potentiellement contaminant. Un test négatif réalisé plus tôt peut devoir être répété.</p>
+<p>En cas de symptômes, chez les enfants ou en cas d’affaiblissement des défenses immunitaires, une évaluation médicale plus précoce est nécessaire. N’attendez pas alors le test sanguin prévu. Chez les enfants de moins de cinq ans, un traitement médicamenteux préventif peut être nécessaire avant même qu’une infection soit détectable.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Ce que signifie votre résultat</h2>
-<p><strong>Négatif :</strong></p>
-<ul class="result-list"><li>Si le dernier contact remonte à au moins 8 semaines, aucune autre mesure n’est nécessaire.</li><li>Si le dernier contact remonte à moins de 8 semaines, un deuxième test QuantiFERON® est réalisé une fois les 8 semaines écoulées.</li></ul>
-<p><strong>Positif :</strong> Cela ne signifie pas encore que vous avez la tuberculose. Par sécurité, il faut toutefois exclure par une radiographie une maladie déjà présente avant de commencer un traitement préventif.</p>
-<ul class="result-list"><li>Une radiographie des poumons est ensuite réalisée au service de santé publique et, si nécessaire, un examen des expectorations.</li><li>Un traitement préventif auprès d’un pneumologue en cabinet libéral est ensuite recommandé.</li><li>Une nouvelle radiographie de contrôle est recommandée à la fin du traitement préventif ou dans l’année suivant le dernier contact.</li><li>Si ce contrôle n’a pas été effectué en ambulatoire, le service de santé publique peut vous y inviter de nouveau.</li></ul>
+<p><strong>Négatif :</strong> Aucune réaction immunitaire correspondante n’a été détectée. Si le test a été réalisé au bon moment et qu’il n’existe pas de risque particulier, aucun autre examen n’est généralement nécessaire. Toutefois, un test négatif ne suffit pas à exclure avec certitude une infection très récente ou une tuberculose maladie.</p>
+<p><strong>Positif :</strong> Une infection est probable. Le test ne montre ni quand ni par qui vous avez été contaminé, ni si vous êtes malade ou contagieux. Un examen médical et, en règle générale, une radiographie des poumons sont ensuite réalisés ; des anomalies nécessitent des examens complémentaires.</p>
 <p><strong>Indéterminé :</strong> Le test ne permet pas de conclusion fiable. Cela peut être lié au prélèvement sanguin ou à une réponse immunitaire affaiblie. Un nouveau prélèvement est généralement analysé ; d’autres examens sont parfois nécessaires.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Être infecté ne signifie pas être malade</h2>
@@ -2973,7 +2949,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>La plupart des personnes infectées ne développent pas de tuberculose maladie. Le risque est le plus élevé pendant les deux premières années suivant la contamination. Les jeunes enfants et les personnes dont les défenses immunitaires sont affaiblies présentent un risque particulièrement élevé.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Un traitement peut prévenir la maladie</h2>
-<p>Lorsqu’une infection est confirmée dans le cadre d’une enquête autour d’un cas, un traitement préventif est généralement recommandé, sauf s’il existe des raisons de ne pas le proposer. Une tuberculose maladie doit d’abord être exclue. Le traitement réduit nettement le risque de maladie. Il est généralement assuré par un pneumologue exerçant en cabinet.</p>
+<p>Lorsqu’une infection est confirmée dans le cadre d’une enquête autour d’un cas, un traitement préventif est généralement recommandé, sauf s’il existe des raisons de ne pas le proposer. Une tuberculose maladie doit d’abord être exclue. Le traitement réduit nettement le risque de maladie, mais ne protège pas complètement. Il est généralement assuré par un pneumologue exerçant en cabinet.</p>
 <p>Selon votre situation, les traitements possibles comprennent notamment la rifampicine pendant quatre mois, la rifampicine associée à l’isoniazide pendant trois mois, ou l’isoniazide pendant neuf mois. Le choix dépend entre autres des autres médicaments, des maladies préexistantes et d’éventuelles résistances des bactéries. Les bénéfices et les effets indésirables possibles sont évalués avec vous.</p>
 <p>Prenez les médicaments comme convenu et respectez les rendez-vous de suivi. En cas de symptômes inhabituels pendant le traitement, contactez l’équipe soignante. Même si vous ne recevez pas de traitement préventif, nous discuterons avec vous des contrôles nécessaires.</p>
 </section>
@@ -3002,16 +2978,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Кровь берут из вены. В лаборатории проверяют, реагируют ли иммунные клетки на определённые компоненты бактерий туберкулёза. Такие анализы крови называются IGRA. Бактерии в Ваш организм не вводятся, и непосредственно бактерии в крови этим тестом не выявляются. Ранее сделанная прививка против туберкулёза (БЦЖ) не делает этот тест положительным.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Важно правильно выбрать время</h2>
-<p>После заражения может пройти до восьми недель, прежде чем тест начнёт реагировать. Поэтому контактным лицам в возрасте от 15 лет без особых рисков тест проводят через восемь недель после последнего возможного заразного контакта. Отрицательный тест, проведённый раньше, при необходимости повторяют.</p>
-<p>При симптомах, у детей или при ослабленном иммунитете необходима более ранняя медицинская оценка. Тогда Центр туберкулёза проведёт анализ крови раньше. Детям младше пяти лет профилактические лекарства могут потребоваться ещё до того, как инфекцию можно будет выявить.</p>
-
-<p><strong>Близкие контактные лица (члены одного домохозяйства):</strong> Для близких контактных лиц, например проживающих в одном домохозяйстве, рентгенография лёгких в ведомстве здравоохранения проводится также сразу.</p>
+<p>После заражения может пройти до восьми недель, прежде чем тест начнёт реагировать. Поэтому контактным лицам в возрасте от 15 лет без особых рисков тест предпочтительно проводят через восемь недель после последнего возможного заразного контакта. Отрицательный тест, проведённый раньше, при необходимости повторяют.</p>
+<p>При симптомах, у детей или при ослабленном иммунитете необходима более ранняя медицинская оценка. В таких случаях не ждите назначенного анализа крови. Детям младше пяти лет профилактические лекарства могут потребоваться ещё до того, как инфекцию можно будет выявить.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Что означает Ваш результат</h2>
-<p><strong>Отрицательный:</strong></p>
-<ul class="result-list"><li>Если последний контакт был не менее 8 недель назад, дальнейшие меры не требуются.</li><li>Если последний контакт был менее 8 недель назад, после истечения 8 недель проводится второй тест QuantiFERON®.</li></ul>
-<p><strong>Положительный:</strong> Это ещё не означает, что у вас туберкулёз. Но для безопасности перед началом профилактического лечения с помощью рентгеновского снимка необходимо исключить уже имеющееся заболевание.</p>
-<ul class="result-list"><li>Затем в ведомстве здравоохранения делают рентгенографию лёгких и, при необходимости, исследование мокроты.</li><li>После этого рекомендуется профилактическое лечение у врача-пульмонолога в амбулаторных условиях.</li><li>Повторный рентгенологический контроль рекомендуется после завершения профилактического лечения или в течение одного года после последнего контакта.</li><li>Если этот контроль не был проведён амбулаторно, ведомство здравоохранения при необходимости снова пригласит вас на него.</li></ul>
+<p><strong>Отрицательный:</strong> Соответствующая иммунная реакция не выявлена. Если тест проведён в правильные сроки и особых рисков нет, дальнейшие обследования обычно не требуются. Однако один отрицательный тест не позволяет надёжно исключить совсем недавнее заражение или заболевание туберкулёзом.</p>
+<p><strong>Положительный:</strong> Инфекция вероятна. Тест не показывает, когда и от кого Вы заразились, а также больны ли Вы или заразны. Затем проводят врачебное обследование и, как правило, рентген лёгких; при отклонениях необходимы дополнительные обследования.</p>
 <p><strong>Неопределённый:</strong> Тест не позволяет сделать достоверный вывод. Причиной может быть образец крови или ослабленная иммунная реакция. Обычно исследуют новый образец крови; иногда требуются другие обследования.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Инфицирование не означает заболевание</h2>
@@ -3019,7 +2991,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Большинство инфицированных людей не заболевают туберкулёзом. Риск наиболее высок в первые два года после заражения. Особенно повышен он у маленьких детей и людей с ослабленным иммунитетом.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Лечение может предотвратить заболевание</h2>
-<p>После подтверждения инфекции при обследовании контактных лиц обычно рекомендуют профилактическое лечение, если нет причин против него. Сначала необходимо исключить заболевание туберкулёзом. Лечение значительно снижает риск заболевания. Профилактическое лечение обычно проводит пульмонолог в амбулаторной практике.</p>
+<p>После подтверждения инфекции при обследовании контактных лиц обычно рекомендуют профилактическое лечение, если нет причин против него. Сначала необходимо исключить заболевание туберкулёзом. Лечение значительно снижает риск заболевания, но не даёт полной защиты. Профилактическое лечение обычно проводит пульмонолог в амбулаторной практике.</p>
 <p>В зависимости от Вашей ситуации возможны, например, рифампицин в течение четырёх месяцев, рифампицин вместе с изониазидом в течение трёх месяцев или изониазид в течение девяти месяцев. Выбор зависит, в частности, от других лекарств, имеющихся заболеваний и возможной лекарственной устойчивости бактерий. Пользу и возможные побочные эффекты обсуждают вместе с Вами.</p>
 <p>Принимайте лекарства по согласованной схеме и приходите на контрольные приёмы. При необычных симптомах во время лечения обращайтесь к лечащей команде. Если Вы не получаете профилактического лечения, мы также обсудим с Вами необходимые контрольные обследования.</p>
 </section>
@@ -3048,16 +3020,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Krew pobiera się z żyły. W laboratorium sprawdza się, czy komórki odpornościowe reagują na określone składniki prątków gruźlicy. Takie badania krwi nazywają się IGRA. Do organizmu nie wprowadza się bakterii, a test nie wykrywa bezpośrednio bakterii we krwi. Wcześniejsze szczepienie przeciw gruźlicy (BCG) nie powoduje dodatniego wyniku tego testu.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Ważny jest odpowiedni termin</h2>
-<p>Od zakażenia do pojawienia się reakcji w teście może upłynąć do ośmiu tygodni. Dlatego osoby z kontaktu w wieku od 15 lat bez szczególnych czynników ryzyka bada się osiem tygodni po ostatnim możliwym kontakcie zakaźnym. Wcześniejszy ujemny test może wymagać powtórzenia.</p>
-<p>Przy objawach, u dzieci lub przy osłabionej odporności potrzebna jest wcześniejsza ocena lekarska. Centrum gruźlicy wykona wtedy badanie krwi wcześniej. U dzieci poniżej pięciu lat leki zapobiegawcze mogą być konieczne jeszcze zanim zakażenie będzie wykrywalne.</p>
-
-<p><strong>Osoby z bliskiego kontaktu (domownicy):</strong> W przypadku osób z bliskiego kontaktu, na przykład mieszkających w tym samym gospodarstwie domowym, zdjęcie rentgenowskie płuc w urzędzie zdrowia wykonuje się również od razu.</p>
+<p>Od zakażenia do pojawienia się reakcji w teście może upłynąć do ośmiu tygodni. Dlatego osoby z kontaktu w wieku od 15 lat bez szczególnych czynników ryzyka najlepiej badać osiem tygodni po ostatnim możliwym kontakcie zakaźnym. Wcześniejszy ujemny test może wymagać powtórzenia.</p>
+<p>Przy objawach, u dzieci lub przy osłabionej odporności potrzebna jest wcześniejsza ocena lekarska. Nie należy wtedy czekać do zaplanowanego badania krwi. U dzieci poniżej pięciu lat leki zapobiegawcze mogą być konieczne jeszcze zanim zakażenie będzie wykrywalne.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Co oznacza wynik</h2>
-<p><strong>Ujemny:</strong></p>
-<ul class="result-list"><li>Jeśli ostatni kontakt miał miejsce co najmniej 8 tygodni temu, nie są potrzebne żadne dalsze działania.</li><li>Jeśli ostatni kontakt miał miejsce mniej niż 8 tygodni temu, po upływie 8 tygodni wykonuje się drugi test QuantiFERON®.</li></ul>
-<p><strong>Dodatni:</strong> Nie oznacza to jeszcze, że mają Państwo gruźlicę. Dla bezpieczeństwa przed rozpoczęciem leczenia zapobiegawczego należy jednak za pomocą zdjęcia rentgenowskiego wykluczyć już istniejącą chorobę.</p>
-<ul class="result-list"><li>Następnie w urzędzie zdrowia wykonuje się zdjęcie rentgenowskie płuc oraz, w razie potrzeby, badanie plwociny.</li><li>Potem zaleca się leczenie zapobiegawcze u pulmonologa w ramach praktyki ambulatoryjnej.</li><li>Kolejne kontrolne zdjęcie rentgenowskie zaleca się po zakończeniu leczenia zapobiegawczego lub w ciągu roku od ostatniego kontaktu.</li><li>Jeśli to badanie kontrolne nie zostało wykonane ambulatoryjnie, urząd zdrowia może ponownie zaprosić Państwa na to badanie.</li></ul>
+<p><strong>Ujemny:</strong> Nie wykryto odpowiedniej reakcji immunologicznej. Jeśli badanie wykonano we właściwym terminie i nie ma szczególnych czynników ryzyka, dalsze badania zazwyczaj nie są potrzebne. Sam ujemny test nie wyklucza jednak w sposób pewny bardzo świeżego zakażenia ani choroby gruźliczej.</p>
+<p><strong>Dodatni:</strong> Zakażenie jest prawdopodobne. Test nie wskazuje, kiedy ani od kogo doszło do zakażenia, ani czy jest Pani/Pan chora/chory lub zakaża. Następnie przeprowadza się badanie lekarskie i zwykle RTG płuc; nieprawidłowości wymagają dalszej diagnostyki.</p>
 <p><strong>Nieokreślony:</strong> Test nie daje wiarygodnej odpowiedzi. Przyczyną może być próbka krwi lub osłabiona reakcja immunologiczna. Zwykle bada się nową próbkę krwi; czasem konieczne są inne badania.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Zakażenie nie oznacza choroby</h2>
@@ -3065,7 +3033,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Większość zakażonych osób nie zachoruje na gruźlicę. Ryzyko jest największe w pierwszych dwóch latach po zakażeniu. Szczególnie podwyższone ryzyko dotyczy małych dzieci oraz osób z osłabioną odpornością.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Leczenie może zapobiec chorobie</h2>
-<p>Po potwierdzeniu zakażenia podczas badania osób z kontaktu zwykle zaleca się leczenie zapobiegawcze, jeśli nie ma przeciwwskazań. Najpierw trzeba wykluczyć chorobę gruźliczą. Leczenie znacznie zmniejsza ryzyko zachorowania. Leczenie zapobiegawcze prowadzi zwykle pulmonolog w poradni lub gabinecie.</p>
+<p>Po potwierdzeniu zakażenia podczas badania osób z kontaktu zwykle zaleca się leczenie zapobiegawcze, jeśli nie ma przeciwwskazań. Najpierw trzeba wykluczyć chorobę gruźliczą. Leczenie znacznie zmniejsza ryzyko zachorowania, ale nie daje pełnej ochrony. Leczenie zapobiegawcze prowadzi zwykle pulmonolog w poradni lub gabinecie.</p>
 <p>Zależnie od indywidualnej sytuacji można zastosować na przykład ryfampicynę przez cztery miesiące, ryfampicynę z izoniazydem przez trzy miesiące lub izoniazyd przez dziewięć miesięcy. Wybór zależy m.in. od innych leków, istniejących chorób i możliwej lekooporności prątków. Korzyści i możliwe działania niepożądane omawiane są wspólnie z Panią/Panem.</p>
 <p>Należy przyjmować leki zgodnie z ustaleniami i przychodzić na wizyty kontrolne. W razie nietypowych dolegliwości w trakcie leczenia prosimy skontaktować się z zespołem leczącym. Także wtedy, gdy nie otrzymuje Pani/Pan leczenia zapobiegawczego, omówimy niezbędne kontrole.</p>
 </section>
@@ -3094,16 +3062,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Bir toplardamardan kan alınır. Laboratuvarda bağışıklık hücrelerinin tüberküloz bakterilerinin belirli bileşenlerine tepki verip vermediği araştırılır. Bu tür kan testlerine IGRA denir. Vücudunuza bakteri verilmez ve test kanda doğrudan bakteri aramaz. Daha önce yapılan tüberküloz aşısı (BCG) bu testi pozitif yapmaz.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Doğru zaman önemlidir</h2>
-<p>Enfeksiyondan sonra testin tepki vermesi sekiz haftayı bulabilir. Bu nedenle 15 yaş ve üzerindeki, özel riski olmayan temaslılarda test, son olası bulaştırıcı temastan sekiz hafta sonra yapılır. Daha erken yapılan negatif bir testin gerektiğinde tekrarlanması gerekir.</p>
-<p>Şikâyetler varsa, çocuklarda veya bağışıklık sistemi zayıfsa daha erken tıbbi değerlendirme gerekir. Bu durumda Tüberküloz Merkezi kan testini daha erken yapar. Beş yaşından küçük çocuklarda enfeksiyon henüz saptanamadan önce bile koruyucu ilaç verilmesi gerekebilir.</p>
-
-<p><strong>Yakın temaslılar (aynı evde yaşayanlar):</strong> Yakın temaslılar için, örneğin aynı evde yaşayan kişilere, sağlık dairesinde hemen akciğer röntgeni de çekilir.</p>
+<p>Enfeksiyondan sonra testin tepki vermesi sekiz haftayı bulabilir. Bu nedenle 15 yaş ve üzerindeki, özel riski olmayan temaslılarda test tercihen son olası bulaştırıcı temastan sekiz hafta sonra yapılır. Daha erken yapılan negatif bir testin gerektiğinde tekrarlanması gerekir.</p>
+<p>Şikâyetler varsa, çocuklarda veya bağışıklık sistemi zayıfsa daha erken tıbbi değerlendirme gerekir. Bu durumlarda planlanan kan testini beklemeyin. Beş yaşından küçük çocuklarda enfeksiyon henüz saptanamadan önce bile koruyucu ilaç verilmesi gerekebilir.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Sonucunuz ne anlama gelir</h2>
-<p><strong>Negatif:</strong></p>
-<ul class="result-list"><li>Son temas en az 8 hafta önce olduysa başka bir önleme gerek yoktur.</li><li>Son temas 8 haftadan daha kısa bir süre önce olduysa, 8 hafta dolduktan sonra ikinci bir QuantiFERON® testi yapılır.</li></ul>
-<p><strong>Pozitif:</strong> Bu henüz tüberküloz olduğunuz anlamına gelmez. Ancak güvenlik için koruyucu tedaviye başlanmadan önce, halihazırda bir hastalığın bulunmadığı röntgenle dışlanmalıdır.</p>
-<ul class="result-list"><li>Ardından sağlık dairesinde akciğer röntgeni çekilir ve gerekirse balgam muayenesi yapılır.</li><li>Sonrasında muayenehanede çalışan bir göğüs hastalıkları uzmanı (pnömolog) tarafından koruyucu tedavi önerilir.</li><li>Koruyucu tedavi tamamlandıktan sonra veya son temastan sonraki bir yıl içinde bir kontrol röntgeni önerilir.</li><li>Bu kontrol muayenesi ayakta tedavi kapsamında yapılmadıysa, sağlık dairesi sizi gerekirse yeniden davet edebilir.</li></ul>
+<p><strong>Negatif:</strong> İlgili bağışıklık yanıtı saptanmamıştır. Test doğru zamanda yapılmışsa ve özel risk yoksa genellikle başka inceleme gerekmez. Ancak tek başına negatif test, çok yeni bir enfeksiyonu veya tüberküloz hastalığını güvenilir biçimde dışlayamaz.</p>
+<p><strong>Pozitif:</strong> Enfeksiyon olasıdır. Test ne zaman veya kimden enfeksiyon aldığınızı, hasta olup olmadığınızı ya da bulaştırıcı olup olmadığınızı göstermez. Ardından doktor muayenesi ve genellikle akciğer röntgeni yapılır; anormal bulgular varsa ek incelemeler gerekir.</p>
 <p><strong>Belirsiz:</strong> Test güvenilir bir sonuç vermez. Bunun nedeni kan örneği veya zayıflamış bağışıklık yanıtı olabilir. Genellikle yeni bir kan örneği incelenir; bazen başka incelemeler gerekir.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Enfekte olmak hasta olmak demek değildir</h2>
@@ -3111,7 +3075,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Enfekte kişilerin çoğunda tüberküloz hastalığı gelişmez. Risk enfeksiyondan sonraki ilk iki yılda en yüksektir. Özellikle küçük çocuklarda ve bağışıklık sistemi zayıf kişilerde hastalık gelişme riski artmıştır.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Tedavi hastalığı önleyebilir</h2>
-<p>Temaslı incelemesinde enfeksiyon doğrulandıktan sonra, engel bir durum yoksa genellikle koruyucu tedavi önerilir. Önce tüberküloz hastalığı dışlanmalıdır. Tedavi hastalık riskini belirgin azaltır. Koruyucu tedavi genellikle ayaktan çalışan bir göğüs hastalıkları uzmanı tarafından yürütülür.</p>
+<p>Temaslı incelemesinde enfeksiyon doğrulandıktan sonra, engel bir durum yoksa genellikle koruyucu tedavi önerilir. Önce tüberküloz hastalığı dışlanmalıdır. Tedavi hastalık riskini belirgin azaltır, ancak tam koruma sağlamaz. Koruyucu tedavi genellikle ayaktan çalışan bir göğüs hastalıkları uzmanı tarafından yürütülür.</p>
 <p>Kişisel durumunuza göre örneğin dört ay rifampisin, üç ay rifampisin ile izoniazid birlikte veya dokuz ay izoniazid kullanılabilir. Seçim diğer ilaçlara, mevcut hastalıklara ve bakterilerin olası ilaç direncine bağlıdır. Yararlar ve olası yan etkiler sizinle birlikte değerlendirilir.</p>
 <p>İlaçları kararlaştırıldığı şekilde alın ve kontrol randevularınıza uyun. Tedavi sırasında olağandışı şikâyetler olursa tedavi ekibine başvurun. Koruyucu tedavi almasanız da gerekli kontrolleri sizinle görüşürüz.</p>
 </section>
@@ -3140,16 +3104,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>از یک ورید خون گرفته می‌شود. در آزمایشگاه بررسی می‌شود که آیا سلول‌های دفاعی به اجزای مشخصی از باکتری‌های سل واکنش نشان می‌دهند. این نوع آزمایش‌های خون IGRA نام دارند. هیچ باکتری‌ای وارد بدن شما نمی‌شود و این آزمایش باکتری را مستقیماً در خون شناسایی نمی‌کند. واکسیناسیون قبلی سل (BCG) باعث مثبت شدن این آزمایش نمی‌شود.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>زمان مناسب مهم است</h2>
-<p>پس از ابتلا به عفونت، ممکن است تا هشت هفته طول بکشد تا آزمایش واکنش نشان دهد. بنابراین افراد در تماس با بیمار که ۱۵ سال یا بیشتر دارند و خطر ویژه‌ای ندارند، هشت هفته پس از آخرین تماس احتمالیِ انتقال‌دهنده عفونت آزمایش می‌شوند. آزمایش منفی‌ای که زودتر انجام شده باشد، ممکن است نیاز به تکرار داشته باشد.</p>
-<p>در صورت وجود علائم، در کودکان یا در افراد با سیستم ایمنی ضعیف، بررسی پزشکی زودتر لازم است. در این صورت مرکز سل آزمایش خون را زودتر انجام می‌دهد. کودکان زیر پنج سال ممکن است حتی پیش از قابل‌شناسایی شدن عفونت به داروی پیشگیرانه نیاز داشته باشند.</p>
-
-<p><strong>تماس‌های نزدیک (افراد هم‌خانه):</strong> برای تماس‌های نزدیک، مثلاً افرادی که در یک خانه زندگی می‌کنند، عکس رادیولوژی ریه در اداره بهداشت بلافاصله نیز انجام می‌شود.</p>
+<p>پس از ابتلا به عفونت، ممکن است تا هشت هفته طول بکشد تا آزمایش واکنش نشان دهد. بنابراین افراد در تماس با بیمار که ۱۵ سال یا بیشتر دارند و خطر ویژه‌ای ندارند، ترجیحاً هشت هفته پس از آخرین تماس احتمالیِ انتقال‌دهنده عفونت آزمایش می‌شوند. آزمایش منفی‌ای که زودتر انجام شده باشد، ممکن است نیاز به تکرار داشته باشد.</p>
+<p>در صورت وجود علائم، در کودکان یا در افراد با سیستم ایمنی ضعیف، بررسی پزشکی زودتر لازم است. در این موارد تا زمان آزمایش خون برنامه‌ریزی‌شده منتظر نمانید. کودکان زیر پنج سال ممکن است حتی پیش از قابل‌شناسایی شدن عفونت به داروی پیشگیرانه نیاز داشته باشند.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>نتیجه شما چه معنایی دارد</h2>
-<p><strong>منفی:</strong></p>
-<ul class="result-list"><li>اگر آخرین تماس دست‌کم ۸ هفته پیش بوده باشد، اقدام دیگری لازم نیست.</li><li>اگر آخرین تماس کمتر از ۸ هفته پیش بوده باشد، پس از گذشت ۸ هفته آزمایش دوم QuantiFERON® انجام می‌شود.</li></ul>
-<p><strong>مثبت:</strong> این هنوز به معنای ابتلای شما به سل نیست. اما برای اطمینان، پیش از شروع درمان پیشگیرانه باید با عکس رادیولوژی مشخص شود که بیماری از قبل وجود ندارد.</p>
-<ul class="result-list"><li>سپس در اداره بهداشت عکس رادیولوژی ریه و در صورت نیاز آزمایش خلط انجام می‌شود.</li><li>پس از آن درمان پیشگیرانه نزد یک متخصص ریه (پزشک متخصص بیماری‌های ریوی) در مطب توصیه می‌شود.</li><li>پس از پایان درمان پیشگیرانه یا ظرف یک سال پس از آخرین تماس، یک عکس رادیولوژی کنترلی دیگر توصیه می‌شود.</li><li>اگر این معاینه کنترلی به‌صورت سرپایی انجام نشده باشد، ممکن است اداره بهداشت دوباره شما را برای آن دعوت کند.</li></ul>
+<p><strong>منفی:</strong> واکنش ایمنی مربوطه شناسایی نشده است. اگر آزمایش در زمان مناسب انجام شده باشد و خطر ویژه‌ای وجود نداشته باشد، معمولاً بررسی بیشتری لازم نیست. بااین‌حال، تنها یک آزمایش منفی نمی‌تواند عفونت بسیار جدید یا بیماری سل را با اطمینان رد کند.</p>
+<p><strong>مثبت:</strong> وجود عفونت محتمل است. آزمایش نشان نمی‌دهد چه زمانی یا از چه کسی عفونت گرفته‌اید، یا اینکه بیمار یا واگیردار هستید. پس از آن معاینه پزشکی و معمولاً عکس رادیولوژی ریه انجام می‌شود؛ در صورت یافته غیرطبیعی، بررسی بیشتر لازم است.</p>
 <p><strong>غیرقابل‌تفسیر:</strong> آزمایش پاسخ قابل‌اعتمادی نمی‌دهد. دلیل ممکن است نمونه خون یا پاسخ ایمنی ضعیف باشد. معمولاً نمونه خون جدید بررسی می‌شود؛ گاهی معاینات دیگری لازم است.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>داشتن عفونت به معنای بیمار بودن نیست</h2>
@@ -3157,7 +3117,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>بیشتر افراد دارای عفونت به بیماری سل مبتلا نمی‌شوند. خطر در دو سال اول پس از ابتلا به عفونت بیشترین است. به‌ویژه کودکان کم‌سن و افراد با سیستم ایمنی ضعیف خطر بیشتری برای ابتلا به بیماری دارند.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>درمان می‌تواند از بیماری پیشگیری کند</h2>
-<p>پس از تأیید عفونت در بررسی افراد در تماس با بیمار، معمولاً درمان پیشگیرانه توصیه می‌شود، مگر اینکه دلیلی برای انجام ندادن آن وجود داشته باشد. ابتدا باید بیماری سل رد شود. درمان خطر بیماری را به‌طور قابل‌توجهی کم می‌کند. درمان پیشگیرانه معمولاً توسط متخصص ریه در مطب انجام می‌شود.</p>
+<p>پس از تأیید عفونت در بررسی افراد در تماس با بیمار، معمولاً درمان پیشگیرانه توصیه می‌شود، مگر اینکه دلیلی برای انجام ندادن آن وجود داشته باشد. ابتدا باید بیماری سل رد شود. درمان خطر بیماری را به‌طور قابل‌توجهی کم می‌کند، اما محافظت کامل ایجاد نمی‌کند. درمان پیشگیرانه معمولاً توسط متخصص ریه در مطب انجام می‌شود.</p>
 <p>بسته به وضعیت شخصی، برای نمونه ریفامپیسین به‌مدت چهار ماه، ریفامپیسین همراه ایزونیازید به‌مدت سه ماه یا ایزونیازید به‌مدت نه ماه ممکن است مناسب باشد. انتخاب، از جمله به داروهای دیگر، بیماری‌های زمینه‌ای و مقاومت احتمالی باکتری‌ها به دارو بستگی دارد. فواید و عوارض احتمالی همراه با شما بررسی می‌شوند.</p>
 <p>داروها را طبق توافق مصرف کنید و در نوبت‌های پیگیری حاضر شوید. اگر در طول درمان علائم غیرعادی داشتید، با تیم درمان تماس بگیرید. حتی اگر درمان پیشگیرانه دریافت نکنید، بررسی‌های پیگیری لازم را با شما مطرح می‌کنیم.</p>
 </section>
@@ -3186,16 +3146,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>تُسحب عينة دم من الوريد. ويُفحص في المختبر ما إذا كانت الخلايا المناعية تستجيب لمكوّنات معيّنة من بكتيريا السل. تُسمّى فحوص الدم هذه IGRA. لا تُدخل أي بكتيريا إلى جسمك، كما أن الاختبار لا يكشف البكتيريا مباشرةً في الدم. ولا يجعل التطعيم السابق ضد السل (BCG) هذا الاختبار إيجابيًا.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>التوقيت الصحيح مهم</h2>
-<p>قد يستغرق ظهور الاستجابة في الاختبار ما يصل إلى ثمانية أسابيع بعد الإصابة بالعدوى. لذلك يُفحص المخالطون البالغون 15 عامًا فأكثر ممن لا توجد لديهم مخاطر خاصة بعد ثمانية أسابيع من آخر مخالطة يُحتمل أنها كانت ناقلة للعدوى. وقد يلزم تكرار اختبار سلبي أُجري قبل ذلك.</p>
-<p>عند وجود أعراض، أو لدى الأطفال، أو عند ضعف المناعة، يلزم تقييم طبي أبكر. عندئذٍ يُجري مركز السل فحص الدم في وقت أبكر. قد يحتاج الأطفال دون الخامسة إلى أدوية وقائية حتى قبل إمكان اكتشاف العدوى.</p>
-
-<p><strong>المخالطون المقرّبون (المقيمون في المنزل نفسه):</strong> بالنسبة إلى المخالطين المقرّبين، مثل الأشخاص الذين يعيشون في المنزل نفسه، يُجرى أيضًا تصوير للرئتين بالأشعة السينية فورًا في دائرة الصحة.</p>
+<p>قد يستغرق ظهور الاستجابة في الاختبار ما يصل إلى ثمانية أسابيع بعد الإصابة بالعدوى. لذلك يُفضَّل فحص المخالطين البالغين 15 عامًا فأكثر ممن لا توجد لديهم مخاطر خاصة بعد ثمانية أسابيع من آخر مخالطة يُحتمل أنها كانت ناقلة للعدوى. وقد يلزم تكرار اختبار سلبي أُجري قبل ذلك.</p>
+<p>عند وجود أعراض، أو لدى الأطفال، أو عند ضعف المناعة، يلزم تقييم طبي أبكر. لا تنتظر في هذه الحالات موعد فحص الدم المحدد. قد يحتاج الأطفال دون الخامسة إلى أدوية وقائية حتى قبل إمكان اكتشاف العدوى.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>ماذا تعني نتيجتك</h2>
-<p><strong>سلبية:</strong></p>
-<ul class="result-list"><li>إذا مضى على آخر اتصال ثمانية أسابيع على الأقل، فلا حاجة إلى إجراءات أخرى.</li><li>إذا مضى على آخر اتصال أقل من ثمانية أسابيع، يُجرى اختبار QuantiFERON® ثانٍ بعد انقضاء الأسابيع الثمانية.</li></ul>
-<p><strong>إيجابية:</strong> هذا لا يعني بعدُ أنك مصاب بالسل. ولكن للاطمئنان يجب قبل بدء العلاج الوقائي استبعاد وجود مرض قائم بالفعل بواسطة صورة الأشعة السينية.</p>
-<ul class="result-list"><li>يلي ذلك تصوير للرئتين بالأشعة السينية في دائرة الصحة، وعند الحاجة فحص للبلغم.</li><li>بعد ذلك يُوصى بعلاج وقائي لدى طبيب أمراض الصدر (اختصاصي الرئة) في العيادة الخارجية.</li><li>يُوصى بإجراء تصوير بالأشعة السينية للمتابعة بعد إتمام العلاج الوقائي أو خلال سنة من آخر اتصال.</li><li>إذا لم يُجرَ فحص المتابعة هذا في العيادة الخارجية، فقد تدعوك دائرة الصحة إليه مرة أخرى.</li></ul>
+<p><strong>سلبية:</strong> لم تُكتشف الاستجابة المناعية المعنية. إذا أُجري الفحص في التوقيت الصحيح ولم توجد مخاطر خاصة، فلا تكون هناك حاجة غالبًا إلى فحوص إضافية. لكن الاختبار السلبي وحده لا يستبعد بأمان عدوى حديثة جدًا أو مرض السل.</p>
+<p><strong>إيجابية:</strong> يُرجَّح وجود عدوى. لا يوضح الاختبار متى أُصبت أو ممن انتقلت إليك العدوى، ولا ما إذا كنت مريضًا أو مُعديًا. يتبع ذلك فحص طبي وعادةً صورة أشعة للصدر؛ وعند ظهور نتائج غير طبيعية تلزم فحوص أخرى.</p>
 <p><strong>غير محددة:</strong> لا يتيح الاختبار استنتاجًا موثوقًا. قد يكون السبب عينة الدم أو ضعف الاستجابة المناعية. تُفحص عادةً عينة دم جديدة؛ وأحيانًا تلزم فحوص أخرى.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>وجود العدوى لا يعني وجود المرض</h2>
@@ -3203,7 +3159,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>معظم المصابين بالعدوى لا يُصابون بمرض السل. يكون الخطر أعلى خلال أول سنتين بعد العدوى. ويزداد خصوصًا لدى الأطفال الصغار والأشخاص ذوي المناعة الضعيفة.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>يمكن للعلاج أن يمنع المرض</h2>
-<p>بعد تأكيد العدوى أثناء فحص المخالطين، يُوصى عادةً بعلاج وقائي ما لم توجد أسباب تمنعه. ويجب أولًا استبعاد مرض السل. يقلل العلاج خطر المرض بوضوح. يُجري العلاج الوقائي عادةً اختصاصي أمراض الرئة في عيادة خارج المستشفى.</p>
+<p>بعد تأكيد العدوى أثناء فحص المخالطين، يُوصى عادةً بعلاج وقائي ما لم توجد أسباب تمنعه. ويجب أولًا استبعاد مرض السل. يقلل العلاج خطر المرض بوضوح لكنه لا يوفر حماية كاملة. يُجري العلاج الوقائي عادةً اختصاصي أمراض الرئة في عيادة خارج المستشفى.</p>
 <p>بحسب وضعك الشخصي، تشمل الخيارات مثلًا ريفامبيسين لمدة أربعة أشهر، أو ريفامبيسين مع إيزونيازيد لمدة ثلاثة أشهر، أو إيزونيازيد لمدة تسعة أشهر. يعتمد الاختيار، من بين أمور أخرى، على الأدوية الأخرى والأمراض السابقة والمقاومة المحتملة للبكتيريا للأدوية. تُناقَش معك الفوائد والآثار الجانبية المحتملة.</p>
 <p>تناول الأدوية كما تم الاتفاق واحضر مواعيد المتابعة. إذا ظهرت أعراض غير معتادة خلال العلاج فتواصل مع فريق العلاج. وحتى إذا لم تتلقَّ علاجًا وقائيًا، سنناقش معك فحوص المتابعة اللازمة.</p>
 </section>
@@ -3232,16 +3188,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Se recoltează sânge dintr-o venă. În laborator se verifică dacă celulele imunitare reacționează la anumite componente ale bacteriilor tuberculozei. Aceste teste de sânge se numesc IGRA. Nu se introduc bacterii în corpul dumneavoastră, iar testul nu detectează direct bacterii în sânge. O vaccinare anterioară împotriva tuberculozei (BCG) nu face acest test pozitiv.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Momentul potrivit este important</h2>
-<p>După infectare pot trece până la opt săptămâni până când testul reacționează. De aceea, persoanele de contact în vârstă de cel puțin 15 ani, fără riscuri speciale, sunt testate la opt săptămâni după ultimul contact posibil contagios. Un test negativ efectuat mai devreme poate necesita repetare.</p>
-<p>În cazul simptomelor, la copii sau în cazul unui sistem imunitar slăbit este necesară o evaluare medicală mai devreme. În acest caz, Centrul de tuberculoză efectuează testul de sânge mai devreme. Copiii sub cinci ani pot avea nevoie de medicamente preventive chiar înainte ca infecția să poată fi detectată.</p>
-
-<p><strong>Contacți apropiați (persoane din aceeași gospodărie):</strong> În cazul contacților apropiați, de exemplu al persoanelor din aceeași gospodărie, se efectuează imediat și o radiografie pulmonară la direcția de sănătate publică.</p>
+<p>După infectare pot trece până la opt săptămâni până când testul reacționează. De aceea, persoanele de contact în vârstă de cel puțin 15 ani, fără riscuri speciale, sunt testate de preferință la opt săptămâni după ultimul contact posibil contagios. Un test negativ efectuat mai devreme poate necesita repetare.</p>
+<p>În cazul simptomelor, la copii sau în cazul unui sistem imunitar slăbit este necesară o evaluare medicală mai devreme. Nu așteptați atunci testul de sânge programat. Copiii sub cinci ani pot avea nevoie de medicamente preventive chiar înainte ca infecția să poată fi detectată.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Ce înseamnă rezultatul dumneavoastră</h2>
-<p><strong>Negativ:</strong></p>
-<ul class="result-list"><li>Dacă ultimul contact a avut loc cu cel puțin 8 săptămâni în urmă, nu sunt necesare alte măsuri.</li><li>Dacă ultimul contact a avut loc cu mai puțin de 8 săptămâni în urmă, după trecerea celor 8 săptămâni se efectuează un al doilea test QuantiFERON®.</li></ul>
-<p><strong>Pozitiv:</strong> Acest lucru nu înseamnă încă că aveți tuberculoză. Pentru siguranță, înainte de începerea tratamentului preventiv trebuie însă exclusă prin radiografie o boală deja existentă.</p>
-<ul class="result-list"><li>Urmează o radiografie pulmonară la direcția de sănătate publică și, dacă este nevoie, o examinare a sputei.</li><li>După aceea se recomandă un tratament preventiv la un medic pneumolog din cabinet.</li><li>Se recomandă o radiografie de control după finalizarea tratamentului preventiv sau în decurs de un an de la ultimul contact.</li><li>Dacă acest control nu a fost efectuat ambulatoriu, direcția de sănătate publică vă poate invita din nou.</li></ul>
+<p><strong>Negativ:</strong> Nu s-a detectat reacția imunitară corespunzătoare. Dacă testul a fost efectuat la momentul potrivit și nu există riscuri speciale, de obicei nu mai sunt necesare examinări. Totuși, un test negativ singur nu poate exclude în mod sigur o infecție foarte recentă sau boala tuberculoasă.</p>
+<p><strong>Pozitiv:</strong> O infecție este probabilă. Testul nu arată când sau de la cine v-ați infectat, nici dacă sunteți bolnav sau contagios. Urmează un examen medical și, de regulă, o radiografie pulmonară; rezultatele anormale necesită investigații suplimentare.</p>
 <p><strong>Neconcludent:</strong> Testul nu permite o concluzie sigură. Cauza poate fi proba de sânge sau o reacție imunitară slăbită. De obicei se analizează o probă nouă; uneori sunt necesare alte investigații.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Infectat nu înseamnă bolnav</h2>
@@ -3249,7 +3201,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Majoritatea persoanelor infectate nu dezvoltă tuberculoză. Riscul este cel mai mare în primii doi ani după infectare. Copiii mici și persoanele cu sistem imunitar slăbit au un risc deosebit de mare de îmbolnăvire.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Tratamentul poate preveni boala</h2>
-<p>După confirmarea infecției în cadrul examinării contacților, se recomandă de regulă tratament preventiv, dacă nu există motive împotriva acestuia. Mai întâi trebuie exclusă boala tuberculoasă. Tratamentul reduce semnificativ riscul. Tratamentul preventiv este efectuat de regulă de un pneumolog în ambulatoriu.</p>
+<p>După confirmarea infecției în cadrul examinării contacților, se recomandă de regulă tratament preventiv, dacă nu există motive împotriva acestuia. Mai întâi trebuie exclusă boala tuberculoasă. Tratamentul reduce semnificativ riscul, dar nu oferă protecție completă. Tratamentul preventiv este efectuat de regulă de un pneumolog în ambulatoriu.</p>
 <p>În funcție de situația personală, opțiunile includ, de exemplu, rifampicină timp de patru luni, rifampicină împreună cu izoniazidă timp de trei luni sau izoniazidă timp de nouă luni. Alegerea depinde, printre altele, de alte medicamente, bolile existente și posibila rezistență a bacteriilor la medicamente. Beneficiile și posibilele reacții adverse sunt evaluate împreună cu dumneavoastră.</p>
 <p>Luați medicamentele conform celor stabilite și respectați programările pentru controale. Dacă apar simptome neobișnuite în timpul tratamentului, contactați echipa medicală. Chiar dacă nu primiți tratament preventiv, vom discuta cu dumneavoastră controalele necesare.</p>
 </section>
@@ -3278,16 +3230,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Se extrae sangre de una vena. En el laboratorio se comprueba si las células inmunitarias reaccionan a determinados componentes de las bacterias de la tuberculosis. Estas pruebas sanguíneas se llaman IGRA. No se introducen bacterias en su cuerpo y la prueba no detecta directamente bacterias en la sangre. Una vacuna previa contra la tuberculosis (BCG) no hace que esta prueba sea positiva.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>El momento adecuado es importante</h2>
-<p>Tras la infección pueden pasar hasta ocho semanas antes de que la prueba reaccione. Por ello, las personas de contacto de 15 años o más sin riesgos especiales se examinan ocho semanas después del último contacto potencialmente contagioso. Una prueba negativa realizada antes puede necesitar repetirse.</p>
-<p>Si hay síntomas, en niños o cuando las defensas están debilitadas, es necesaria una valoración médica más temprana. En ese caso, el Centro de Tuberculosis realiza la prueba de sangre antes. Los menores de cinco años pueden necesitar medicación preventiva incluso antes de que se pueda detectar una infección.</p>
-
-<p><strong>Contactos estrechos (personas del mismo hogar):</strong> En los contactos estrechos, por ejemplo las personas que viven en el mismo hogar, también se realiza de inmediato una radiografía de los pulmones en el servicio de salud pública.</p>
+<p>Tras la infección pueden pasar hasta ocho semanas antes de que la prueba reaccione. Por ello, las personas de contacto de 15 años o más sin riesgos especiales se examinan preferiblemente ocho semanas después del último contacto potencialmente contagioso. Una prueba negativa realizada antes puede necesitar repetirse.</p>
+<p>Si hay síntomas, en niños o cuando las defensas están debilitadas, es necesaria una valoración médica más temprana. En estos casos no espere al análisis de sangre previsto. Los menores de cinco años pueden necesitar medicación preventiva incluso antes de que se pueda detectar una infección.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Qué significa su resultado</h2>
-<p><strong>Negativo:</strong></p>
-<ul class="result-list"><li>Si el último contacto fue hace al menos 8 semanas, no se necesitan más medidas.</li><li>Si el último contacto fue hace menos de 8 semanas, se realiza una segunda prueba QuantiFERON® una vez transcurridas las 8 semanas.</li></ul>
-<p><strong>Positivo:</strong> Esto todavía no significa que tenga tuberculosis. Por seguridad, antes de iniciar un tratamiento preventivo hay que descartar con una radiografía que ya exista una enfermedad.</p>
-<ul class="result-list"><li>A continuación se realiza una radiografía de los pulmones en el servicio de salud pública y, si es necesario, un examen del esputo.</li><li>Después se recomienda un tratamiento preventivo con un neumólogo en consulta ambulatoria.</li><li>Se recomienda otra radiografía de control al terminar el tratamiento preventivo o en el plazo de un año desde el último contacto.</li><li>Si este control no se ha realizado de forma ambulatoria, el servicio de salud pública puede volver a citarle.</li></ul>
+<p><strong>Negativo:</strong> No se ha detectado la respuesta inmunitaria correspondiente. Si la prueba se realizó en el momento adecuado y no hay riesgos especiales, normalmente no se necesitan más exámenes. Sin embargo, una prueba negativa por sí sola no permite descartar con seguridad una infección muy reciente ni la enfermedad tuberculosa.</p>
+<p><strong>Positivo:</strong> Es probable que exista infección. La prueba no indica cuándo ni de quién se infectó, ni si está enfermo o es contagioso. A continuación se realiza un examen médico y, generalmente, una radiografía de tórax; si hay hallazgos anormales, son necesarias más pruebas.</p>
 <p><strong>Indeterminado:</strong> La prueba no permite una conclusión fiable. Puede deberse a la muestra de sangre o a una respuesta inmunitaria debilitada. Normalmente se analiza una nueva muestra; a veces se necesitan otros exámenes.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Estar infectado no significa estar enfermo</h2>
@@ -3295,7 +3243,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>La mayoría de las personas infectadas no desarrollan tuberculosis como enfermedad. El riesgo es mayor durante los dos primeros años tras la infección. Los niños pequeños y las personas con defensas debilitadas presentan un riesgo especialmente elevado.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>El tratamiento puede prevenir la enfermedad</h2>
-<p>Tras confirmar una infección en un estudio de contactos, generalmente se recomienda tratamiento preventivo si no hay razones que lo desaconsejen. Primero debe descartarse la enfermedad tuberculosa. El tratamiento reduce considerablemente el riesgo. Habitualmente lo lleva a cabo un neumólogo en una consulta ambulatoria.</p>
+<p>Tras confirmar una infección en un estudio de contactos, generalmente se recomienda tratamiento preventivo si no hay razones que lo desaconsejen. Primero debe descartarse la enfermedad tuberculosa. El tratamiento reduce considerablemente el riesgo, pero no ofrece protección completa. Habitualmente lo lleva a cabo un neumólogo en una consulta ambulatoria.</p>
 <p>Según su situación, pueden utilizarse, por ejemplo, rifampicina durante cuatro meses, rifampicina junto con isoniazida durante tres meses o isoniazida durante nueve meses. La elección depende, entre otros factores, de otros medicamentos, enfermedades previas y posibles resistencias de las bacterias. Los beneficios y los posibles efectos secundarios se valoran con usted.</p>
 <p>Tome los medicamentos según lo acordado y acuda a las revisiones. Si aparecen síntomas inusuales durante el tratamiento, contacte con el equipo que le atiende. Aunque no reciba tratamiento preventivo, comentaremos con usted los controles necesarios.</p>
 </section>
@@ -3324,16 +3272,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>नस से रक्त लिया जाता है। प्रयोगशाला में देखा जाता है कि क्या प्रतिरक्षा कोशिकाएँ तपेदिक के जीवाणुओं के कुछ घटकों पर प्रतिक्रिया देती हैं। ऐसी रक्त जाँचों को IGRA कहते हैं। आपके शरीर में कोई जीवाणु नहीं डाला जाता और इस जाँच से रक्त में सीधे जीवाणु नहीं खोजे जाते। पहले लगा तपेदिक का टीका (BCG) इस जाँच को पॉज़िटिव नहीं बनाता।</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>सही समय महत्वपूर्ण है</h2>
-<p>संक्रमण के बाद जाँच में प्रतिक्रिया आने में आठ हफ़्ते तक लग सकते हैं। इसलिए 15 वर्ष या उससे अधिक आयु के संपर्क में आए व्यक्तियों में, यदि विशेष जोखिम न हों, तो अंतिम संभावित संक्रामक संपर्क के आठ हफ़्ते बाद जाँच की जाती है। इससे पहले की गई नेगेटिव जाँच दोहरानी पड़ सकती है।</p>
-<p>लक्षण होने पर, बच्चों में या कमज़ोर प्रतिरक्षा वाले लोगों में पहले चिकित्सकीय मूल्यांकन आवश्यक है। ऐसे में टीबी केंद्र रक्त जाँच पहले ही कर देता है। पाँच वर्ष से कम उम्र के बच्चों को संक्रमण का पता लगने से पहले भी निवारक दवा की आवश्यकता हो सकती है।</p>
-
-<p><strong>निकट संपर्क वाले व्यक्ति (एक ही घर में रहने वाले):</strong> निकट संपर्क वाले व्यक्तियों, जैसे एक ही घर में रहने वाले लोगों का, स्वास्थ्य विभाग में तुरंत फेफड़ों का एक्स-रे भी किया जाता है।</p>
+<p>संक्रमण के बाद जाँच में प्रतिक्रिया आने में आठ हफ़्ते तक लग सकते हैं। इसलिए 15 वर्ष या उससे अधिक आयु के संपर्क में आए व्यक्तियों में, यदि विशेष जोखिम न हों, तो अंतिम संभावित संक्रामक संपर्क के आठ हफ़्ते बाद जाँच करना बेहतर है। इससे पहले की गई नेगेटिव जाँच दोहरानी पड़ सकती है।</p>
+<p>लक्षण होने पर, बच्चों में या कमज़ोर प्रतिरक्षा वाले लोगों में पहले चिकित्सकीय मूल्यांकन आवश्यक है। ऐसे में निर्धारित रक्त जाँच तक प्रतीक्षा न करें। पाँच वर्ष से कम उम्र के बच्चों को संक्रमण का पता लगने से पहले भी निवारक दवा की आवश्यकता हो सकती है।</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>आपके परिणाम का अर्थ</h2>
-<p><strong>नेगेटिव:</strong></p>
-<ul class="result-list"><li>यदि अंतिम संपर्क को कम से कम 8 सप्ताह हो चुके हैं, तो किसी और कार्रवाई की ज़रूरत नहीं है।</li><li>यदि अंतिम संपर्क को 8 सप्ताह से कम हुए हैं, तो 8 सप्ताह पूरे होने के बाद दूसरा QuantiFERON® टेस्ट किया जाता है।</li></ul>
-<p><strong>पॉज़िटिव:</strong> इसका अभी यह मतलब नहीं है कि आपको टीबी है। लेकिन सुरक्षा के लिए रोकथाम वाला इलाज शुरू करने से पहले एक्स-रे से यह पक्का करना ज़रूरी है कि कोई बीमारी पहले से मौजूद नहीं है।</p>
-<ul class="result-list"><li>इसके बाद स्वास्थ्य विभाग में फेफड़ों का एक्स-रे किया जाता है और ज़रूरत हो तो बलगम की जाँच की जाती है।</li><li>उसके बाद किसी निजी क्लिनिक के फेफड़ों के विशेषज्ञ (पल्मोनोलॉजिस्ट) से रोकथाम के लिए इलाज कराने की सलाह दी जाती है।</li><li>रोकथाम वाला इलाज पूरा होने के बाद या अंतिम संपर्क के एक साल के भीतर एक और जाँच-एक्स-रे कराने की सलाह दी जाती है।</li><li>यदि यह जाँच बाह्य-रोगी के रूप में नहीं कराई गई है, तो स्वास्थ्य विभाग आवश्यकता होने पर आपको दोबारा बुला सकता है।</li></ul>
+<p><strong>नेगेटिव:</strong> संबंधित प्रतिरक्षा प्रतिक्रिया नहीं मिली। यदि जाँच सही समय पर हुई हो और विशेष जोखिम न हों, तो सामान्यतः आगे जाँच की आवश्यकता नहीं होती। फिर भी, केवल नेगेटिव जाँच से बहुत हाल के संक्रमण या तपेदिक की बीमारी को पूरी विश्वसनीयता से खारिज नहीं किया जा सकता।</p>
+<p><strong>पॉज़िटिव:</strong> संक्रमण होने की संभावना है। जाँच यह नहीं बताती कि संक्रमण कब या किससे हुआ, या आप बीमार हैं अथवा संक्रमण फैला सकते हैं। इसके बाद चिकित्सकीय परीक्षण और सामान्यतः छाती का एक्स-रे होता है; असामान्य निष्कर्ष होने पर आगे जाँच आवश्यक है।</p>
 <p><strong>अनिर्णीत:</strong> जाँच से विश्वसनीय निष्कर्ष नहीं मिलता। कारण रक्त का नमूना या कमज़ोर प्रतिरक्षा प्रतिक्रिया हो सकती है। सामान्यतः नए रक्त नमूने की जाँच की जाती है; कभी अन्य जाँचें आवश्यक होती हैं।</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>संक्रमित होने का अर्थ बीमार होना नहीं है</h2>
@@ -3341,7 +3285,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>अधिकांश संक्रमित लोगों को तपेदिक की बीमारी नहीं होती। संक्रमण के बाद पहले दो वर्षों में जोखिम सबसे अधिक होता है। विशेषकर छोटे बच्चों और कमज़ोर प्रतिरक्षा वाले लोगों में बीमारी का जोखिम बढ़ा होता है।</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>उपचार बीमारी को रोक सकता है</h2>
-<p>संपर्क जाँच में संक्रमण की पुष्टि होने के बाद, यदि उपचार न करने का कोई कारण न हो, तो सामान्यतः निवारक उपचार की सलाह दी जाती है। पहले तपेदिक की बीमारी को खारिज करना आवश्यक है। उपचार बीमारी का जोखिम काफ़ी घटाता है। निवारक उपचार सामान्यतः बाह्य रोगी क्लिनिक में फेफड़ों के विशेषज्ञ द्वारा किया जाता है।</p>
+<p>संपर्क जाँच में संक्रमण की पुष्टि होने के बाद, यदि उपचार न करने का कोई कारण न हो, तो सामान्यतः निवारक उपचार की सलाह दी जाती है। पहले तपेदिक की बीमारी को खारिज करना आवश्यक है। उपचार बीमारी का जोखिम काफ़ी घटाता है, लेकिन पूरी सुरक्षा नहीं देता। निवारक उपचार सामान्यतः बाह्य रोगी क्लिनिक में फेफड़ों के विशेषज्ञ द्वारा किया जाता है।</p>
 <p>व्यक्तिगत स्थिति के अनुसार, उदाहरण के लिए चार महीने रिफैम्पिसिन, तीन महीने रिफैम्पिसिन के साथ आइसोनियाज़िड, या नौ महीने आइसोनियाज़िड दिया जा सकता है। चुनाव अन्य दवाओं, पहले से मौजूद बीमारियों और जीवाणुओं की संभावित दवा-प्रतिरोधकता पर भी निर्भर करता है। लाभ और संभावित दुष्प्रभाव आपके साथ मिलकर तौले जाते हैं।</p>
 <p>दवाएँ तय निर्देशों के अनुसार लें और अनुवर्ती जाँचों पर आएँ। उपचार के दौरान असामान्य तकलीफ़ हो तो उपचार टीम से संपर्क करें। यदि आप निवारक उपचार नहीं लेते हैं, तब भी हम आवश्यक अनुवर्ती जाँचों पर आपसे चर्चा करेंगे।</p>
 </section>
@@ -3370,16 +3314,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Взема се кръв от вена. В лабораторията се проверява дали имунните клетки реагират на определени съставки на туберкулозните бактерии. Тези кръвни тестове се наричат IGRA. В тялото Ви не се въвеждат бактерии и тестът не открива директно бактерии в кръвта. Предишна ваксинация срещу туберкулоза (БЦЖ) не прави този тест положителен.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Правилният момент е важен</h2>
-<p>След заразяване може да минат до осем седмици, преди тестът да реагира. Затова контактните лица на 15 и повече години без особени рискове се изследват осем седмици след последния възможен заразен контакт. Отрицателен тест, направен по-рано, може да се наложи да бъде повторен.</p>
-<p>При оплаквания, при деца или при отслабена имунна защита е необходима по-ранна лекарска оценка. Тогава Центърът по туберкулоза извършва кръвния тест по-рано. Деца под пет години може да се нуждаят от превантивни лекарства още преди инфекцията да може да бъде открита.</p>
-
-<p><strong>Близки контактни лица (от същото домакинство):</strong> При близките контактни лица, например лицата от едно и също домакинство, веднага се прави и рентгенова снимка на белите дробове в здравната служба.</p>
+<p>След заразяване може да минат до осем седмици, преди тестът да реагира. Затова контактните лица на 15 и повече години без особени рискове се изследват за предпочитане осем седмици след последния възможен заразен контакт. Отрицателен тест, направен по-рано, може да се наложи да бъде повторен.</p>
+<p>При оплаквания, при деца или при отслабена имунна защита е необходима по-ранна лекарска оценка. Тогава не чакайте планирания кръвен тест. Деца под пет години може да се нуждаят от превантивни лекарства още преди инфекцията да може да бъде открита.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Какво означава резултатът Ви</h2>
-<p><strong>Отрицателен:</strong></p>
-<ul class="result-list"><li>Ако последният контакт е бил преди поне 8 седмици, не са необходими други мерки.</li><li>Ако последният контакт е бил преди по-малко от 8 седмици, след изтичането на 8-те седмици се прави втори тест QuantiFERON®.</li></ul>
-<p><strong>Положителен:</strong> Това все още не означава, че имате туберкулоза. За сигурност обаче преди започване на превантивно лечение трябва да се изключи с рентгенова снимка вече съществуващо заболяване.</p>
-<ul class="result-list"><li>Следва рентгенова снимка на белите дробове в здравната служба и при нужда изследване на храчки.</li><li>След това се препоръчва превантивно лечение при пулмолог в извънболнична практика.</li><li>Препоръчва се контролна рентгенова снимка след приключване на превантивното лечение или в рамките на една година след последния контакт.</li><li>Ако този контролен преглед не е направен амбулаторно, здравната служба може отново да ви покани за него.</li></ul>
+<p><strong>Отрицателен:</strong> Не е открита съответната имунна реакция. При правилен момент на изследване и липса на особени рискове обикновено не са необходими други изследвания. Само отрицателният тест обаче не може сигурно да изключи съвсем скорошна инфекция или туберкулозно заболяване.</p>
+<p><strong>Положителен:</strong> Вероятна е инфекция. Тестът не показва кога или от кого сте се заразили, нито дали сте болни или заразни. Следват лекарски преглед и обикновено рентгенография на белите дробове; при отклонения са необходими допълнителни изследвания.</p>
 <p><strong>Неопределен:</strong> Тестът не позволява надеждно заключение. Причината може да е кръвната проба или отслабена имунна реакция. Обикновено се изследва нова проба; понякога са необходими други изследвания.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Инфектиран не означава болен</h2>
@@ -3387,7 +3327,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Повечето инфектирани хора не се разболяват от туберкулоза. Рискът е най-висок през първите две години след заразяването. Особено малките деца и хората с отслабен имунитет имат повишен риск от заболяване.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Лечението може да предотврати заболяването</h2>
-<p>След потвърдена инфекция при изследване на контактни лица обикновено се препоръчва превантивно лечение, ако няма причини против него. Първо трябва да се изключи туберкулозно заболяване. Лечението значително намалява риска. То обикновено се провежда от пулмолог в извънболничната помощ.</p>
+<p>След потвърдена инфекция при изследване на контактни лица обикновено се препоръчва превантивно лечение, ако няма причини против него. Първо трябва да се изключи туберкулозно заболяване. Лечението значително намалява риска, но не осигурява пълна защита. То обикновено се провежда от пулмолог в извънболничната помощ.</p>
 <p>Според личната ситуация може да се използва например рифампицин за четири месеца, рифампицин с изониазид за три месеца или изониазид за девет месеца. Изборът зависи, наред с другото, от други лекарства, съществуващи заболявания и възможна лекарствена резистентност на бактериите. Ползите и възможните нежелани реакции се обсъждат с Вас.</p>
 <p>Приемайте лекарствата според уговорката и спазвайте контролните прегледи. При необичайни оплаквания по време на лечението се обърнете към лекуващия екип. Дори да не получавате превантивно лечение, ще обсъдим необходимите контроли с Вас.</p>
 </section>
@@ -3416,16 +3356,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Dhiig ayaa laga qaadaa xidid. Shaybaarka waxaa lagu hubiyaa in unugyada difaaca jirku ka falceliyaan qaybo gaar ah oo bakteeriyada qaaxada ka mid ah. Baaritaannadan dhiigga waxaa la yiraahdaa IGRA. Bakteeriyo laguma geliyo jirkaaga, baaritaankuna si toos ah ugama raadiyo bakteeriyo dhiigga. Tallaal qaaxo oo hore (BCG) ma keeno in baaritaankani togan noqdo.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Waqtiga saxda ah waa muhiim</h2>
-<p>Caabuqa ka dib waxay qaadan kartaa ilaa siddeed toddobaad in baaritaanku ka falceliyo. Sidaas darteed dadka xiriirka la yeeshay bukaanka ee jira 15 sano ama ka weyn, oo aan lahayn khatar gaar ah, waxaa la baaraa siddeed toddobaad ka dib xiriirkii ugu dambeeyay ee suuragalka ahaa inuu caabuq gudbiyo. Baaritaan taban oo hore loo sameeyay waxaa laga yaabaa in lagu celiyo.</p>
-<p>Haddii calaamado jiraan, carruurta ama dadka difaaca jirkoodu daciif yahay, qiimayn caafimaad oo ka horraysa ayaa loo baahan yahay. Markaas Xarunta Qaaxadu baaritaanka dhiigga ayay hore u sameysaa. Carruurta ka yar shan sano waxay u baahan karaan daawo ka-hortag ah xitaa ka hor inta aan caabuqa la ogaan karin.</p>
-
-<p><strong>Dadka si dhow ula xiriiray (kuwa isla gurigaas deggan):</strong> Dadka si dhow ula xiriiray, tusaale ahaan kuwa isla gurigaas deggan, sawirka shucaaca sambabada ayaa sidoo kale isla markiiba laga qaadaa waaxda caafimaadka.</p>
+<p>Caabuqa ka dib waxay qaadan kartaa ilaa siddeed toddobaad in baaritaanku ka falceliyo. Sidaas darteed dadka xiriirka la yeeshay bukaanka ee jira 15 sano ama ka weyn, oo aan lahayn khatar gaar ah, waxaa la doorbidaa in la baaro siddeed toddobaad ka dib xiriirkii ugu dambeeyay ee suuragalka ahaa inuu caabuq gudbiyo. Baaritaan taban oo hore loo sameeyay waxaa laga yaabaa in lagu celiyo.</p>
+<p>Haddii calaamado jiraan, carruurta ama dadka difaaca jirkoodu daciif yahay, qiimayn caafimaad oo ka horraysa ayaa loo baahan yahay. Markaas ha sugin baaritaanka dhiigga ee la qorsheeyay. Carruurta ka yar shan sano waxay u baahan karaan daawo ka-hortag ah xitaa ka hor inta aan caabuqa la ogaan karin.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Waxa natiijadaadu ka dhigan tahay</h2>
-<p><strong>Taban:</strong></p>
-<ul class="result-list"><li>Haddii xiriirkii ugu dambeeyay uu ahaa ugu yaraan 8 toddobaad ka hor, tallaabooyin kale looma baahna.</li><li>Haddii xiriirkii ugu dambeeyay uu ka yaraa 8 toddobaad ka hor, baaritaan QuantiFERON® labaad ayaa la sameeyaa marka 8-ka toddobaad ay dhammaadaan.</li></ul>
-<p><strong>Togan:</strong> Tani ma muujinayso weli inaad qaaxo qabto. Si kastaba ha ahaatee, badbaado darteed, ka hor inta aan la bilaabin daaweynta ka-hortagga, waa in sawirka shucaaca (X-ray) lagu ceyriyo inaan cudur hore u jirin.</p>
-<ul class="result-list"><li>Waxaa ku xiga sawirka shucaaca (X-ray) ee sambabada oo laga qaado waaxda caafimaadka, haddii loo baahdana baaritaanka candhuufta.</li><li>Kadib, waxaa lagugula talinayaa daaweyn ka-hortag ah oo uu bixiyo dhakhtar sambabada ku takhasusay (pulmonologist) oo ka shaqeeya rugta bannaanka.</li><li>Waxaa lagula talinayaa sawir shucaac oo kale oo la socod ah marka daaweynta ka-hortagga la dhammeeyo ama sanad gudahood kadib xiriirkii ugu dambeeyay.</li><li>Haddii baaritaankan la socodka ah aan lagu samayn si bannaan (ambulatory), waaxda caafimaadka ayaa laga yaabaa inay mar kale kuu soo wacdo.</li></ul>
+<p><strong>Taban:</strong> Lama helin falcelintii difaaca jirka ee la raadinayay. Haddii baaritaanka la sameeyay waqtigii saxda ahaa oo aanay jirin khataro gaar ah, baaritaanno kale badanaa looma baahna. Hase yeeshee baaritaan taban oo keliya si lagu kalsoon yahay ugama saari karo caabuq aad u cusub ama cudurka qaaxada.</p>
+<p><strong>Togan:</strong> Waxaa suuragal badan inuu caabuq jiro. Baaritaanku ma sheego goorta ama qofka aad ka qaaday, ama inaad xanuunsan tahay ama dadka kale qaadsiin karto. Waxaa xiga baaritaan dhakhtar iyo badanaa raajo sambabada ah; haddii wax aan caadi ahayn la helo, baaritaanno dheeraad ah ayaa loo baahan yahay.</p>
 <p><strong>Aan go’aan laga gaari karin:</strong> Baaritaanku ma bixiyo jawaab lagu kalsoon yahay. Sababtu waxay noqon kartaa muunadda dhiigga ama falcelinta difaaca jirka oo daciif ah. Badanaa muunad cusub ayaa la baaraa; mararka qaarkood baaritaanno kale ayaa loo baahan yahay.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Inaad caabuq qabto macnaheedu ma aha inaad cudurka qabto</h2>
@@ -3433,7 +3369,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Inta badan dadka caabuqa qaba ma yeeshaan cudurka qaaxada. Khatartu waxay ugu badan tahay labada sano ee ugu horreeya ka dib caabuqa. Gaar ahaan carruurta yaryar iyo dadka difaaca jirkoodu daciif yahay waxay leeyihiin khatar cudur oo sareysa.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Daaweyntu waxay ka hortagi kartaa cudurka</h2>
-<p>Marka caabuq lagu xaqiijiyo baaritaanka dadka xiriirka la yeeshay bukaanka, daaweyn ka-hortag ah ayaa guud ahaan lagu taliyaa, haddii aanay jirin sababo ka hor imanaya. Marka hore waa in la hubiyo inuusan jirin cudurka qaaxada. Daaweyntu si weyn ayay u yaraysaa khatarta cudurka. Badanaa waxaa bixiya dhakhtar ku takhasusay sambabada oo ka shaqeeya rug bukaan-socod.</p>
+<p>Marka caabuq lagu xaqiijiyo baaritaanka dadka xiriirka la yeeshay bukaanka, daaweyn ka-hortag ah ayaa guud ahaan lagu taliyaa, haddii aanay jirin sababo ka hor imanaya. Marka hore waa in la hubiyo inuusan jirin cudurka qaaxada. Daaweyntu si weyn ayay u yaraysaa khatarta cudurka, balse ilaalin buuxda ma bixiso. Badanaa waxaa bixiya dhakhtar ku takhasusay sambabada oo ka shaqeeya rug bukaan-socod.</p>
 <p>Iyadoo ku xiran xaaladdaada, waxaa tusaale ahaan la isticmaali karaa rifampicin afar bilood, rifampicin iyo isoniazid oo wadajir ah saddex bilood, ama isoniazid sagaal bilood. Doorashadu waxay ku xiran tahay daawooyinka kale, cudurrada hore iyo iska-caabbinta daawooyinka ee bakteeriyada oo suuragal ah. Faa’iidooyinka iyo waxyeellooyinka suuragalka ah adiga ayaa lagula qiimaynayaa.</p>
 <p>Daawooyinka u qaado sidii lagu heshiiyay, kana soo qaybgal ballamaha dabagalka. Haddii aad yeelato calaamado aan caadi ahayn inta daaweyntu socoto, la xiriir kooxda daaweynta. Xitaa haddii aadan qaadan daaweyn ka-hortag ah, waxaan kaala hadli doonaa baaritaannada dabagalka ee loo baahan yahay.</p>
 </section>
@@ -3462,16 +3398,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Máu được lấy từ tĩnh mạch. Phòng xét nghiệm kiểm tra xem tế bào miễn dịch có phản ứng với một số thành phần của vi khuẩn lao hay không. Những xét nghiệm máu này được gọi là IGRA. Không có vi khuẩn nào được đưa vào cơ thể quý vị và xét nghiệm cũng không trực tiếp tìm vi khuẩn trong máu. Việc tiêm vắc-xin lao (BCG) trước đây không làm xét nghiệm này dương tính.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Thời điểm phù hợp rất quan trọng</h2>
-<p>Sau khi nhiễm, có thể mất đến tám tuần để xét nghiệm có phản ứng. Vì vậy, người tiếp xúc từ 15 tuổi trở lên không có nguy cơ đặc biệt được xét nghiệm tám tuần sau lần tiếp xúc cuối cùng có khả năng lây nhiễm. Kết quả âm tính nếu xét nghiệm sớm hơn có thể cần được kiểm tra lại.</p>
-<p>Nếu có triệu chứng, là trẻ em hoặc có hệ miễn dịch suy yếu, cần được đánh giá y tế sớm hơn. Khi đó, Trung tâm Lao sẽ làm xét nghiệm máu sớm hơn. Trẻ dưới năm tuổi có thể cần thuốc dự phòng ngay cả trước khi phát hiện được tình trạng nhiễm.</p>
-
-<p><strong>Người tiếp xúc gần (cùng hộ gia đình):</strong> Với người tiếp xúc gần, ví dụ những người sống chung một hộ gia đình, cũng sẽ chụp X-quang phổi ngay tại cơ quan y tế.</p>
+<p>Sau khi nhiễm, có thể mất đến tám tuần để xét nghiệm có phản ứng. Vì vậy, người tiếp xúc từ 15 tuổi trở lên không có nguy cơ đặc biệt nên được xét nghiệm vào khoảng tám tuần sau lần tiếp xúc cuối cùng có khả năng lây nhiễm. Kết quả âm tính nếu xét nghiệm sớm hơn có thể cần được kiểm tra lại.</p>
+<p>Nếu có triệu chứng, là trẻ em hoặc có hệ miễn dịch suy yếu, cần được đánh giá y tế sớm hơn. Khi đó không nên chờ đến lịch xét nghiệm máu. Trẻ dưới năm tuổi có thể cần thuốc dự phòng ngay cả trước khi phát hiện được tình trạng nhiễm.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Ý nghĩa của kết quả</h2>
-<p><strong>Âm tính:</strong></p>
-<ul class="result-list"><li>Nếu lần tiếp xúc gần nhất cách đây ít nhất 8 tuần thì không cần biện pháp nào khác.</li><li>Nếu lần tiếp xúc gần nhất cách đây chưa đến 8 tuần, sẽ làm xét nghiệm QuantiFERON® lần thứ hai sau khi đủ 8 tuần.</li></ul>
-<p><strong>Dương tính:</strong> Điều này chưa có nghĩa là bạn bị bệnh lao. Tuy nhiên, để an toàn, trước khi bắt đầu điều trị dự phòng cần loại trừ bằng phim X-quang việc đã có bệnh sẵn.</p>
-<ul class="result-list"><li>Tiếp theo là chụp X-quang phổi tại cơ quan y tế và, nếu cần, xét nghiệm đờm.</li><li>Sau đó, nên điều trị dự phòng tại bác sĩ chuyên khoa phổi (bác sĩ hô hấp) ở phòng khám.</li><li>Nên chụp X-quang kiểm tra lại sau khi hoàn thành điều trị dự phòng hoặc trong vòng một năm sau lần tiếp xúc gần nhất.</li><li>Nếu lần kiểm tra này chưa được thực hiện ngoại trú, cơ quan y tế có thể mời bạn đến lại.</li></ul>
+<p><strong>Âm tính:</strong> Không phát hiện phản ứng miễn dịch tương ứng. Nếu xét nghiệm đúng thời điểm và không có nguy cơ đặc biệt, thường không cần khám thêm. Tuy nhiên, chỉ một xét nghiệm âm tính không thể loại trừ chắc chắn tình trạng nhiễm rất gần đây hoặc bệnh lao.</p>
+<p><strong>Dương tính:</strong> Có khả năng đã nhiễm lao. Xét nghiệm không cho biết quý vị bị nhiễm khi nào, từ ai, hoặc có mắc bệnh hay có khả năng lây không. Sau đó cần khám bác sĩ và thường chụp X-quang phổi; nếu có bất thường, cần kiểm tra thêm.</p>
 <p><strong>Không xác định:</strong> Xét nghiệm không cho kết luận đáng tin cậy. Nguyên nhân có thể do mẫu máu hoặc phản ứng miễn dịch yếu. Thường cần xét nghiệm mẫu máu mới; đôi khi cần các kiểm tra khác.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Nhiễm lao không đồng nghĩa với mắc bệnh lao</h2>
@@ -3479,7 +3411,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Phần lớn người nhiễm không phát triển thành bệnh lao. Nguy cơ cao nhất trong hai năm đầu sau khi nhiễm. Đặc biệt, trẻ nhỏ và người có hệ miễn dịch suy yếu có nguy cơ mắc bệnh cao hơn.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Điều trị có thể phòng ngừa bệnh</h2>
-<p>Sau khi xác nhận nhiễm trong quá trình khám người tiếp xúc, thường khuyến nghị điều trị dự phòng nếu không có lý do chống lại việc điều trị. Trước tiên phải loại trừ bệnh lao. Điều trị giảm đáng kể nguy cơ mắc bệnh. Điều trị dự phòng thường do bác sĩ chuyên khoa phổi tại phòng khám ngoại trú thực hiện.</p>
+<p>Sau khi xác nhận nhiễm trong quá trình khám người tiếp xúc, thường khuyến nghị điều trị dự phòng nếu không có lý do chống lại việc điều trị. Trước tiên phải loại trừ bệnh lao. Điều trị giảm đáng kể nguy cơ mắc bệnh nhưng không bảo vệ hoàn toàn. Điều trị dự phòng thường do bác sĩ chuyên khoa phổi tại phòng khám ngoại trú thực hiện.</p>
 <p>Tùy tình trạng cá nhân, có thể sử dụng chẳng hạn rifampicin trong bốn tháng, rifampicin kết hợp isoniazid trong ba tháng, hoặc isoniazid trong chín tháng. Lựa chọn phụ thuộc vào các thuốc khác, bệnh có sẵn và khả năng kháng thuốc của vi khuẩn. Lợi ích và tác dụng phụ có thể xảy ra sẽ được cân nhắc cùng quý vị.</p>
 <p>Uống thuốc theo thỏa thuận và đến các buổi tái khám. Nếu có triệu chứng bất thường trong điều trị, hãy liên hệ nhóm điều trị. Ngay cả khi không điều trị dự phòng, chúng tôi cũng sẽ trao đổi với quý vị về các kiểm tra theo dõi cần thiết.</p>
 </section>
@@ -3508,16 +3440,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>ካብ ሰራውር ደም ይውሰድ። ኣብ ላቦራቶሪ፣ ዋህዮታት ምክልኻል ሕማም ንዝተወሰኑ ክፋላት ባክተርያ ዓባይ ሰዓል ምላሽ እንተ ይህቡ ይምርመር። ከምዚ ዝበሉ ምርመራታት ደም IGRA ይበሃሉ። ባክተርያ ናብ ኣካልኩም ኣይኣቱን፣ እቲ ምርመራ እውን ባክተርያ ብቐጥታ ኣብ ደም ኣይደልን እዩ። ቅድሚ ሕጂ ዝተዋህበ ክታበት ዓባይ ሰዓል (BCG) ነዚ ምርመራ ፖዚቲቭ ኣይገብሮን።</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>ትኽክለኛ ግዜ ኣገዳሲ እዩ</h2>
-<p>ድሕሪ ረኽሲ፣ እቲ ምርመራ ምላሽ ክህብ ክሳብ ሸሞንተ ሰሙናት ክወስድ ይኽእል። ስለዚ፣ 15 ዓመትን ልዕሊኡን ዝዕድሚኦም፣ ፍሉይ ሓደጋ ዘይብሎም ርክብ ዝነበሮም ሰባት፣ ረኽሲ ከመሓላልፍ ካብ ዝኽእል ናይ መወዳእታ ርክብ ሸሞንተ ሰሙናት ድሕሪኡ ይምርመሩ። ቀዲሙ ዝተገብረ ነጋቲቭ ምርመራ ክድገም ክድለ ይኽእል።</p>
-<p>ምልክታት እንተለዉ፣ ኣብ ህጻናት ወይ ስርዓተ ምክልኻል ሕማም እንተ ደኺሙ፣ ቀልጢፉ ሕክምናዊ ግምገማ የድሊ። ኣብዚ ኩነታት እቲ ማእከል ቲቢ ነቲ ምርመራ ደም ቀዲሙ ይገብሮ። ትሕቲ ሓሙሽተ ዓመት ዝዕድሚኦም ህጻናት፣ ረኽሲ ቅድሚ ምልላዩ እውን መከላኸሊ መድሃኒት ከድልዮም ይኽእል።</p>
-
-<p><strong>ቀረባ ርክብ ዘለዎም ሰባት (ኣብ ሓደ ቤት ዝነብሩ):</strong> ቀረባ ርክብ ዘለዎም ሰባት፡ ንኣብነት ኣብ ሓደ ገዛ ዝነብሩ፡ ኣብ ቤት ጽሕፈት ጥዕና ብቕልጡፍ ናይ ሳንባ ኤክስ-ሬይ ይግበረሎም።</p>
+<p>ድሕሪ ረኽሲ፣ እቲ ምርመራ ምላሽ ክህብ ክሳብ ሸሞንተ ሰሙናት ክወስድ ይኽእል። ስለዚ፣ 15 ዓመትን ልዕሊኡን ዝዕድሚኦም፣ ፍሉይ ሓደጋ ዘይብሎም ርክብ ዝነበሮም ሰባት፣ ረኽሲ ከመሓላልፍ ካብ ዝኽእል ናይ መወዳእታ ርክብ ሸሞንተ ሰሙናት ድሕሪኡ ክምርመሩ ይምረጽ። ቀዲሙ ዝተገብረ ነጋቲቭ ምርመራ ክድገም ክድለ ይኽእል።</p>
+<p>ምልክታት እንተለዉ፣ ኣብ ህጻናት ወይ ስርዓተ ምክልኻል ሕማም እንተ ደኺሙ፣ ቀልጢፉ ሕክምናዊ ግምገማ የድሊ። ኣብዚ ኩነታት ክሳብ እቲ ዝተመደበ ምርመራ ደም ኣይትጸበዩ። ትሕቲ ሓሙሽተ ዓመት ዝዕድሚኦም ህጻናት፣ ረኽሲ ቅድሚ ምልላዩ እውን መከላኸሊ መድሃኒት ከድልዮም ይኽእል።</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>ውጽኢትኩም እንታይ ማለት እዩ</h2>
-<p><strong>ነጋቲቭ፦</strong></p>
-<ul class="result-list"><li>እቲ ናይ መወዳእታ ርክብ ብውሑዱ 8 ሰሙናት ዝሓለፎ እንተኾነ፡ ተወሳኺ ስጉምቲ ኣየድልን።</li><li>እቲ ናይ መወዳእታ ርክብ ካብ 8 ሰሙናት ንእሽተይ እንተኾነ፡ እቶም 8 ሰሙናት ምስ ሓለፉ ካልኣይ ናይ QuantiFERON® ምርመራ ይግበር።</li></ul>
-<p><strong>ፖዚቲቭ፦</strong> እዚ ገና ቲቢ ከም ዘለኩም ኣይምልክትን። ግን ንውሑስነት፡ ቅድሚ ቅድመ-ምክልኻል ሕክምና ምጅማር፡ ኣቐዲሙ ዝነበረ ሕማም ከም ዘየለ ብኤክስ-ሬይ ክረጋገጽ ኣለዎ።</p>
-<ul class="result-list"><li>ድሕሪኡ ኣብ ቤት ጽሕፈት ጥዕና ናይ ሳንባ ኤክስ-ሬይ፡ ከድልዮ እንተኾይኑ ድማ ካብ ሳንባ ብሰዓል ዝወጽእ ልስሉስ ነገር ምርመራ ይግበር።</li><li>ድሕሪኡ ኣብ ናይ ብሕታዊ ክሊኒክ ዝሰርሕ ሓኪም ሳንባ (ፑልሞኖሎግ) ቅድመ-ምክልኻል ሕክምና ይምከር።</li><li>ቅድመ-ምክልኻል ሕክምና ምስ ወድአ ወይ ካብ ዳሕረዋይ ርክብ ኣብ ውሽጢ ሓደ ዓመት ካልእ ናይ ክትትል ኤክስ-ሬይ ይምከር።</li><li>እዚ ናይ ክትትል ምርመራ ከም ወጻኢ ሕሙም እንተዘይተኻይዱ፡ ቤት ጽሕፈት ጥዕና ከም ዘድሊ ብሓድሽ ክዕድመኩም ይኽእል።</li></ul>
+<p><strong>ነጋቲቭ፦</strong> እቲ ዝድለ ምላሽ ስርዓተ ምክልኻል ሕማም ኣይተረኽበን። ምርመራ ኣብ ትኽክለኛ ግዜ እንተ ተገይሩን ፍሉይ ሓደጋ እንተ ዘየለን፣ ተወሳኺ ምርመራ ብዙሕ ግዜ ኣየድልን። ግን ነጋቲቭ ውጽኢት በይኑ ኣዝዩ ሓድሽ ረኽሲ ወይ ሕማም ዓባይ ሰዓል ብእሙን መንገዲ ክነጽግ ኣይክእልን።</p>
+<p><strong>ፖዚቲቭ፦</strong> ረኽሲ ክህሉ ተኽእሎ ኣሎ። እቲ ምርመራ መዓስ ወይ ካብ መን ከም ዝተለኸፍኩም፣ ወይ ሓሚምኩም ወይ ተመሓላለፍቲ እንተኾንኩም ኣየርእን። ቀጺሉ ሕክምናዊ ምርመራን ብዙሕ ግዜ ራጂ ሳንቡእን ይግበር፤ ዘይንቡር ውጽኢት እንተሎ ተወሳኺ ምርመራ የድሊ።</p>
 <p><strong>ዘይንጹር፦</strong> እቲ ምርመራ እሙን መልሲ ኣይህብን። ምኽንያቱ ናሙና ደም ወይ ዝደኸመ ምላሽ ምክልኻል ሕማም ክኸውን ይኽእል። ብዙሕ ግዜ ሓድሽ ናሙና ደም ይምርመር፤ ሓድሓደ ግዜ ካልኦት ምርመራታት የድልዩ።</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>ረኽሲ ምህላው ሕማም ምህላው ማለት ኣይኮነን</h2>
@@ -3525,7 +3453,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>መብዛሕትኦም ረኽሲ ዘለዎም ሰባት ብዓባይ ሰዓል ኣይሓሙን። ሓደጋ ኣብ ቀዳሞት ክልተ ዓመታት ድሕሪ ረኽሲ ዝለዓለ እዩ። ብፍላይ ንኣሽቱ ህጻናትን ስርዓተ ምክልኻል ሕማሞም ዝደኸመ ሰባትን ዝለዓለ ናይ ሕማም ሓደጋ ኣለዎም።</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>ሕክምና ሕማም ክከላኸል ይኽእል</h2>
-<p>ኣብ ምርመራ ምስ ሕሙም ርክብ ዝነበሮም ሰባት ረኽሲ እንተ ተረጋጊጹ፣ ዝኽልክል ምኽንያት እንተ ዘየለ፣ መከላኸሊ ሕክምና ብዙሕ ግዜ ይምከር። ቅድሚኡ ሕማም ዓባይ ሰዓል ከም ዘየለ ክረጋገጽ ኣለዎ። ሕክምና ሓደጋ ሕማም ብጣዕሚ ይቕንስ። መከላኸሊ ሕክምና ብዙሕ ግዜ ኣብ ክሊኒክ ተመላለስቲ ሕሙማት ብሓኪም ስፔሻሊስት ሳንቡእ ይግበር።</p>
+<p>ኣብ ምርመራ ምስ ሕሙም ርክብ ዝነበሮም ሰባት ረኽሲ እንተ ተረጋጊጹ፣ ዝኽልክል ምኽንያት እንተ ዘየለ፣ መከላኸሊ ሕክምና ብዙሕ ግዜ ይምከር። ቅድሚኡ ሕማም ዓባይ ሰዓል ከም ዘየለ ክረጋገጽ ኣለዎ። ሕክምና ሓደጋ ሕማም ብጣዕሚ ይቕንስ፣ ግን ምሉእ ውሕስነት ኣይህብን። መከላኸሊ ሕክምና ብዙሕ ግዜ ኣብ ክሊኒክ ተመላለስቲ ሕሙማት ብሓኪም ስፔሻሊስት ሳንቡእ ይግበር።</p>
 <p>ከከም ውልቃዊ ኩነታትኩም፣ ንኣብነት ሪፋምፒሲን ንኣርባዕተ ኣዋርሕ፣ ሪፋምፒሲን ምስ ኢዞኒያዚድ ንሰለስተ ኣዋርሕ፣ ወይ ኢዞኒያዚድ ንትሽዓተ ኣዋርሕ ክወሃብ ይኽእል። ምርጫ ኣብ ካልኦት መድሃኒታት፣ ዘለዉ ሕማማትን ባክተርያ ንመድሃኒት ዘለዎ ተቓውሞን ይምርኮስ። ጥቕምን ክመጹ ዝኽእሉ ጎድናዊ ሳዕቤናትን ምሳኹም ይግምገሙ።</p>
 <p>መድሃኒታት ከም ዝተሰማማዕኩምሉ ውሰዱ፣ ኣብ ናይ ክትትል ቆጸራታት እውን ተረኸቡ። ኣብ እዋን ሕክምና ዘይንቡር ምልክታት እንተለዉ፣ ንጉጅለ ሕክምና ኣዘራርቡ። መከላኸሊ ሕክምና እንተ ዘይወሰድኩም እውን፣ ብዛዕባ ዘድልዩ ናይ ክትትል ምርመራታት ምሳኹም ክንዘራረብ ኢና።</p>
 </section>
@@ -3554,16 +3482,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Кров беруть із вени. У лабораторії перевіряють, чи реагують імунні клітини на певні компоненти бактерій туберкульозу. Такі аналізи крові називаються IGRA. Бактерії у Ваш організм не вводяться, і тест не виявляє бактерії безпосередньо в крові. Попередня вакцинація проти туберкульозу (БЦЖ) не робить цей тест позитивним.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Важливо правильно обрати час</h2>
-<p>Після зараження може минути до восьми тижнів, перш ніж тест почне реагувати. Тому контактних осіб віком від 15 років без особливих ризиків тестують через вісім тижнів після останнього можливого заразного контакту. Негативний тест, проведений раніше, за потреби повторюють.</p>
-<p>За наявності симптомів, у дітей або за ослабленого імунітету потрібна раніша медична оцінка. Тоді Центр туберкульозу проведе аналіз крові раніше. Дітям до п’яти років профілактичні ліки можуть знадобитися ще до того, як інфекцію можна буде виявити.</p>
-
-<p><strong>Близькі контактні особи (з одного домогосподарства):</strong> Для близьких контактних осіб, наприклад тих, хто живе в одному домогосподарстві, рентген легень у службі охорони здоров’я роблять також одразу.</p>
+<p>Після зараження може минути до восьми тижнів, перш ніж тест почне реагувати. Тому контактних осіб віком від 15 років без особливих ризиків бажано тестувати через вісім тижнів після останнього можливого заразного контакту. Негативний тест, проведений раніше, за потреби повторюють.</p>
+<p>За наявності симптомів, у дітей або за ослабленого імунітету потрібна раніша медична оцінка. Тоді не чекайте запланованого аналізу крові. Дітям до п’яти років профілактичні ліки можуть знадобитися ще до того, як інфекцію можна буде виявити.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Що означає Ваш результат</h2>
-<p><strong>Негативний:</strong></p>
-<ul class="result-list"><li>Якщо останній контакт був щонайменше 8 тижнів тому, жодних додаткових заходів не потрібно.</li><li>Якщо останній контакт був менше ніж 8 тижнів тому, після закінчення 8 тижнів проводять другий тест QuantiFERON®.</li></ul>
-<p><strong>Позитивний:</strong> Це ще не означає, що у вас туберкульоз. Але для безпеки перед початком профілактичного лікування за допомогою рентгенівського знімка потрібно виключити вже наявне захворювання.</p>
-<ul class="result-list"><li>Далі в службі охорони здоров’я роблять рентген легень і, за потреби, досліджують мокротиння.</li><li>Після цього рекомендується профілактичне лікування в лікаря-пульмонолога в амбулаторних умовах.</li><li>Повторний контрольний рентген рекомендується після завершення профілактичного лікування або протягом одного року після останнього контакту.</li><li>Якщо цей контроль не проводили амбулаторно, служба охорони здоров’я за потреби знову запросить вас на нього.</li></ul>
+<p><strong>Негативний:</strong> Відповідної імунної реакції не виявлено. Якщо тест проведено у правильний час і немає особливих ризиків, подальші обстеження зазвичай не потрібні. Проте лише негативний тест не дає змоги надійно виключити зовсім недавнє зараження або захворювання на туберкульоз.</p>
+<p><strong>Позитивний:</strong> Інфекція ймовірна. Тест не показує, коли й від кого Ви заразилися, а також чи хворі Ви або заразні. Далі проводять лікарський огляд і зазвичай рентген легень; за відхилень потрібні додаткові обстеження.</p>
 <p><strong>Невизначений:</strong> Тест не дає надійного висновку. Причиною може бути зразок крові або ослаблена імунна реакція. Зазвичай досліджують новий зразок крові; іноді потрібні інші обстеження.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Інфікованість не означає захворювання</h2>
@@ -3571,7 +3495,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Більшість інфікованих людей не хворіють на туберкульоз. Ризик найвищий протягом перших двох років після зараження. Особливо підвищений ризик мають маленькі діти та люди з ослабленим імунітетом.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Лікування може запобігти захворюванню</h2>
-<p>Після підтвердження інфекції під час обстеження контактних осіб зазвичай рекомендують профілактичне лікування, якщо немає причин проти нього. Спочатку необхідно виключити захворювання на туберкульоз. Лікування значно знижує ризик. Профілактичне лікування зазвичай проводить пульмонолог в амбулаторній практиці.</p>
+<p>Після підтвердження інфекції під час обстеження контактних осіб зазвичай рекомендують профілактичне лікування, якщо немає причин проти нього. Спочатку необхідно виключити захворювання на туберкульоз. Лікування значно знижує ризик, але не забезпечує повного захисту. Профілактичне лікування зазвичай проводить пульмонолог в амбулаторній практиці.</p>
 <p>Залежно від Вашої ситуації можливі, наприклад, рифампіцин протягом чотирьох місяців, рифампіцин разом з ізоніазидом протягом трьох місяців або ізоніазид протягом дев’яти місяців. Вибір залежить, зокрема, від інших ліків, наявних захворювань і можливої стійкості бактерій до препаратів. Користь і можливі побічні ефекти обговорюють разом із Вами.</p>
 <p>Приймайте ліки за узгодженою схемою та приходьте на контрольні прийоми. За незвичних симптомів під час лікування звертайтеся до лікувальної команди. Навіть якщо Ви не отримуєте профілактичного лікування, ми обговоримо з Вами необхідні контрольні обстеження.</p>
 </section>
@@ -3600,16 +3524,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Veenist võetakse verd. Laboris kontrollitakse, kas immuunrakud reageerivad tuberkuloosibakterite teatud koostisosadele. Selliseid vereanalüüse nimetatakse IGRAdeks. Teie organismi ei viida baktereid ning test ei tuvasta baktereid otse veres. Varasem tuberkuloosivaktsineerimine (BCG) ei muuda seda testi positiivseks.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Õige ajastus on tähtis</h2>
-<p>Pärast nakatumist võib kuluda kuni kaheksa nädalat, enne kui test reageerib. Seetõttu testitakse vähemalt 15-aastaseid kontaktseid, kellel puuduvad eririskid, kaheksa nädalat pärast viimast võimalikku nakkusohtlikku kontakti. Varem tehtud negatiivset testi võib olla vaja korrata.</p>
-<p>Sümptomite korral, lastel või nõrgenenud immuunsüsteemiga inimestel on vajalik varasem arstlik hindamine. Siis teeb tuberkuloosikeskus vereanalüüsi varem. Alla viieaastased lapsed võivad vajada ennetavaid ravimeid juba enne, kui nakkust saab tuvastada.</p>
-
-<p><strong>Lähikontaktsed (samas majapidamises elavad):</strong> Lähikontaktsetele, näiteks samas majapidamises elavatele inimestele, tehakse kopsude röntgenülesvõte rahvaterviseametis ka kohe.</p>
+<p>Pärast nakatumist võib kuluda kuni kaheksa nädalat, enne kui test reageerib. Seetõttu testitakse vähemalt 15-aastaseid kontaktseid, kellel puuduvad eririskid, eelistatult kaheksa nädalat pärast viimast võimalikku nakkusohtlikku kontakti. Varem tehtud negatiivset testi võib olla vaja korrata.</p>
+<p>Sümptomite korral, lastel või nõrgenenud immuunsüsteemiga inimestel on vajalik varasem arstlik hindamine. Siis ärge oodake kavandatud vereanalüüsini. Alla viieaastased lapsed võivad vajada ennetavaid ravimeid juba enne, kui nakkust saab tuvastada.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Mida teie tulemus tähendab</h2>
-<p><strong>Negatiivne:</strong></p>
-<ul class="result-list"><li>Kui viimasest kontaktist on möödas vähemalt 8 nädalat, pole täiendavaid meetmeid vaja.</li><li>Kui viimasest kontaktist on möödas vähem kui 8 nädalat, tehakse pärast 8 nädala möödumist teine QuantiFERON®-test.</li></ul>
-<p><strong>Positiivne:</strong> See ei tähenda veel, et teil on tuberkuloos. Ohutuse huvides tuleb aga enne ennetava ravi alustamist röntgenpildiga välistada juba olemasolev haigus.</p>
-<ul class="result-list"><li>Seejärel tehakse rahvaterviseametis kopsude röntgenülesvõte ja vajaduse korral rögauuring.</li><li>Pärast seda soovitatakse ennetavat ravi vastuvõtul töötava kopsuarsti (pulmonoloogi) juures.</li><li>Kontrollröntgenit soovitatakse pärast ennetava ravi lõppu või ühe aasta jooksul pärast viimast kontakti.</li><li>Kui seda kontrolluuringut ei tehtud ambulatoorselt, võib rahvaterviseamet teid selleks uuesti kutsuda.</li></ul>
+<p><strong>Negatiivne:</strong> Vastavat immuunreaktsiooni ei tuvastatud. Kui test tehti õigel ajal ja eririskid puuduvad, pole enamasti täiendavaid uuringuid vaja. Negatiivne test üksi ei välista siiski usaldusväärselt väga hiljutist nakkust ega tuberkuloosihaigust.</p>
+<p><strong>Positiivne:</strong> Nakkus on tõenäoline. Test ei näita, millal või kellelt nakkuse saite, ega seda, kas olete haige või nakkusohtlik. Järgneb arstlik läbivaatus ja tavaliselt kopsuröntgen; kõrvalekallete korral on vaja lisauuringuid.</p>
 <p><strong>Määramatu:</strong> Test ei võimalda usaldusväärset järeldust. Põhjuseks võib olla vereproov või nõrgenenud immuunreaktsioon. Tavaliselt uuritakse uut vereproovi; mõnikord on vaja muid uuringuid.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Nakatumine ei tähenda haigestumist</h2>
@@ -3617,7 +3537,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Enamik nakatunud inimesi ei haigestu tuberkuloosi. Risk on suurim esimesel kahel aastal pärast nakatumist. Eriti suur on haigestumisrisk väikelastel ja nõrgenenud immuunsüsteemiga inimestel.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Ravi võib haigestumist vältida</h2>
-<p>Kontaktsete uuringus kinnitatud nakkuse korral soovitatakse üldjuhul ennetavat ravi, kui selleks pole vastunäidustusi. Kõigepealt tuleb välistada tuberkuloosihaigus. Ravi vähendab haigestumisriski oluliselt. Ennetavat ravi korraldab tavaliselt ambulatoorselt töötav kopsuarst.</p>
+<p>Kontaktsete uuringus kinnitatud nakkuse korral soovitatakse üldjuhul ennetavat ravi, kui selleks pole vastunäidustusi. Kõigepealt tuleb välistada tuberkuloosihaigus. Ravi vähendab haigestumisriski oluliselt, kuid ei anna täielikku kaitset. Ennetavat ravi korraldab tavaliselt ambulatoorselt töötav kopsuarst.</p>
 <p>Olenevalt teie olukorrast võib kasutada näiteks rifampitsiini neli kuud, rifampitsiini koos isoniasiidiga kolm kuud või isoniasiidi üheksa kuud. Valik sõltub muu hulgas teistest ravimitest, kaasuvatest haigustest ja bakterite võimalikust ravimiresistentsusest. Kasu ja võimalikke kõrvaltoimeid kaalutakse koos teiega.</p>
 <p>Võtke ravimeid kokkulepitud viisil ja käige kontrollvisiitidel. Ebatavaliste vaevuste tekkimisel ravi ajal pöörduge ravimeeskonna poole. Ka juhul, kui te ei saa ennetavat ravi, arutame teiega vajalikke kontrolluuringuid.</p>
 </section>
@@ -3646,16 +3566,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Asinis paņem no vēnas. Laboratorijā pārbauda, vai imūnās šūnas reaģē uz noteiktām tuberkulozes baktēriju sastāvdaļām. Šādus asins testus sauc par IGRA. Jūsu organismā neievada baktērijas, un tests nenosaka baktērijas tieši asinīs. Agrāka vakcinācija pret tuberkulozi (BCG) nepadara šo testu pozitīvu.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Pareizais laiks ir svarīgs</h2>
-<p>Pēc inficēšanās var paiet līdz astoņām nedēļām, līdz tests reaģē. Tādēļ kontaktpersonas no 15 gadu vecuma bez īpašiem riskiem testē astoņas nedēļas pēc pēdējā iespējamā infekciozā kontakta. Agrāk veiktu negatīvu testu var būt nepieciešams atkārtot.</p>
-<p>Ja ir simptomi, bērniem vai cilvēkiem ar novājinātu imūnsistēmu nepieciešama agrāka ārsta izvērtēšana. Tādā gadījumā Tuberkulozes centrs veic asins testu agrāk. Bērniem līdz piecu gadu vecumam profilaktiskas zāles var būt vajadzīgas, pirms infekciju vēl iespējams noteikt.</p>
-
-<p><strong>Tuvi kontaktpersonas (vienas mājsaimniecības locekļi):</strong> Tuviem kontaktiem, piemēram, vienā mājsaimniecībā dzīvojošajiem, plaušu rentgena izmeklējumu veselības dienestā veic arī nekavējoties.</p>
+<p>Pēc inficēšanās var paiet līdz astoņām nedēļām, līdz tests reaģē. Tādēļ kontaktpersonas no 15 gadu vecuma bez īpašiem riskiem vēlams testēt astoņas nedēļas pēc pēdējā iespējamā infekciozā kontakta. Agrāk veiktu negatīvu testu var būt nepieciešams atkārtot.</p>
+<p>Ja ir simptomi, bērniem vai cilvēkiem ar novājinātu imūnsistēmu nepieciešama agrāka ārsta izvērtēšana. Tad negaidiet plānoto asins testu. Bērniem līdz piecu gadu vecumam profilaktiskas zāles var būt vajadzīgas, pirms infekciju vēl iespējams noteikt.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Ko nozīmē Jūsu rezultāts</h2>
-<p><strong>Negatīvs:</strong></p>
-<ul class="result-list"><li>Ja kopš pēdējā kontakta pagājušas vismaz 8 nedēļas, citi pasākumi nav vajadzīgi.</li><li>Ja kopš pēdējā kontakta pagājušas mazāk nekā 8 nedēļas, pēc 8 nedēļu beigām veic otru QuantiFERON® testu.</li></ul>
-<p><strong>Pozitīvs:</strong> Tas vēl nenozīmē, ka jums ir tuberkuloze. Taču drošības labad pirms profilaktiskās ārstēšanas sākšanas ar rentgenu jāizslēdz jau esoša slimība.</p>
-<ul class="result-list"><li>Tad veselības dienestā veic plaušu rentgena izmeklējumu un, ja vajadzīgs, krēpu izmeklējumu.</li><li>Pēc tam ieteicama profilaktiska ārstēšana pie privātprakses pulmonologa (plaušu ārsta).</li><li>Kontroles rentgens ieteicams pēc profilaktiskās ārstēšanas beigām vai viena gada laikā pēc pēdējā kontakta.</li><li>Ja šī kontrole nav veikta ambulatori, veselības dienests var jūs uz to uzaicināt vēlreiz.</li></ul>
+<p><strong>Negatīvs:</strong> Atbilstoša imūnā reakcija nav konstatēta. Ja tests veikts pareizajā laikā un nav īpašu risku, parasti papildu izmeklējumi nav nepieciešami. Tomēr negatīvs tests viens pats nevar droši izslēgt ļoti nesenu infekciju vai tuberkulozes slimību.</p>
+<p><strong>Pozitīvs:</strong> Infekcija ir iespējama ar lielu varbūtību. Tests neparāda, kad vai no kā esat inficējies, ne arī to, vai esat slims vai infekciozs. Seko ārsta apskate un parasti plaušu rentgenogrāfija; ja konstatē novirzes, vajadzīgi papildu izmeklējumi.</p>
 <p><strong>Nenoteikts:</strong> Tests neļauj izdarīt uzticamu secinājumu. Iemesls var būt asins paraugs vai novājināta imūnā reakcija. Parasti pārbauda jaunu asins paraugu; dažreiz nepieciešami citi izmeklējumi.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Inficēts nenozīmē slims</h2>
@@ -3663,7 +3579,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Vairums inficēto cilvēku ar tuberkulozi nesaslimst. Risks ir visaugstākais pirmajos divos gados pēc inficēšanās. Īpaši paaugstināts risks ir maziem bērniem un cilvēkiem ar novājinātu imūnsistēmu.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Ārstēšana var novērst slimību</h2>
-<p>Pēc infekcijas apstiprināšanas kontaktpersonu izmeklēšanā parasti iesaka profilaktisku ārstēšanu, ja nav iemeslu to neveikt. Vispirms jāizslēdz tuberkulozes slimība. Ārstēšana ievērojami samazina saslimšanas risku. Profilaktisko ārstēšanu parasti veic pneimonologs ambulatorā praksē.</p>
+<p>Pēc infekcijas apstiprināšanas kontaktpersonu izmeklēšanā parasti iesaka profilaktisku ārstēšanu, ja nav iemeslu to neveikt. Vispirms jāizslēdz tuberkulozes slimība. Ārstēšana ievērojami samazina saslimšanas risku, taču nenodrošina pilnīgu aizsardzību. Profilaktisko ārstēšanu parasti veic pneimonologs ambulatorā praksē.</p>
 <p>Atkarībā no personīgās situācijas var lietot, piemēram, rifampicīnu četrus mēnešus, rifampicīnu kopā ar izoniazīdu trīs mēnešus vai izoniazīdu deviņus mēnešus. Izvēle ir atkarīga arī no citām zālēm, esošām slimībām un iespējamās baktēriju rezistences pret zālēm. Ieguvumus un iespējamās blakusparādības izvērtē kopā ar Jums.</p>
 <p>Lietojiet zāles, kā norunāts, un ierodieties uz kontroles vizītēm. Ja ārstēšanas laikā rodas neparasti simptomi, sazinieties ar ārstējošo komandu. Arī tad, ja nesaņemat profilaktisku ārstēšanu, pārrunāsim nepieciešamās pārbaudes.</p>
 </section>
@@ -3692,16 +3608,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Kraujas paimamas iš venos. Laboratorijoje tikrinama, ar imuninės ląstelės reaguoja į tam tikras tuberkuliozės bakterijų dalis. Tokie kraujo tyrimai vadinami IGRA. Į Jūsų organizmą bakterijų neįleidžiama, o tyrimas neaptinka bakterijų tiesiogiai kraujyje. Ankstesnis skiepas nuo tuberkuliozės (BCG) nesukelia teigiamo šio testo rezultato.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Svarbu tinkamas laikas</h2>
-<p>Po užsikrėtimo gali praeiti iki aštuonių savaičių, kol testas pradės reaguoti. Todėl kontaktą turėjusius asmenis nuo 15 metų be ypatingų rizikų tiriama praėjus aštuonioms savaitėms po paskutinio galimai užkrečiamo kontakto. Anksčiau atliktą neigiamą testą gali tekti pakartoti.</p>
-<p>Esant simptomams, vaikams ar žmonėms su nusilpusiu imunitetu reikia ankstesnio gydytojo įvertinimo. Tuomet tuberkuliozės centras kraujo tyrimą atlieka anksčiau. Jaunesniems nei penkerių metų vaikams profilaktinių vaistų gali reikėti dar prieš tai, kai infekcija tampa nustatoma.</p>
-
-<p><strong>Artimi kontaktiniai asmenys (to paties namų ūkio nariai):</strong> Artimiems kontaktiniams asmenims, pavyzdžiui, gyvenantiems tame pačiame namų ūkyje, plaučių rentgeno nuotrauka sveikatos tarnyboje daroma taip pat iš karto.</p>
+<p>Po užsikrėtimo gali praeiti iki aštuonių savaičių, kol testas pradės reaguoti. Todėl kontaktą turėjusius asmenis nuo 15 metų be ypatingų rizikų pageidautina tirti praėjus aštuonioms savaitėms po paskutinio galimai užkrečiamo kontakto. Anksčiau atliktą neigiamą testą gali tekti pakartoti.</p>
+<p>Esant simptomams, vaikams ar žmonėms su nusilpusiu imunitetu reikia ankstesnio gydytojo įvertinimo. Tuomet nelaukite numatyto kraujo tyrimo. Jaunesniems nei penkerių metų vaikams profilaktinių vaistų gali reikėti dar prieš tai, kai infekcija tampa nustatoma.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Ką reiškia Jūsų rezultatas</h2>
-<p><strong>Neigiamas:</strong></p>
-<ul class="result-list"><li>Jei nuo paskutinio kontakto praėjo bent 8 savaitės, kitų priemonių nereikia.</li><li>Jei nuo paskutinio kontakto praėjo mažiau nei 8 savaitės, praėjus 8 savaitėms atliekamas antrasis QuantiFERON® testas.</li></ul>
-<p><strong>Teigiamas:</strong> Tai dar nereiškia, kad sergate tuberkulioze. Tačiau saugumo sumetimais prieš pradedant prevencinį gydymą rentgeno nuotrauka reikia atmesti jau esančią ligą.</p>
-<ul class="result-list"><li>Toliau sveikatos tarnyboje daroma plaučių rentgeno nuotrauka ir, jei reikia, tiriami skrepliai.</li><li>Po to rekomenduojamas prevencinis gydymas pas ambulatorinį plaučių ligų gydytoją (pulmonologą).</li><li>Kontrolinė rentgeno nuotrauka rekomenduojama baigus prevencinį gydymą arba per vienerius metus po paskutinio kontakto.</li><li>Jei šis kontrolinis tyrimas nebuvo atliktas ambulatoriškai, sveikatos tarnyba gali jus vėl pakviesti.</li></ul>
+<p><strong>Neigiamas:</strong> Atitinkama imuninė reakcija nenustatyta. Jei testas atliktas tinkamu laiku ir nėra ypatingų rizikų, tolesnių tyrimų paprastai nereikia. Tačiau vien neigiamas testas negali patikimai atmesti labai nesenos infekcijos ar tuberkuliozės ligos.</p>
+<p><strong>Teigiamas:</strong> Infekcija tikėtina. Testas neparodo, kada ar nuo ko užsikrėtėte, taip pat ar sergate ir galite užkrėsti kitus. Toliau atliekama gydytojo apžiūra ir paprastai plaučių rentgenograma; radus pakitimų reikia papildomų tyrimų.</p>
 <p><strong>Neapibrėžtas:</strong> Testas nesuteikia patikimos išvados. Priežastis gali būti kraujo mėginys ar susilpnėjusi imuninė reakcija. Paprastai tiriamas naujas mėginys; kartais reikia kitų tyrimų.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Užsikrėtimas nereiškia ligos</h2>
@@ -3709,7 +3621,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Dauguma užsikrėtusių žmonių tuberkulioze nesuserga. Rizika didžiausia per pirmuosius dvejus metus po užsikrėtimo. Ypač padidėjusi rizika yra mažiems vaikams ir žmonėms, kurių imunitetas nusilpęs.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Gydymas gali apsaugoti nuo ligos</h2>
-<p>Patvirtinus infekciją tiriant kontaktinius asmenis, paprastai rekomenduojamas profilaktinis gydymas, jei nėra priežasčių jo netaikyti. Pirmiausia būtina atmesti tuberkuliozės ligą. Gydymas gerokai sumažina susirgimo riziką. Profilaktinį gydymą paprastai skiria ir prižiūri ambulatoriškai dirbantis pulmonologas.</p>
+<p>Patvirtinus infekciją tiriant kontaktinius asmenis, paprastai rekomenduojamas profilaktinis gydymas, jei nėra priežasčių jo netaikyti. Pirmiausia būtina atmesti tuberkuliozės ligą. Gydymas gerokai sumažina susirgimo riziką, tačiau visiškos apsaugos nesuteikia. Profilaktinį gydymą paprastai skiria ir prižiūri ambulatoriškai dirbantis pulmonologas.</p>
 <p>Priklausomai nuo asmeninės situacijos, galima vartoti, pavyzdžiui, rifampiciną keturis mėnesius, rifampiciną su izoniazidu tris mėnesius arba izoniazidą devynis mėnesius. Pasirinkimas priklauso ir nuo kitų vaistų, esamų ligų bei galimo bakterijų atsparumo vaistams. Nauda ir galimas šalutinis poveikis aptariami kartu su Jumis.</p>
 <p>Vartokite vaistus, kaip sutarta, ir atvykite į kontrolinius vizitus. Jei gydymo metu atsiranda neįprastų simptomų, kreipkitės į gydymo komandą. Net jei negaunate profilaktinio gydymo, aptarsime su Jumis reikiamas kontrolines patikras.</p>
 </section>
@@ -3738,16 +3650,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Се зема крв од вена. Во лабораторијата се проверува дали имунолошките клетки реагираат на одредени делови од бактериите на туберкулозата. Овие крвни тестови се нарекуваат IGRA. Во Вашето тело не се внесуваат бактерии и тестот не открива бактерии директно во крвта. Претходна вакцинација против туберкулоза (BCG) не го прави овој тест позитивен.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Важен е вистинскиот момент</h2>
-<p>По заразувањето може да поминат до осум недели додека тестот да реагира. Затоа контактните лица на возраст од 15 години нагоре без посебни ризици се тестираат осум недели по последниот можен заразен контакт. Негативен тест направен порано можеби ќе треба да се повтори.</p>
-<p>При симптоми, кај деца или при ослабен имунитет, потребна е порана лекарска процена. Тогаш Центарот за туберкулоза го прави крвниот тест порано. Деца под пет години може да имаат потреба од превентивни лекови уште пред инфекцијата да може да се открие.</p>
-
-<p><strong>Блиски контакти (лица од истото домаќинство):</strong> Кај блиските контакти, на пример лицата од истото домаќинство, веднаш се прави и рендгенско снимање на белите дробови во здравствената служба.</p>
+<p>По заразувањето може да поминат до осум недели додека тестот да реагира. Затоа контактните лица на возраст од 15 години нагоре без посебни ризици по можност се тестираат осум недели по последниот можен заразен контакт. Негативен тест направен порано можеби ќе треба да се повтори.</p>
+<p>При симптоми, кај деца или при ослабен имунитет, потребна е порана лекарска процена. Тогаш не чекајте до закажаниот крвен тест. Деца под пет години може да имаат потреба од превентивни лекови уште пред инфекцијата да може да се открие.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Што значи Вашиот резултат</h2>
-<p><strong>Негативен:</strong></p>
-<ul class="result-list"><li>Ако последниот контакт бил пред најмалку 8 недели, не се потребни понатамошни мерки.</li><li>Ако последниот контакт бил пред помалку од 8 недели, по истекот на 8-те недели се прави втор QuantiFERON® тест.</li></ul>
-<p><strong>Позитивен:</strong> Тоа сè уште не значи дека имате туберкулоза. Но за безбедност, пред започнувањето на превентивното лекување со рендгенско снимање мора да се исклучи веќе постоечко заболување.</p>
-<ul class="result-list"><li>Потоа во здравствената служба се прави рендгенско снимање на белите дробови и, доколку е потребно, преглед на искашлок.</li><li>Потоа се препорачува превентивно лекување кај пулмолог во амбулантска пракса.</li><li>Се препорачува контролно рендгенско снимање по завршувањето на превентивното лекување или во рок од една година по последниот контакт.</li><li>Ако овој контролен преглед не е направен амбулантски, здравствената служба може повторно да ве покани.</li></ul>
+<p><strong>Негативен:</strong> Не е откриена соодветна имунолошка реакција. Ако тестот е направен во вистинско време и нема посебни ризици, обично не се потребни други испитувања. Сепак, само негативен тест не може сигурно да исклучи многу неодамнешна инфекција или туберкулозна болест.</p>
+<p><strong>Позитивен:</strong> Веројатно постои инфекција. Тестот не покажува кога или од кого сте се заразиле, ниту дали сте болни или заразни. Следуваат лекарски преглед и обично рендгенска снимка на белите дробови; при ненормални наоди се потребни дополнителни испитувања.</p>
 <p><strong>Неодреден:</strong> Тестот не овозможува сигурен заклучок. Причината може да биде примерокот од крв или ослабената имунолошка реакција. Обично се испитува нов примерок; понекогаш се потребни други испитувања.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Инфициран не значи болен</h2>
@@ -3755,7 +3663,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Повеќето инфицирани лица не заболуваат од туберкулоза. Ризикот е најголем во првите две години по заразувањето. Особено малите деца и лицата со ослабен имунитет имаат зголемен ризик од заболување.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Лекувањето може да ја спречи болеста</h2>
-<p>По потврдена инфекција при испитување на контактни лица обично се препорачува превентивно лекување, освен ако постојат причини против него. Прво мора да се исклучи туберкулозна болест. Лекувањето значително го намалува ризикот. Превентивното лекување обично го спроведува пулмолог во амбулантска ординација.</p>
+<p>По потврдена инфекција при испитување на контактни лица обично се препорачува превентивно лекување, освен ако постојат причини против него. Прво мора да се исклучи туберкулозна болест. Лекувањето значително го намалува ризикот, но не обезбедува целосна заштита. Превентивното лекување обично го спроведува пулмолог во амбулантска ординација.</p>
 <p>Зависно од личната состојба, може да се користи, на пример, рифампицин четири месеци, рифампицин со изонијазид три месеци или изонијазид девет месеци. Изборот зависи и од други лекови, постојните болести и можната отпорност на бактериите на лекови. Користа и можните несакани ефекти се разгледуваат заедно со Вас.</p>
 <p>Земајте ги лековите како што е договорено и доаѓајте на контролните прегледи. При необични симптоми за време на лекувањето контактирајте го тимот што Ве лекува. И ако не примате превентивно лекување, ќе ги договориме со Вас потребните контроли.</p>
 </section>
@@ -3784,16 +3692,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Merret gjak nga një venë. Në laborator kontrollohet nëse qelizat imunitare reagojnë ndaj disa përbërësve të baktereve të tuberkulozit. Këto analiza gjaku quhen IGRA. Në trupin tuaj nuk futen baktere dhe testi nuk zbulon drejtpërdrejt baktere në gjak. Vaksinimi i mëparshëm kundër tuberkulozit (BCG) nuk e bën këtë test pozitiv.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Koha e duhur është e rëndësishme</h2>
-<p>Pas infektimit mund të duhen deri në tetë javë që testi të reagojë. Prandaj personat e kontaktit të moshës 15 vjeç e lart, pa rreziqe të veçanta, testohen tetë javë pas kontaktit të fundit të mundshëm ngjitës. Një test negativ i kryer më herët mund të ketë nevojë të përsëritet.</p>
-<p>Nëse ka simptoma, te fëmijët ose kur imuniteti është i dobësuar, nevojitet vlerësim mjekësor më herët. Atëherë Qendra e Tuberkulozit e kryen analizën e gjakut më herët. Fëmijët nën pesë vjeç mund të kenë nevojë për ilaçe parandaluese edhe përpara se infeksioni të jetë i zbulueshëm.</p>
-
-<p><strong>Kontaktet e ngushta (persona të së njëjtës familje):</strong> Tek kontaktet e ngushta, për shembull personat që jetojnë në të njëjtën familje, radiografia e mushkërive në shërbimin e shëndetit publik kryhet gjithashtu menjëherë.</p>
+<p>Pas infektimit mund të duhen deri në tetë javë që testi të reagojë. Prandaj personat e kontaktit të moshës 15 vjeç e lart, pa rreziqe të veçanta, preferohet të testohen tetë javë pas kontaktit të fundit të mundshëm ngjitës. Një test negativ i kryer më herët mund të ketë nevojë të përsëritet.</p>
+<p>Nëse ka simptoma, te fëmijët ose kur imuniteti është i dobësuar, nevojitet vlerësim mjekësor më herët. Atëherë mos prisni deri te analiza e planifikuar e gjakut. Fëmijët nën pesë vjeç mund të kenë nevojë për ilaçe parandaluese edhe përpara se infeksioni të jetë i zbulueshëm.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Çfarë do të thotë rezultati juaj</h2>
-<p><strong>Negativ:</strong></p>
-<ul class="result-list"><li>Nëse kontakti i fundit ka ndodhur të paktën 8 javë më parë, nuk nevojiten masa të tjera.</li><li>Nëse kontakti i fundit ka ndodhur më pak se 8 javë më parë, pas kalimit të 8 javëve kryhet një test i dytë QuantiFERON®.</li></ul>
-<p><strong>Pozitiv:</strong> Kjo nuk do të thotë ende se keni tuberkuloz. Megjithatë, për siguri, para fillimit të trajtimit parandalues duhet të përjashtohet me radiografi një sëmundje që ekziston tashmë.</p>
-<ul class="result-list"><li>Pason një radiografi e mushkërive në shërbimin e shëndetit publik dhe, nëse nevojitet, një ekzaminim i pështymës së kolluar.</li><li>Pas kësaj rekomandohet trajtim parandalues te një pneumolog në praktikë ambulatore.</li><li>Rekomandohet një radiografi kontrolli pas përfundimit të trajtimit parandalues ose brenda një viti nga kontakti i fundit.</li><li>Nëse ky kontroll nuk është kryer në mënyrë ambulatore, shërbimi i shëndetit publik mund t’ju ftojë përsëri.</li></ul>
+<p><strong>Negativ:</strong> Nuk u zbulua reagimi përkatës imunitar. Nëse testi u krye në kohën e duhur dhe nuk ka rreziqe të veçanta, zakonisht nuk nevojiten ekzaminime të tjera. Megjithatë, një test negativ i vetëm nuk mund të përjashtojë me siguri një infeksion shumë të fundit ose sëmundjen e tuberkulozit.</p>
+<p><strong>Pozitiv:</strong> Infeksioni është i mundshëm me probabilitet të lartë. Testi nuk tregon kur ose nga kush jeni infektuar, as nëse jeni i sëmurë ose ngjitës. Më pas kryhet ekzaminim mjekësor dhe zakonisht radiografi e mushkërive; gjetjet jo normale kërkojnë ekzaminime shtesë.</p>
 <p><strong>I papërcaktuar:</strong> Testi nuk lejon një përfundim të besueshëm. Shkak mund të jetë mostra e gjakut ose reagimi i dobësuar imunitar. Zakonisht testohet një mostër e re gjaku; ndonjëherë nevojiten ekzaminime të tjera.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>I infektuar nuk do të thotë i sëmurë</h2>
@@ -3801,7 +3705,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Shumica e personave të infektuar nuk sëmuren me tuberkuloz. Rreziku është më i lartë gjatë dy viteve të para pas infektimit. Veçanërisht fëmijët e vegjël dhe personat me imunitet të dobësuar kanë rrezik të shtuar për t’u sëmurë.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Trajtimi mund ta parandalojë sëmundjen</h2>
-<p>Pas konfirmimit të infeksionit gjatë ekzaminimit të kontakteve, zakonisht rekomandohet trajtim parandalues, nëse nuk ka arsye kundër tij. Fillimisht duhet përjashtuar sëmundja e tuberkulozit. Trajtimi e ul ndjeshëm rrezikun. Trajtimi parandalues zakonisht kryhet nga një specialist i mushkërive në praktikën ambulatore.</p>
+<p>Pas konfirmimit të infeksionit gjatë ekzaminimit të kontakteve, zakonisht rekomandohet trajtim parandalues, nëse nuk ka arsye kundër tij. Fillimisht duhet përjashtuar sëmundja e tuberkulozit. Trajtimi e ul ndjeshëm rrezikun, por nuk jep mbrojtje të plotë. Trajtimi parandalues zakonisht kryhet nga një specialist i mushkërive në praktikën ambulatore.</p>
 <p>Sipas situatës personale, mund të përdoret për shembull rifampicinë për katër muaj, rifampicinë me izoniazid për tre muaj ose izoniazid për nëntë muaj. Zgjedhja varet ndër të tjera nga ilaçet e tjera, sëmundjet ekzistuese dhe rezistenca e mundshme e baktereve ndaj ilaçeve. Përfitimet dhe efektet anësore të mundshme peshohen bashkë me ju.</p>
 <p>Merrini ilaçet sipas marrëveshjes dhe respektoni vizitat e kontrollit. Nëse keni simptoma të pazakonta gjatë trajtimit, kontaktoni ekipin mjekësor. Edhe nëse nuk merrni trajtim parandalues, do të diskutojmë me ju kontrollet e nevojshme.</p>
 </section>
@@ -3830,16 +3734,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>จะเจาะเลือดจากหลอดเลือดดำ ห้องปฏิบัติการจะตรวจว่าเซลล์ภูมิคุ้มกันตอบสนองต่อส่วนประกอบบางอย่างของเชื้อวัณโรคหรือไม่ การตรวจเลือดประเภทนี้เรียกว่า IGRA ไม่มีการนำแบคทีเรียเข้าสู่ร่างกาย และการตรวจนี้ไม่ได้ตรวจหาแบคทีเรียโดยตรงในเลือด การเคยฉีดวัคซีนวัณโรค (BCG) ไม่ทำให้ผลตรวจนี้เป็นบวก</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>ช่วงเวลาที่เหมาะสมสำคัญ</h2>
-<p>หลังติดเชื้ออาจใช้เวลาถึงแปดสัปดาห์ก่อนที่การตรวจจะมีปฏิกิริยา ดังนั้นผู้สัมผัสอายุ 15 ปีขึ้นไปที่ไม่มีความเสี่ยงเฉพาะ จะตรวจเมื่อครบแปดสัปดาห์หลังการสัมผัสครั้งสุดท้ายที่อาจแพร่เชื้อได้ ผลลบจากการตรวจที่เร็วกว่านั้นอาจจำเป็นต้องตรวจซ้ำ</p>
-<p>หากมีอาการ เป็นเด็ก หรือมีภูมิคุ้มกันอ่อนแอ จำเป็นต้องได้รับการประเมินจากแพทย์เร็วกว่านั้น ในกรณีนี้ ศูนย์วัณโรคจะตรวจเลือดให้เร็วขึ้น เด็กอายุต่ำกว่าห้าปีอาจต้องได้รับยาป้องกันแม้ยังตรวจไม่พบการติดเชื้อ</p>
-
-<p><strong>ผู้สัมผัสใกล้ชิด (ผู้อยู่บ้านเดียวกัน):</strong> สำหรับผู้สัมผัสใกล้ชิด เช่น ผู้ที่อาศัยอยู่ในครัวเรือนเดียวกัน จะเอกซเรย์ปอดที่สำนักงานสาธารณสุขทันทีด้วย</p>
+<p>หลังติดเชื้ออาจใช้เวลาถึงแปดสัปดาห์ก่อนที่การตรวจจะมีปฏิกิริยา ดังนั้นผู้สัมผัสอายุ 15 ปีขึ้นไปที่ไม่มีความเสี่ยงเฉพาะ ควรตรวจเมื่อครบแปดสัปดาห์หลังการสัมผัสครั้งสุดท้ายที่อาจแพร่เชื้อได้ ผลลบจากการตรวจที่เร็วกว่านั้นอาจจำเป็นต้องตรวจซ้ำ</p>
+<p>หากมีอาการ เป็นเด็ก หรือมีภูมิคุ้มกันอ่อนแอ จำเป็นต้องได้รับการประเมินจากแพทย์เร็วกว่านั้น อย่ารอจนถึงนัดตรวจเลือด เด็กอายุต่ำกว่าห้าปีอาจต้องได้รับยาป้องกันแม้ยังตรวจไม่พบการติดเชื้อ</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>ผลตรวจของท่านหมายความว่าอย่างไร</h2>
-<p><strong>ลบ:</strong></p>
-<ul class="result-list"><li>หากการสัมผัสครั้งล่าสุดผ่านมาอย่างน้อย 8 สัปดาห์ ไม่จำเป็นต้องดำเนินการใดเพิ่มเติม</li><li>หากการสัมผัสครั้งล่าสุดผ่านมาน้อยกว่า 8 สัปดาห์ จะตรวจ QuantiFERON® ครั้งที่สองเมื่อครบ 8 สัปดาห์แล้ว</li></ul>
-<p><strong>บวก:</strong> ซึ่งยังไม่ได้หมายความว่าท่านเป็นวัณโรค แต่เพื่อความปลอดภัย ก่อนเริ่มการรักษาเชิงป้องกันต้องใช้ภาพเอกซเรย์ยืนยันว่ายังไม่มีการเจ็บป่วยอยู่ก่อนแล้ว</p>
-<ul class="result-list"><li>จากนั้นจะเอกซเรย์ปอดที่สำนักงานสาธารณสุข และหากจำเป็นจะตรวจเสมหะ</li><li>หลังจากนั้นแนะนำให้รับการรักษาเชิงป้องกันกับแพทย์ผู้เชี่ยวชาญด้านโรคปอด (แพทย์ปอด) ที่คลินิกภายนอกโรงพยาบาล</li><li>แนะนำให้เอกซเรย์ติดตามผลอีกครั้งเมื่อรักษาเชิงป้องกันเสร็จสิ้น หรือภายใน 1 ปีหลังการสัมผัสครั้งล่าสุด</li><li>หากไม่ได้ตรวจติดตามผลนี้แบบผู้ป่วยนอก สำนักงานสาธารณสุขอาจเชิญท่านมาตรวจอีกครั้ง</li></ul>
+<p><strong>ลบ:</strong> ไม่พบการตอบสนองของภูมิคุ้มกันที่เกี่ยวข้อง หากตรวจในเวลาที่เหมาะสมและไม่มีความเสี่ยงเฉพาะ โดยทั่วไปไม่จำเป็นต้องตรวจเพิ่มเติม อย่างไรก็ตาม ผลลบเพียงอย่างเดียวไม่สามารถตัดการติดเชื้อที่เพิ่งเกิดขึ้นหรือโรควัณโรคออกได้อย่างแน่นอน</p>
+<p><strong>บวก:</strong> มีความเป็นไปได้สูงว่าติดเชื้อ การตรวจไม่บอกว่าท่านติดเชื้อเมื่อใด จากใคร หรือท่านป่วยหรือแพร่เชื้อได้หรือไม่ ขั้นต่อไปคือการตรวจโดยแพทย์และโดยทั่วไปจะเอกซเรย์ปอด หากพบความผิดปกติต้องตรวจเพิ่มเติม</p>
 <p><strong>ไม่สามารถสรุปผล:</strong> การตรวจไม่ให้ข้อสรุปที่น่าเชื่อถือ สาเหตุอาจเกี่ยวกับตัวอย่างเลือดหรือการตอบสนองทางภูมิคุ้มกันที่อ่อนแอ โดยทั่วไปจะตรวจตัวอย่างเลือดใหม่ บางครั้งอาจต้องตรวจด้วยวิธีอื่น</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>ติดเชื้อไม่ได้หมายความว่าป่วย</h2>
@@ -3847,7 +3747,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>ผู้ติดเชื้อส่วนใหญ่ไม่ป่วยเป็นวัณโรค ความเสี่ยงสูงที่สุดในสองปีแรกหลังติดเชื้อ โดยเฉพาะเด็กเล็กและผู้ที่มีภูมิคุ้มกันอ่อนแอมีความเสี่ยงป่วยสูงขึ้น</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>การรักษาสามารถป้องกันโรคได้</h2>
-<p>หลังยืนยันการติดเชื้อจากการตรวจผู้สัมผัส โดยทั่วไปแนะนำการรักษาเพื่อป้องกันโรคหากไม่มีเหตุที่ไม่ควรรักษา ต้องตรวจให้แน่ใจก่อนว่าไม่ได้ป่วยเป็นวัณโรค การรักษาลดความเสี่ยงป่วยได้มาก การรักษาเพื่อป้องกันโรคโดยทั่วไปดำเนินการโดยแพทย์เฉพาะทางโรคปอดในคลินิกผู้ป่วยนอก</p>
+<p>หลังยืนยันการติดเชื้อจากการตรวจผู้สัมผัส โดยทั่วไปแนะนำการรักษาเพื่อป้องกันโรคหากไม่มีเหตุที่ไม่ควรรักษา ต้องตรวจให้แน่ใจก่อนว่าไม่ได้ป่วยเป็นวัณโรค การรักษาลดความเสี่ยงป่วยได้มาก แต่ไม่ได้ป้องกันทั้งหมด การรักษาเพื่อป้องกันโรคโดยทั่วไปดำเนินการโดยแพทย์เฉพาะทางโรคปอดในคลินิกผู้ป่วยนอก</p>
 <p>ขึ้นอยู่กับสถานการณ์ของแต่ละคน อาจใช้ เช่น ไรแฟมพิซินสี่เดือน ไรแฟมพิซินร่วมกับไอโซไนอาซิดสามเดือน หรือไอโซไนอาซิดเก้าเดือน การเลือกขึ้นอยู่กับยาอื่นที่ใช้ โรคเดิม และความเป็นไปได้ที่เชื้อดื้อยา โดยจะพิจารณาประโยชน์และผลข้างเคียงที่อาจเกิดขึ้นร่วมกับท่าน</p>
 <p>รับประทานยาตามที่ตกลงและมาตรวจติดตามตามนัด หากมีอาการผิดปกติระหว่างรักษาให้ติดต่อทีมรักษา แม้ท่านไม่ได้รับการรักษาเพื่อป้องกันโรค เราจะหารือเรื่องการตรวจติดตามที่จำเป็นกับท่าน</p>
 </section>
@@ -4003,16 +3903,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>É colhida uma amostra de sangue de uma veia. No laboratório, verifica-se se as células do sistema imunitário reagem a determinados componentes das bactérias da tuberculose. As análises ao sangue deste tipo chamam-se IGRA. Não são introduzidas bactérias no seu corpo, e o teste não deteta diretamente bactérias no sangue. Uma vacinação anterior contra a tuberculose (BCG) não torna este teste positivo.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>O momento do exame é importante</h2>
-<p>Após a infeção, podem decorrer até oito semanas até o teste reagir. Por isso, as pessoas de contacto com 15 ou mais anos e sem riscos específicos fazem o teste oito semanas após o último contacto potencialmente infecioso. Um teste negativo realizado antes desse prazo pode ter de ser repetido.</p>
-<p>Se tiver sintomas, se for uma criança ou se tiver o sistema imunitário enfraquecido, é necessária uma avaliação médica mais precoce. Nesse caso, o Centro de Tuberculose realiza o teste sanguíneo mais cedo. As crianças com menos de cinco anos podem precisar de medicação preventiva mesmo antes de ser possível detetar uma infeção.</p>
-
-<p><strong>Contactos próximos (pessoas do mesmo agregado):</strong> Nos contactos próximos, por exemplo as pessoas que vivem no mesmo agregado familiar, é também feita de imediato uma radiografia aos pulmões no serviço de saúde pública.</p>
+<p>Após a infeção, podem decorrer até oito semanas até o teste reagir. Por isso, as pessoas de contacto com 15 ou mais anos e sem riscos específicos devem, de preferência, fazer o teste oito semanas após o último contacto potencialmente infecioso. Um teste negativo realizado antes desse prazo pode ter de ser repetido.</p>
+<p>Se tiver sintomas, se for uma criança ou se tiver o sistema imunitário enfraquecido, é necessária uma avaliação médica mais precoce. Nestes casos, não espere pela análise ao sangue agendada. As crianças com menos de cinco anos podem precisar de medicação preventiva mesmo antes de ser possível detetar uma infeção.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>O que significa o seu resultado</h2>
-<p><strong>Negativo:</strong></p>
-<ul class="result-list"><li>Se o último contacto foi há, pelo menos, 8 semanas, não são necessárias outras medidas.</li><li>Se o último contacto foi há menos de 8 semanas, é feito um segundo teste QuantiFERON® depois de decorridas as 8 semanas.</li></ul>
-<p><strong>Positivo:</strong> Isto ainda não significa que tenha tuberculose. Por segurança, antes de iniciar o tratamento preventivo é, porém, necessário excluir com uma radiografia uma doença já existente.</p>
-<ul class="result-list"><li>Segue-se uma radiografia aos pulmões no serviço de saúde pública e, se necessário, um exame da expetoração.</li><li>Depois disso, recomenda-se um tratamento preventivo junto de um pneumologista em consultório.</li><li>Recomenda-se uma radiografia de controlo após a conclusão do tratamento preventivo ou no prazo de um ano após o último contacto.</li><li>Se este controlo não tiver sido feito em ambulatório, o serviço de saúde pública poderá convidá-lo novamente.</li></ul>
+<p><strong>Negativo:</strong> Não foi detetada a resposta imunitária correspondente. Se o teste foi realizado no momento adequado e não existem riscos específicos, geralmente não são necessários outros exames. No entanto, um teste negativo, por si só, não permite excluir com segurança uma infeção muito recente ou tuberculose ativa.</p>
+<p><strong>Positivo:</strong> É provável que exista uma infeção. O teste não indica quando ou através de quem ocorreu a infeção, nem se tem a doença ou se a pode transmitir. Seguem-se uma avaliação médica e, geralmente, uma radiografia do tórax; se forem detetadas alterações, são necessários outros exames.</p>
 <p><strong>Indeterminado:</strong> O teste não fornece uma resposta fiável. Isto pode dever-se à amostra de sangue ou a uma resposta imunitária enfraquecida. Habitualmente, analisa-se uma nova amostra de sangue; por vezes, são necessários outros exames.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Estar infetado não significa estar doente</h2>
@@ -4020,7 +3916,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>A maioria das pessoas infetadas não desenvolve tuberculose ativa. O risco é mais elevado nos primeiros dois anos após a infeção. As crianças pequenas e as pessoas com o sistema imunitário enfraquecido têm um risco particularmente elevado de desenvolver a doença.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>O tratamento pode prevenir a doença</h2>
-<p>Após a confirmação de uma infeção durante uma investigação de contactos, recomenda-se geralmente um tratamento preventivo, desde que não existam contraindicações. Primeiro, é necessário excluir tuberculose ativa. O tratamento reduz significativamente o risco de desenvolver a doença. O tratamento preventivo é habitualmente realizado por um pneumologista em consulta de ambulatório.</p>
+<p>Após a confirmação de uma infeção durante uma investigação de contactos, recomenda-se geralmente um tratamento preventivo, desde que não existam contraindicações. Primeiro, é necessário excluir tuberculose ativa. O tratamento reduz significativamente o risco de desenvolver a doença, mas não oferece proteção total. O tratamento preventivo é habitualmente realizado por um pneumologista em consulta de ambulatório.</p>
 <p>Dependendo da sua situação individual, as opções incluem, por exemplo, rifampicina durante quatro meses, rifampicina em conjunto com isoniazida durante três meses ou isoniazida durante nove meses. A escolha depende, entre outros fatores, dos outros medicamentos que toma, das doenças existentes e de uma eventual resistência das bactérias aos medicamentos. Os benefícios e os possíveis efeitos secundários serão discutidos consigo.</p>
 <p>Tome os medicamentos conforme combinado e compareça às consultas de acompanhamento. Se notar sintomas invulgares durante o tratamento, contacte a equipa responsável. Mesmo que não faça tratamento preventivo, discutiremos consigo os exames de acompanhamento necessários.</p>
 </section>
@@ -4284,16 +4180,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Λαμβάνεται αίμα από μια φλέβα. Στο εργαστήριο ελέγχεται αν τα ανοσοκύτταρα του δείγματος αντιδρούν σε ορισμένα συστατικά των βακτηρίων της φυματίωσης. Τέτοιες εξετάσεις αίματος ονομάζονται IGRA. Δεν εισάγονται βακτήρια στο σώμα σας και το τεστ δεν ανιχνεύει τα βακτήρια απευθείας στο αίμα. Ο προηγούμενος εμβολιασμός κατά της φυματίωσης (BCG) δεν κάνει αυτό το τεστ θετικό.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Ο χρόνος έχει σημασία</h2>
-<p>Μετά τη μόλυνση μπορεί να χρειαστούν έως και οκτώ εβδομάδες μέχρι να αντιδράσει το τεστ. Γι’ αυτό τα άτομα επαφής ηλικίας 15 ετών και άνω χωρίς ιδιαίτερους κινδύνους εξετάζονται οκτώ εβδομάδες μετά την τελευταία πιθανή μεταδοτική επαφή. Ένα αρνητικό τεστ που έγινε νωρίτερα ίσως χρειαστεί να επαναληφθεί.</p>
-<p>Αν έχετε συμπτώματα, είστε παιδί ή έχετε εξασθενημένο ανοσοποιητικό σύστημα, απαιτείται νωρίτερη ιατρική εκτίμηση. Σε αυτή την περίπτωση το Κέντρο Φυματίωσης κάνει την αιμοληψία νωρίτερα. Τα παιδιά κάτω των πέντε ετών μπορεί να χρειαστούν προληπτική φαρμακευτική αγωγή ακόμη και πριν ανιχνευθεί μόλυνση.</p>
-
-<p><strong>Στενές επαφές (άτομα του ίδιου νοικοκυριού):</strong> Στις στενές επαφές, για παράδειγμα στα άτομα που ζουν στο ίδιο νοικοκυριό, γίνεται επίσης αμέσως ακτινογραφία των πνευμόνων στην υπηρεσία δημόσιας υγείας.</p>
+<p>Μετά τη μόλυνση μπορεί να χρειαστούν έως και οκτώ εβδομάδες μέχρι να αντιδράσει το τεστ. Γι’ αυτό τα άτομα επαφής ηλικίας 15 ετών και άνω χωρίς ιδιαίτερους κινδύνους εξετάζονται κατά προτίμηση οκτώ εβδομάδες μετά την τελευταία πιθανή μεταδοτική επαφή. Ένα αρνητικό τεστ που έγινε νωρίτερα ίσως χρειαστεί να επαναληφθεί.</p>
+<p>Αν έχετε συμπτώματα, είστε παιδί ή έχετε εξασθενημένο ανοσοποιητικό σύστημα, απαιτείται νωρίτερη ιατρική εκτίμηση. Σε αυτές τις περιπτώσεις μην περιμένετε την προγραμματισμένη αιμοληψία. Τα παιδιά κάτω των πέντε ετών μπορεί να χρειαστούν προληπτική φαρμακευτική αγωγή ακόμη και πριν ανιχνευθεί μόλυνση.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Τι σημαίνει το αποτέλεσμά σας</h2>
-<p><strong>Αρνητικό:</strong></p>
-<ul class="result-list"><li>Αν η τελευταία επαφή έγινε πριν από τουλάχιστον 8 εβδομάδες, δεν χρειάζονται περαιτέρω μέτρα.</li><li>Αν η τελευταία επαφή έγινε πριν από λιγότερο από 8 εβδομάδες, μετά την πάροδο των 8 εβδομάδων γίνεται δεύτερο τεστ QuantiFERON®.</li></ul>
-<p><strong>Θετικό:</strong> Αυτό δεν σημαίνει ακόμη ότι έχετε φυματίωση. Για λόγους ασφαλείας, όμως, πριν από την έναρξη της προληπτικής θεραπείας πρέπει να αποκλειστεί με ακτινογραφία μια ήδη υπάρχουσα νόσος.</p>
-<ul class="result-list"><li>Ακολουθεί ακτινογραφία των πνευμόνων στην υπηρεσία δημόσιας υγείας και, αν χρειάζεται, εξέταση πτυέλων.</li><li>Μετά συνιστάται προληπτική θεραπεία σε πνευμονολόγο ιδιωτικού ιατρείου.</li><li>Συνιστάται επανέλεγχος με ακτινογραφία μετά την ολοκλήρωση της προληπτικής θεραπείας ή εντός ενός έτους από την τελευταία επαφή.</li><li>Αν ο επανέλεγχος αυτός δεν έγινε σε εξωτερική βάση, η υπηρεσία δημόσιας υγείας μπορεί να σας καλέσει ξανά.</li></ul>
+<p><strong>Αρνητικό:</strong> Δεν ανιχνεύθηκε αντίστοιχη ανοσολογική αντίδραση. Αν το τεστ έγινε στο κατάλληλο χρονικό σημείο και δεν υπάρχουν ιδιαίτεροι κίνδυνοι, συνήθως δεν χρειάζονται περαιτέρω εξετάσεις. Ωστόσο, ένα αρνητικό τεστ από μόνο του δεν μπορεί να αποκλείσει με βεβαιότητα μια πολύ πρόσφατη μόλυνση ή φυματίωση.</p>
+<p><strong>Θετικό:</strong> Η μόλυνση είναι πιθανή. Το τεστ δεν δείχνει πότε ούτε από ποιον μολυνθήκατε, ούτε αν νοσείτε ή είστε μεταδοτικοί. Ακολουθεί ιατρική εξέταση και συνήθως ακτινογραφία θώρακος· παθολογικά ευρήματα απαιτούν περαιτέρω εξετάσεις.</p>
 <p><strong>Αδιευκρίνιστο:</strong> Το τεστ δεν δίνει αξιόπιστη απάντηση. Αυτό μπορεί να οφείλεται στο δείγμα αίματος ή σε εξασθενημένη ανοσολογική απόκριση. Συνήθως εξετάζεται νέο δείγμα αίματος· μερικές φορές χρειάζονται άλλες εξετάσεις.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Το να έχετε μολυνθεί δεν σημαίνει ότι νοσείτε</h2>
@@ -4301,7 +4193,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Οι περισσότεροι μολυσμένοι άνθρωποι δεν αναπτύσσουν φυματίωση. Ο κίνδυνος είναι μεγαλύτερος τα πρώτα δύο χρόνια μετά τη μόλυνση. Τα μικρά παιδιά και τα άτομα με εξασθενημένο ανοσοποιητικό σύστημα έχουν ιδιαίτερα υψηλό κίνδυνο να νοσήσουν.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Η θεραπεία μπορεί να προλάβει τη νόσο</h2>
-<p>Αφού επιβεβαιωθεί η μόλυνση κατά την έρευνα επαφών, συνήθως συνιστάται προληπτική θεραπεία, εκτός αν υπάρχουν λόγοι που την αποκλείουν. Πρώτα πρέπει να αποκλειστεί η φυματίωση. Η θεραπεία μειώνει σημαντικά τον κίνδυνο νόσησης. Η προληπτική θεραπεία γίνεται συνήθως από πνευμονολόγο σε εξωτερικό ιατρείο.</p>
+<p>Αφού επιβεβαιωθεί η μόλυνση κατά την έρευνα επαφών, συνήθως συνιστάται προληπτική θεραπεία, εκτός αν υπάρχουν λόγοι που την αποκλείουν. Πρώτα πρέπει να αποκλειστεί η φυματίωση. Η θεραπεία μειώνει σημαντικά τον κίνδυνο νόσησης, αλλά δεν παρέχει πλήρη προστασία. Η προληπτική θεραπεία γίνεται συνήθως από πνευμονολόγο σε εξωτερικό ιατρείο.</p>
 <p>Ανάλογα με την ατομική σας κατάσταση, οι επιλογές περιλαμβάνουν, για παράδειγμα, ριφαμπικίνη για τέσσερις μήνες, ριφαμπικίνη μαζί με ισονιαζίδη για τρεις μήνες ή ισονιαζίδη για εννέα μήνες. Η επιλογή εξαρτάται, μεταξύ άλλων, από άλλα φάρμακα, υπάρχουσες παθήσεις και πιθανή ανθεκτικότητα των βακτηρίων στα φάρμακα. Θα συζητήσουμε μαζί σας τα οφέλη και τις πιθανές παρενέργειες.</p>
 <p>Παίρνετε τα φάρμακα όπως έχει συμφωνηθεί και προσέρχεστε στα ραντεβού παρακολούθησης. Αν κατά τη διάρκεια της θεραπείας παρατηρήσετε ασυνήθιστα συμπτώματα, επικοινωνήστε με την ομάδα που σας θεραπεύει. Ακόμη και αν δεν λάβετε προληπτική θεραπεία, θα συζητήσουμε μαζί σας τις απαραίτητες εξετάσεις παρακολούθησης.</p>
 </section>
@@ -4328,16 +4220,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Ana ɗaukan jini daga jijiya. A dakin gwaje-gwaje, ana gwada samfurin domin ganin ko ƙwayoyin garkuwar jiki suna mayar da martani ga wasu abubuwan da ke cikin ƙwayoyin tarin fuka. Irin waɗannan gwaje-gwajen jini ana kiransu IGRA. Ba a shigar da wata ƙwayar cuta a jikinku ba, kuma gwajin ba ya gano ƙwayoyin cuta kai tsaye a jininku. Alluran rigakafin tarin fuka (BCG) da aka yi a baya ba ya sa wannan gwajin ya zama mai tabbatarwa.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Lokaci yana da muhimmanci</h2>
-<p>Bayan kamuwa da cuta, yana iya ɗaukar makonni har guda takwas kafin gwajin ya nuna martani. Saboda haka, ana gwada mutanen da suka yi hulɗa waɗanda shekarunsu suka kai 15 ko fiye, ba tare da wani haɗari na musamman ba, makonni takwas bayan hulɗar ƙarshe da mai cutar. Idan an yi gwajin da wuri kuma sakamakon bai tabbatar da kamuwa da cuta ba, wataƙila za a sake yin gwajin.</p>
-<p>Idan kuna da alamomin cuta, ko kuna yaro, ko garkuwar jikinku ta yi rauni, ana buƙatar bincike na likita da wuri. A irin wannan yanayi, Cibiyar Tarin Fuka tana yin gwajin jini da wuri. Yara ƙanana ‘yan ƙasa da shekaru 5 na iya buƙatar shan maganin rigakafi tun kafin a iya gano kamuwa da cuta.</p>
-
-<p><strong>Makusanta na kusa (mutanen gida ɗaya):</strong> Ga makusanta na kusa, misali mutanen da ke zaune a gida ɗaya, ana kuma ɗaukar hoton X-ray na huhu nan take a ofishin lafiya.</p>
+<p>Bayan kamuwa da cuta, yana iya ɗaukar makonni har guda takwas kafin gwajin ya nuna martani. Saboda haka, ana fifita gwada mutanen da suka yi hulɗa waɗanda shekarunsu suka kai 15 ko fiye, ba tare da wani haɗari na musamman ba, makonni takwas bayan hulɗar ƙarshe da mai cutar. Idan an yi gwajin da wuri kuma sakamakon bai tabbatar da kamuwa da cuta ba, wataƙila za a sake yin gwajin.</p>
+<p>Idan kuna da alamomin cuta, ko kuna yaro, ko garkuwar jikinku ta yi rauni, ana buƙatar bincike na likita da wuri. A irin waɗannan yanayi, kada ku jira har zuwa ranar gwajin jini da aka shirya. Yara ƙanana ‘yan ƙasa da shekaru 5 na iya buƙatar shan maganin rigakafi tun kafin a iya gano kamuwa da cuta.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Abin da sakamakon gwajinku ke nufi</h2>
-<p><strong>Babu:</strong></p>
-<ul class="result-list"><li>Idan haɗuwa ta ƙarshe ta wuce makonni 8 ko fiye, ba a buƙatar wasu matakai.</li><li>Idan haɗuwa ta ƙarshe ba ta kai makonni 8 ba, bayan makonni 8 sun cika za a yi gwajin QuantiFERON® na biyu.</li></ul>
-<p><strong>Tabbatacce:</strong> Wannan ba ya nufin tukuna cewa kuna da tarin fuka. Amma don tabbatar da lafiya, kafin a fara maganin rigakafi dole ne a tabbatar da hoton X-ray cewa babu cuta da ta riga ta kasance.</p>
-<ul class="result-list"><li>Daga nan za a ɗauki hoton X-ray na huhu a ofishin lafiya, kuma idan ya zama dole a yi gwajin kaki.</li><li>Bayan haka, ana ba da shawarar magani na rigakafi wurin likitan huhu (pulmonologist) a asibiti mai zaman kansa.</li><li>Ana ba da shawarar wani hoton X-ray na bibiya bayan an kammala maganin rigakafi ko cikin shekara ɗaya bayan haɗuwa ta ƙarshe.</li><li>Idan ba a yi wannan gwajin bibiya a matsayin mara lafiya na waje ba, ofishin lafiya na iya sake gayyatar ku.</li></ul>
+<p><strong>Babu:</strong> Ba a sami martani na garkuwar jiki ba. Idan an yi gwajin a lokacin da ya dace kuma babu wani haɗari na musamman, yawanci ba a buƙatar ƙarin gwaje-gwaje. Duk da haka, sakamakon ‘babu’ kaɗai ba zai iya tabbatar da rashin kamuwa da cuta kwanan nan ba ko rashin cutar tarin fuka.</p>
+<p><strong>Tabbatacce:</strong> Akwai yiwuwar kamuwa da cuta. Gwajin ba ya nuna lokacin da ko daga wanene kuka kamu da cuta, kuma ba ya nuna ko kuna da cutar ko za ku iya yaɗa ta. Za a yi muku bincike na likita sannan yawanci ɗaukar hoton ƙirji (X-ray); idan an sami wani abu mara kyau, ana buƙatar ƙarin bincike.</p>
 <p><strong>Ba a tabbatar ba:</strong> Gwajin bai bayar da amsa tabbatacciya ba. Wannan na iya faruwa saboda samfurin jini ko martanin garkuwar jiki mai rauni. Yawanci, ana sake gwada sabon samfurin jini; wani lokaci ana buƙatar wasu gwaje-gwajen.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Kamuwa da cuta ba yana nufin kuna da cutar ba</h2>
@@ -4345,7 +4233,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Yawancin mutanen da suka kamu da cuta ba sa kamuwa da cutar tarin fuka mai aiki. Haɗarin ya fi girma cikin shekaru biyu na farko bayan kamuwa da cuta. Yara ƙanana da mutanen da garkuwar jikinsu ta yi rauni suna da haɗari mafi girma na kamuwa da cutar.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Magani na iya hana cutar</h2>
-<p>Bayan an tabbatar da kamuwa da cuta a lokacin binciken masu hulɗa, ana ba da shawarar shan maganin rigakafi sai dai idan akwai dalilan da suke hana hakan. Dole ne farko a tabbatar babu cutar tarin fuka mai aiki. Magani yana rage haɗarin kamuwa da cutar sosai. Yawanci likitan huhu ne ke ba da maganin rigakafin, a matsayin majinyaci wanda ba a kwantar da shi asibiti ba.</p>
+<p>Bayan an tabbatar da kamuwa da cuta a lokacin binciken masu hulɗa, ana ba da shawarar shan maganin rigakafi sai dai idan akwai dalilan da suke hana hakan. Dole ne farko a tabbatar babu cutar tarin fuka mai aiki. Magani yana rage haɗarin kamuwa da cutar sosai, amma ba ya bayar da kariya cikakke. Yawanci likitan huhu ne ke ba da maganin rigakafin, a matsayin majinyaci wanda ba a kwantar da shi asibiti ba.</p>
 <p>Dangane da yanayinku, akwai zaɓuɓɓuka kamar rifampicin na tsawon watanni huɗu, rifampicin tare da isoniazid na tsawon watanni uku, ko isoniazid na tsawon watanni tara. Zaɓin ya dogara, a tsakanin sauran abubuwa, kan wasu magungunan da kuke sha, yanayin lafiyarku, da yiwuwar juriyar ƙwayoyin cuta ga magani. Za a tattauna muku amfani da yiwuwar illolin magani.</p>
 <p>Ku sha magungunan kamar yadda aka amince, kuma ku halarci alƙawuran biye. Idan kun lura da wata alama mai ban mamaki yayin shan magani, ku tuntuɓi ƙungiyar jiyya. Ko da ba ku sha maganin rigakafi ba, za mu tattauna muku muhimman gwaje-gwajen biye da suka wajaba.</p>
 </section>
@@ -4491,16 +4379,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Uzima se krv iz vene. U laboratoriji se proverava da li imunske ćelije u uzorku reaguju na određene sastojke bakterija tuberkuloze. Ovakvi testovi krvi zovu se IGRA. U Vaše telo se ne unose nikakve bakterije, a test ne otkriva bakterije direktno u krvi. Ranije vakcinisanje protiv tuberkuloze (BCG) ne čini ovaj test pozitivnim.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Vreme je važno</h2>
-<p>Nakon infekcije može proći do osam nedelja pre nego što test reaguje. Zato se kontakt osobe od 15 godina i starije bez posebnih rizika testiraju osam nedelja nakon poslednjeg mogućeg zaraznog kontakta. Negativan test urađen ranije možda će trebati ponoviti.</p>
-<p>Ako imate simptome, dete ste ili imate oslabljen imunski sistem, potrebna je ranija lekarska procena. Tada Centar za tuberkulozu radi test krvi ranije. Deca mlađa od pet godina mogu da zahtevaju preventivne lekove i pre nego što se infekcija može dokazati.</p>
-
-<p><strong>Bliski kontakti (osobe iz istog domaćinstva):</strong> Kod bliskih kontakata, na primer osoba iz istog domaćinstva, odmah se radi i rendgenski snimak pluća u zdravstvenom uredu.</p>
+<p>Nakon infekcije može proći do osam nedelja pre nego što test reaguje. Zato se kontakt osobe od 15 godina i starije bez posebnih rizika prvenstveno testiraju osam nedelja nakon poslednjeg mogućeg zaraznog kontakta. Negativan test urađen ranije možda će trebati ponoviti.</p>
+<p>Ako imate simptome, dete ste ili imate oslabljen imunski sistem, potrebna je ranija lekarska procena. U tim slučajevima nemojte čekati zakazano uzimanje krvi. Deca mlađa od pet godina mogu da zahtevaju preventivne lekove i pre nego što se infekcija može dokazati.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Šta znači Vaš rezultat</h2>
-<p><strong>Negativan:</strong></p>
-<ul class="result-list"><li>Ako je poslednji kontakt bio pre najmanje 8 nedelja, nisu potrebne dalje mere.</li><li>Ako je poslednji kontakt bio pre manje od 8 nedelja, nakon isteka 8 nedelja radi se drugi QuantiFERON® test.</li></ul>
-<p><strong>Pozitivan:</strong> To još ne znači da imate tuberkulozu. Međutim, radi sigurnosti, pre početka preventivnog lečenja rendgenskim snimkom treba isključiti već postojeću bolest.</p>
-<ul class="result-list"><li>Zatim se u zdravstvenom uredu radi rendgenski snimak pluća i, po potrebi, pregled iskašljaja.</li><li>Posle toga se preporučuje preventivno lečenje kod pulmologa u ambulantnoj praksi.</li><li>Preporučuje se kontrolni rendgenski snimak nakon završetka preventivnog lečenja ili u roku od godinu dana od poslednjeg kontakta.</li><li>Ako ovaj kontrolni pregled nije obavljen ambulantno, zdravstveni ured vas može ponovo pozvati.</li></ul>
+<p><strong>Negativan:</strong> Nije otkrivena odgovarajuća imunska reakcija. Ako je test urađen u pravo vreme i nema posebnih rizika, dalji pregledi obično nisu potrebni. Međutim, sam negativan test ne može pouzdano da isključi veoma svežu infekciju ili tuberkulozu.</p>
+<p><strong>Pozitivan:</strong> Infekcija je verovatna. Test ne pokazuje kada ni od koga ste se zarazili, niti da li ste bolesni ili zarazni. Sledi lekarski pregled i obično rendgen grudnog koša; nenormalni nalazi zahtevaju dalje preglede.</p>
 <p><strong>Neodređen:</strong> Test ne daje pouzdan odgovor. Uzrok može biti uzorak krvi ili oslabljen imunski odgovor. Obično se ispituje novi uzorak krvi; ponekad su potrebni i drugi pregledi.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Zaraženost ne znači bolest</h2>
@@ -4508,7 +4392,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Većina zaraženih ljudi ne oboli od tuberkuloze. Rizik je najveći u prve dve godine nakon infekcije. Mala deca i osobe sa oslabljenim imunskim sistemom imaju posebno visok rizik od obolevanja.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Lečenje može sprečiti bolest</h2>
-<p>Kada se infekcija potvrdi tokom ispitivanja kontakata, obično se preporučuje preventivno lečenje, ako ne postoje razlozi protiv. Prvo se mora isključiti tuberkuloza. Lečenje značajno smanjuje rizik od obolevanja. Preventivno lečenje obično sprovodi pulmolog u ambulanti.</p>
+<p>Kada se infekcija potvrdi tokom ispitivanja kontakata, obično se preporučuje preventivno lečenje, ako ne postoje razlozi protiv. Prvo se mora isključiti tuberkuloza. Lečenje značajno smanjuje rizik od obolevanja, ali ne pruža potpunu zaštitu. Preventivno lečenje obično sprovodi pulmolog u ambulanti.</p>
 <p>Zavisno od Vaše individualne situacije, opcije su, na primer, rifampicin četiri meseca, rifampicin zajedno sa izonijazidom tri meseca ili izonijazid devet meseci. Izbor zavisi, između ostalog, od drugih lekova, postojećih bolesti i moguće otpornosti bakterija na lekove. Sa Vama ćemo razgovarati o koristima i mogućim neželjenim dejstvima.</p>
 <p>Uzimajte lekove kako je dogovoreno i dolazite na kontrolne preglede. Ako tokom lečenja primetite neobične simptome, obratite se timu koji Vas leči. Čak i ako ne dobijete preventivno lečenje, dogovorićemo sa Vama potrebne kontrolne preglede.</p>
 </section>
@@ -4654,16 +4538,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Uzima se krv iz vene. U laboratoriju se provjerava reagiraju li imunosne stanice u uzorku na određene sastojke bakterija tuberkuloze. Takve se krvne pretrage zovu IGRA. U Vaše se tijelo ne unose nikakve bakterije, a test ne otkriva bakterije izravno u krvi. Ranije cijepljenje protiv tuberkuloze (BCG) ne čini ovaj test pozitivnim.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Vrijeme je važno</h2>
-<p>Nakon infekcije može proći do osam tjedana prije nego što test reagira. Zato se kontakt osobe od 15 godina i starije bez posebnih rizika testiraju osam tjedana nakon posljednjeg mogućeg zaraznog kontakta. Negativan test učinjen ranije možda će se trebati ponoviti.</p>
-<p>Ako imate simptome, dijete ste ili imate oslabljen imunosni sustav, potrebna je ranija liječnička procjena. Tada Centar za tuberkulozu radi krvni test ranije. Djeci mlađoj od pet godina mogu biti potrebni preventivni lijekovi i prije nego što se infekcija može dokazati.</p>
-
-<p><strong>Bliski kontakti (osobe iz istog kućanstva):</strong> Kod bliskih kontakata, na primjer osoba iz istog kućanstva, odmah se radi i rendgenska snimka pluća u zdravstvenom uredu.</p>
+<p>Nakon infekcije može proći do osam tjedana prije nego što test reagira. Zato se kontakt osobe od 15 godina i starije bez posebnih rizika prvenstveno testiraju osam tjedana nakon posljednjeg mogućeg zaraznog kontakta. Negativan test učinjen ranije možda će se trebati ponoviti.</p>
+<p>Ako imate simptome, dijete ste ili imate oslabljen imunosni sustav, potrebna je ranija liječnička procjena. U tim slučajevima nemojte čekati zakazano vađenje krvi. Djeci mlađoj od pet godina mogu biti potrebni preventivni lijekovi i prije nego što se infekcija može dokazati.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Što znači Vaš rezultat</h2>
-<p><strong>Negativan:</strong></p>
-<ul class="result-list"><li>Ako je posljednji kontakt bio prije najmanje 8 tjedana, nisu potrebne daljnje mjere.</li><li>Ako je posljednji kontakt bio prije manje od 8 tjedana, nakon isteka 8 tjedana radi se drugi QuantiFERON® test.</li></ul>
-<p><strong>Pozitivan:</strong> To još ne znači da imate tuberkulozu. Međutim, radi sigurnosti, prije početka preventivnog liječenja rendgenskom snimkom treba isključiti već postojeću bolest.</p>
-<ul class="result-list"><li>Zatim se u zdravstvenom uredu radi rendgenska snimka pluća i, prema potrebi, pretraga iskašljaja.</li><li>Nakon toga preporučuje se preventivno liječenje kod pulmologa u ambulantnoj praksi.</li><li>Preporučuje se kontrolna rendgenska snimka nakon završetka preventivnog liječenja ili u roku od godine dana od posljednjeg kontakta.</li><li>Ako ovaj kontrolni pregled nije obavljen ambulantno, zdravstveni ured vas može ponovno pozvati.</li></ul>
+<p><strong>Negativan:</strong> Nije otkrivena odgovarajuća imunosna reakcija. Ako je test učinjen u pravo vrijeme i nema posebnih rizika, daljnji pregledi obično nisu potrebni. Međutim, sam negativan test ne može pouzdano isključiti vrlo svježu infekciju ili tuberkulozu.</p>
+<p><strong>Pozitivan:</strong> Infekcija je vjerojatna. Test ne pokazuje kada ni od koga ste se zarazili, niti jeste li bolesni ili zarazni. Slijedi liječnički pregled i obično rendgen prsnog koša; nenormalni nalazi zahtijevaju daljnje pretrage.</p>
 <p><strong>Neodređen:</strong> Test ne daje pouzdan odgovor. Uzrok može biti uzorak krvi ili oslabljen imunosni odgovor. Obično se ispituje novi uzorak krvi; ponekad su potrebne i druge pretrage.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Zaraženost ne znači bolest</h2>
@@ -4671,7 +4551,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Većina zaraženih ljudi ne oboli od tuberkuloze. Rizik je najveći u prve dvije godine nakon infekcije. Mala djeca i osobe s oslabljenim imunosnim sustavom imaju posebno visok rizik od oboljenja.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Liječenje može spriječiti bolest</h2>
-<p>Nakon što se infekcija potvrdi tijekom ispitivanja kontakata, obično se preporučuje preventivno liječenje, ako ne postoje razlozi protiv. Prvo se mora isključiti tuberkuloza. Liječenje značajno smanjuje rizik od oboljenja. Preventivno liječenje obično provodi pulmolog u ambulanti.</p>
+<p>Nakon što se infekcija potvrdi tijekom ispitivanja kontakata, obično se preporučuje preventivno liječenje, ako ne postoje razlozi protiv. Prvo se mora isključiti tuberkuloza. Liječenje značajno smanjuje rizik od oboljenja, ali ne pruža potpunu zaštitu. Preventivno liječenje obično provodi pulmolog u ambulanti.</p>
 <p>Ovisno o Vašoj individualnoj situaciji, opcije su, na primjer, rifampicin četiri mjeseca, rifampicin zajedno s izonijazidom tri mjeseca ili izonijazid devet mjeseci. Izbor ovisi, među ostalim, o drugim lijekovima, postojećim bolestima i mogućoj otpornosti bakterija na lijekove. S Vama ćemo razgovarati o koristima i mogućim nuspojavama.</p>
 <p>Uzimajte lijekove kako je dogovoreno i dolazite na kontrolne preglede. Ako tijekom liječenja primijetite neobične simptome, obratite se timu koji Vas liječi. Čak i ako ne dobijete preventivno liječenje, dogovorit ćemo s Vama potrebne kontrolne preglede.</p>
 </section>
@@ -4817,16 +4697,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Odvzame se kri iz vene. V laboratoriju preverijo, ali imunske celice v vzorcu reagirajo na določene sestavine bakterij tuberkuloze. Takšni krvni testi se imenujejo IGRA. V Vaše telo se ne vnašajo nobene bakterije, test pa bakterij ne odkriva neposredno v krvi. Prejšnje cepljenje proti tuberkulozi (BCG) tega testa ne naredi pozitivnega.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Čas je pomemben</h2>
-<p>Po okužbi lahko traja do osem tednov, preden test reagira. Kontaktne osebe, stare 15 let ali več, brez posebnih tveganj zato testiramo osem tednov po zadnjem možnem nalezljivem stiku. Negativen test, opravljen prej, bo morda treba ponoviti.</p>
-<p>Če imate simptome, ste otrok ali imate oslabljen imunski sistem, je potrebna zgodnejša zdravniška ocena. V takem primeru Center za tuberkulozo opravi test krvi prej. Otroci, mlajši od pet let, bodo morda potrebovali preventivna zdravila že, preden je okužbo mogoče dokazati.</p>
-
-<p><strong>Tesni stiki (osebe iz istega gospodinjstva):</strong> Pri tesnih stikih, na primer osebah iz istega gospodinjstva, se rentgensko slikanje pljuč na zdravstvenem uradu opravi tudi takoj.</p>
+<p>Po okužbi lahko traja do osem tednov, preden test reagira. Kontaktne osebe, stare 15 let ali več, brez posebnih tveganj zato prednostno testiramo osem tednov po zadnjem možnem nalezljivem stiku. Negativen test, opravljen prej, bo morda treba ponoviti.</p>
+<p>Če imate simptome, ste otrok ali imate oslabljen imunski sistem, je potrebna zgodnejša zdravniška ocena. V teh primerih ne čakajte na predviden odvzem krvi. Otroci, mlajši od pet let, bodo morda potrebovali preventivna zdravila že, preden je okužbo mogoče dokazati.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Kaj pomeni Vaš rezultat</h2>
-<p><strong>Negativen:</strong></p>
-<ul class="result-list"><li>Če je od zadnjega stika minilo vsaj 8 tednov, nadaljnji ukrepi niso potrebni.</li><li>Če je od zadnjega stika minilo manj kot 8 tednov, se po poteku 8 tednov opravi drugi test QuantiFERON®.</li></ul>
-<p><strong>Pozitiven:</strong> To še ne pomeni, da imate tuberkulozo. Vendar je treba zaradi varnosti pred začetkom preventivnega zdravljenja z rentgenskim posnetkom izključiti že obstoječo bolezen.</p>
-<ul class="result-list"><li>Sledi rentgensko slikanje pljuč na zdravstvenem uradu in po potrebi pregled izmečka.</li><li>Nato se priporoča preventivno zdravljenje pri pulmologu v ambulantni praksi.</li><li>Kontrolno rentgensko slikanje se priporoča po koncu preventivnega zdravljenja ali v enem letu po zadnjem stiku.</li><li>Če tega kontrolnega pregleda niso opravili ambulantno, vas lahko zdravstveni urad ponovno povabi.</li></ul>
+<p><strong>Negativen:</strong> Ustreznega imunskega odziva niso zaznali. Če je bil test opravljen ob pravem času in ni posebnih tveganj, nadaljnji pregledi običajno niso potrebni. Vendar sam negativen test ne more zanesljivo izključiti zelo sveže okužbe ali tuberkuloze.</p>
+<p><strong>Pozitiven:</strong> Okužba je verjetna. Test ne pokaže, kdaj in od koga ste se okužili, niti ali ste bolni ali nalezljivi. Sledi zdravniški pregled in običajno rentgen prsnega koša; nenormalne najdbe zahtevajo nadaljnje preiskave.</p>
 <p><strong>Nedoločen:</strong> Test ne daje zanesljivega odgovora. Vzrok je lahko vzorec krvi ali oslabljen imunski odziv. Običajno preiščejo nov vzorec krvi; včasih so potrebne tudi druge preiskave.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Okuženost ne pomeni bolezni</h2>
@@ -4834,7 +4710,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Večina okuženih ljudi ne zboli za tuberkulozo. Tveganje je največje v prvih dveh letih po okužbi. Majhni otroci in ljudje z oslabljenim imunskim sistemom imajo še posebej veliko tveganje za bolezen.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Zdravljenje lahko prepreči bolezen</h2>
-<p>Ko je okužba potrjena med preiskavo stikov, se običajno priporoča preventivno zdravljenje, razen če obstajajo razlogi proti. Najprej je treba izključiti tuberkulozo. Zdravljenje bistveno zmanjša tveganje za bolezen. Preventivno zdravljenje običajno izvaja pulmolog v ambulanti.</p>
+<p>Ko je okužba potrjena med preiskavo stikov, se običajno priporoča preventivno zdravljenje, razen če obstajajo razlogi proti. Najprej je treba izključiti tuberkulozo. Zdravljenje bistveno zmanjša tveganje za bolezen, vendar ne nudi popolne zaščite. Preventivno zdravljenje običajno izvaja pulmolog v ambulanti.</p>
 <p>Glede na Vaš individualni položaj so možnosti na primer rifampicin štiri mesece, rifampicin skupaj z izoniazidom tri mesece ali izoniazid devet mesecev. Izbira je med drugim odvisna od drugih zdravil, obstoječih bolezni in možne odpornosti bakterij na zdravila. Z Vami se bomo pogovorili o koristih in možnih neželenih učinkih.</p>
 <p>Zdravila jemljite, kot je dogovorjeno, in hodite na kontrolne preglede. Če med zdravljenjem opazite neobičajne simptome, se obrnite na ekipo, ki Vas zdravi. Tudi če ne prejmete preventivnega zdravljenja, se bomo z Vami dogovorili o potrebnih kontrolnih pregledih.</p>
 </section>
@@ -4980,16 +4856,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>رگ سے خون لیا جاتا ہے۔ لیبارٹری میں دیکھا جاتا ہے کہ نمونے میں موجود مدافعتی خلیے تپ دق کے جراثیم کے مخصوص اجزا پر ردِعمل دیتے ہیں یا نہیں۔ اس طرح کے خون کے ٹیسٹ IGRA کہلاتے ہیں۔ آپ کے جسم میں کوئی جراثیم داخل نہیں کیے جاتے اور ٹیسٹ خون میں جراثیم کو براہِ راست نہیں ڈھونڈتا۔ تپ دق کا سابقہ ٹیکہ (BCG) اس ٹیسٹ کو مثبت نہیں بناتا۔</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>وقت کی اہمیت</h2>
-<p>انفیکشن کے بعد ٹیسٹ کے ردِعمل ظاہر کرنے میں آٹھ ہفتے تک لگ سکتے ہیں۔ اس لیے 15 سال یا اس سے زیادہ عمر کے وہ رابطے والے افراد جن میں کوئی خاص خطرہ نہ ہو، آخری ممکنہ متعدی رابطے کے آٹھ ہفتے بعد ٹیسٹ کروائیں۔ اس سے پہلے کروایا گیا منفی ٹیسٹ دوبارہ کرنا پڑ سکتا ہے۔</p>
-<p>اگر آپ میں علامات ہیں، آپ بچے ہیں یا آپ کا مدافعتی نظام کمزور ہے تو طبی جائزہ جلد ضروری ہے۔ ایسی صورت میں مرکزِ تپ دق خون کا ٹیسٹ جلد ہی کر دیتا ہے۔ پانچ سال سے کم عمر بچوں کو انفیکشن کا پتا چلنے سے پہلے بھی احتیاطی ادویات کی ضرورت ہو سکتی ہے۔</p>
-
-<p><strong>قریبی رابطے والے افراد (ایک ہی گھر کے لوگ):</strong> قریبی رابطے والے افراد، مثلاً ایک ہی گھر میں رہنے والوں کا، محکمۂ صحت میں فوراً پھیپھڑوں کا ایکس رے بھی کیا جاتا ہے۔</p>
+<p>انفیکشن کے بعد ٹیسٹ کے ردِعمل ظاہر کرنے میں آٹھ ہفتے تک لگ سکتے ہیں۔ اس لیے 15 سال یا اس سے زیادہ عمر کے وہ رابطے والے افراد جن میں کوئی خاص خطرہ نہ ہو، ترجیحاً آخری ممکنہ متعدی رابطے کے آٹھ ہفتے بعد ٹیسٹ کروائیں۔ اس سے پہلے کروایا گیا منفی ٹیسٹ دوبارہ کرنا پڑ سکتا ہے۔</p>
+<p>اگر آپ میں علامات ہیں، آپ بچے ہیں یا آپ کا مدافعتی نظام کمزور ہے تو طبی جائزہ جلد ضروری ہے۔ ان صورتوں میں مقررہ خون کے ٹیسٹ کا انتظار نہ کریں۔ پانچ سال سے کم عمر بچوں کو انفیکشن کا پتا چلنے سے پہلے بھی احتیاطی ادویات کی ضرورت ہو سکتی ہے۔</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>آپ کے نتیجے کا مطلب</h2>
-<p><strong>منفی:</strong></p>
-<ul class="result-list"><li>اگر آخری رابطہ کو کم از کم 8 ہفتے گزر چکے ہوں تو مزید کسی اقدام کی ضرورت نہیں۔</li><li>اگر آخری رابطہ کو 8 ہفتے سے کم ہوئے ہوں تو 8 ہفتے پورے ہونے کے بعد دوسرا QuantiFERON® ٹیسٹ کیا جاتا ہے۔</li></ul>
-<p><strong>مثبت:</strong> اس کا ابھی یہ مطلب نہیں کہ آپ کو تپ دق ہے۔ لیکن حفاظت کے لیے احتیاطی علاج شروع کرنے سے پہلے ایکس رے کے ذریعے یہ یقینی بنانا ضروری ہے کہ کوئی بیماری پہلے سے موجود نہیں۔</p>
-<ul class="result-list"><li>اس کے بعد محکمۂ صحت میں پھیپھڑوں کا ایکس رے کیا جاتا ہے اور ضرورت ہو تو بلغم کا معائنہ بھی۔</li><li>پھر کسی نجی کلینک کے ماہرِ امراضِ سینہ (پلمونولوجسٹ) سے احتیاطی علاج کی سفارش کی جاتی ہے۔</li><li>احتیاطی علاج مکمل ہونے کے بعد یا آخری رابطہ کے ایک سال کے اندر ایک اور نگرانی کے ایکس رے کی سفارش کی جاتی ہے۔</li><li>اگر یہ نگرانی کا معائنہ بیرونی مریض کے طور پر نہیں کروایا گیا تو محکمۂ صحت ضرورت پڑنے پر آپ کو دوبارہ بلا سکتا ہے۔</li></ul>
+<p><strong>منفی:</strong> متعلقہ مدافعتی ردِعمل نہیں ملا۔ اگر ٹیسٹ صحیح وقت پر کیا گیا اور کوئی خاص خطرہ نہیں تو عموماً مزید معائنوں کی ضرورت نہیں ہوتی۔ تاہم صرف منفی ٹیسٹ بہت تازہ انفیکشن یا تپ دق کی بیماری کو یقینی طور پر خارج نہیں کر سکتا۔</p>
+<p><strong>مثبت:</strong> انفیکشن کا امکان ہے۔ ٹیسٹ یہ نہیں بتاتا کہ انفیکشن کب اور کس سے ہوا، اور نہ یہ کہ آپ کو بیماری ہے یا آپ متعدی ہیں۔ اس کے بعد طبی معائنہ اور عموماً سینے کا ایکس رے کیا جاتا ہے؛ غیر معمولی نتائج کی صورت میں مزید معائنے درکار ہوتے ہیں۔</p>
 <p><strong>غیر واضح:</strong> ٹیسٹ قابلِ اعتماد جواب نہیں دیتا۔ اس کی وجہ خون کا نمونہ یا کمزور مدافعتی ردِعمل ہو سکتی ہے۔ عموماً خون کا نیا نمونہ جانچا جاتا ہے؛ کبھی کبھی دوسرے معائنے بھی ضروری ہوتے ہیں۔</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>انفیکشن ہونے کا مطلب بیمار ہونا نہیں</h2>
@@ -4997,7 +4869,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>انفیکشن والے زیادہ تر لوگوں کو تپ دق کی بیماری نہیں ہوتی۔ انفیکشن کے بعد پہلے دو سال میں خطرہ سب سے زیادہ ہوتا ہے۔ چھوٹے بچوں اور کمزور مدافعتی نظام والے لوگوں میں بیماری کا خطرہ خاص طور پر زیادہ ہوتا ہے۔</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>علاج بیماری کو روک سکتا ہے</h2>
-<p>رابطے کی تحقیقات کے دوران انفیکشن کی تصدیق کے بعد عموماً احتیاطی علاج کی سفارش کی جاتی ہے، بشرطیکہ اس کے خلاف کوئی وجہ نہ ہو۔ پہلے تپ دق کی بیماری کو خارج کرنا ضروری ہے۔ علاج بیماری کا خطرہ نمایاں طور پر کم کرتا ہے۔ احتیاطی علاج عموماً آؤٹ پیشنٹ کلینک میں پھیپھڑوں کے ماہر کرتے ہیں۔</p>
+<p>رابطے کی تحقیقات کے دوران انفیکشن کی تصدیق کے بعد عموماً احتیاطی علاج کی سفارش کی جاتی ہے، بشرطیکہ اس کے خلاف کوئی وجہ نہ ہو۔ پہلے تپ دق کی بیماری کو خارج کرنا ضروری ہے۔ علاج بیماری کا خطرہ نمایاں طور پر کم کرتا ہے لیکن مکمل تحفظ نہیں دیتا۔ احتیاطی علاج عموماً آؤٹ پیشنٹ کلینک میں پھیپھڑوں کے ماہر کرتے ہیں۔</p>
 <p>آپ کی انفرادی صورتِ حال کے مطابق مثلاً چار مہینے تک ریفیمپیسن، تین مہینے تک ریفیمپیسن کے ساتھ آئسونیازڈ، یا نو مہینے تک آئسونیازڈ کے اختیارات ہیں۔ انتخاب کا انحصار دیگر ادویات، موجودہ بیماریوں اور جراثیم میں ادویات کے خلاف ممکنہ مزاحمت سمیت دیگر باتوں پر ہوتا ہے۔ فوائد اور ممکنہ مضر اثرات پر آپ سے بات کی جائے گی۔</p>
 <p>دوائیں طے شدہ طریقے سے لیں اور فالو اپ ملاقاتوں میں آئیں۔ علاج کے دوران غیر معمولی علامات محسوس ہوں تو علاج کرنے والی ٹیم سے رابطہ کریں۔ اگر آپ کو احتیاطی علاج نہ بھی ملے تو ضروری فالو اپ معائنوں پر ہم آپ سے بات کریں گے۔</p>
 </section>
@@ -5143,16 +5015,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>له رګ څخه وینه اخیستل کېږي. په لابراتوار کې ګورو چې په نمونه کې معافیتي حجرې د توبرکلوز د باکتریاوو پر ځانګړو برخو غبرګون ښيي که نه. دا ډول د وینې ازموینې IGRA بلل کېږي. ستاسو بدن ته هېڅ باکتریا نه داخلېږي او ازموینه په وینه کې باکتریا مستقیم نه ښيي. د توبرکلوز پخوانی واکسین (BCG) دا ازموینه مثبته نه کوي.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>وخت مهم دی</h2>
-<p>د انتان وروسته ممکن تر اتو اونیو پورې وخت ونیسي چې ازموینه غبرګون وښيي. له همدې امله ۱۵ کلن یا له هغه پورته کسان چې ځانګړي خطرونه نه لري، د وروستۍ ممکنې ساري اړیکې څخه اته اونۍ وروسته ازمويل کېږي. مخکې شوې منفي ازموینه ښایي بیا تکرار شي.</p>
-<p>که تاسو نښې لرئ، ماشوم یاست یا معافیتي سیستم مو کمزوری وي، نو ژر طبي ارزونه اړینه ده. په داسې حالت کې د توبرکلوز مرکز د وینې ازموینه ژر کوي. له پنځو کلونو کم ماشومانو ته ښایي د انتان له موندلو مخکې هم مخنیوی کوونکي درمل اړین وي.</p>
-
-<p><strong>نږدې اړیکې (د یوې کورنۍ/کور اوسېدونکي):</strong> د نږدې اړیکو لپاره، د بېلګې په توګه په یو کور کې اوسېدونکو ته، د روغتیا په اداره کې سمدستي د سږو ایکسري هم کیږي.</p>
+<p>د انتان وروسته ممکن تر اتو اونیو پورې وخت ونیسي چې ازموینه غبرګون وښيي. له همدې امله ۱۵ کلن یا له هغه پورته کسان چې ځانګړي خطرونه نه لري، ترجیحاً د وروستۍ ممکنې ساري اړیکې څخه اته اونۍ وروسته ازمويل کېږي. مخکې شوې منفي ازموینه ښایي بیا تکرار شي.</p>
+<p>که تاسو نښې لرئ، ماشوم یاست یا معافیتي سیستم مو کمزوری وي، نو ژر طبي ارزونه اړینه ده. په دې حالتونو کې د ټاکل شوې وینې ازموینې انتظار مه کوئ. له پنځو کلونو کم ماشومانو ته ښایي د انتان له موندلو مخکې هم مخنیوی کوونکي درمل اړین وي.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>ستاسو د پایلې معنی</h2>
-<p><strong>منفي:</strong></p>
-<ul class="result-list"><li>که وروستی اړیکې ته لږ تر لږه ۸ اوونۍ تېرې شوې وي، نور اقدامات اړین نه دي.</li><li>که وروستۍ اړیکې ته له ۸ اوونیو لږ تېرې شوې وي، د ۸ اوونیو له پوره کېدو وروسته دویم QuantiFERON® ازموینه کیږي.</li></ul>
-<p><strong>مثبت:</strong> دا لا دا مانا نه لري چې تاسو توبرکلوز لرئ. خو د خوندیتوب لپاره د مخنیوي درملنې له پیل مخکې باید د ایکسري په مرسته ثابته شي چې لا دمخه ناروغي نشته.</p>
-<ul class="result-list"><li>بیا د روغتیا په اداره کې د سږو ایکسري او که اړتیا وي د بلغمو معاینه کیږي.</li><li>له هغې وروسته په کلینیک کې د سږو متخصص (پلمونولوجست) سره د مخنیوي درملنه سپارښتل کیږي.</li><li>د مخنیوي درملنې له بشپړېدو وروسته یا د وروستۍ اړیکې له نیټې یو کال دننه یو بل د څارنې ایکسري سپارښتل کیږي.</li><li>که دا د څارنې معاینه د بهرني ناروغ په توګه نه وي شوې، د روغتیا اداره کېدای شي تاسو بیا ورته وبولي.</li></ul>
+<p><strong>منفي:</strong> اړونده معافیتي غبرګون ونه موندل شو. که ازموینه په سم وخت شوې وي او ځانګړي خطرونه نه وي، نو معمولاً نورې معاینې اړینې نه دي. خو یوازې منفي ازموینه نشي کولی ډېر تازه انتان یا د توبرکلوز ناروغي په باوري ډول رد کړي.</p>
+<p><strong>مثبت:</strong> انتان ښایي شوی وي. ازموینه نه ښيي چې انتان کله او له چا اخیستل شوی، او نه دا چې تاسو ناروغي لرئ یا ساري یاست. بیا طبي معاینه او معمولاً د سینې ایکس-رې کېږي؛ غیر عادي موندنې نورې معاینې غواړي.</p>
 <p><strong>نامعلوم:</strong> ازموینه باوري ځواب نه ورکوي. لامل یې د وینې نمونه یا کمزوری معافیتي غبرګون کېدای شي. معمولاً د وینې نوې نمونه ازمويل کېږي؛ ځینې وختونه نورې معاینې هم اړینې دي.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>د انتان لرل د ناروغ کېدو معنی نه لري</h2>
@@ -5160,7 +5028,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>ډېری انتان شوي کسان د توبرکلوز ناروغي نه پیدا کوي. خطر د انتان وروسته په لومړیو دوو کلونو کې تر ټولو ډېر وي. کوچني ماشومان او هغه کسان چې معافیتي سیستم یې کمزوری وي د ناروغۍ ډېر لوړ خطر لري.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>درملنه کولی شي ناروغي ودروي</h2>
-<p>د اړیکو په څېړنه کې د انتان له تاییدېدو وروسته عموماً مخنیوی کوونکې درملنه سپارښتل کېږي، مګر دا چې د دې پر ضد دلیل وي. لومړی باید د توبرکلوز ناروغي رد شي. درملنه د ناروغۍ خطر ډېر کموي. مخنیوی کوونکې درملنه معمولاً د سږو متخصص په بهرني (سرپایي) کلینیک کې کوي.</p>
+<p>د اړیکو په څېړنه کې د انتان له تاییدېدو وروسته عموماً مخنیوی کوونکې درملنه سپارښتل کېږي، مګر دا چې د دې پر ضد دلیل وي. لومړی باید د توبرکلوز ناروغي رد شي. درملنه د ناروغۍ خطر ډېر کموي خو بشپړه ساتنه نه کوي. مخنیوی کوونکې درملنه معمولاً د سږو متخصص په بهرني (سرپایي) کلینیک کې کوي.</p>
 <p>ستاسو د انفرادي حالت له مخې، د بېلګې په توګه څلور میاشتې ریفیمپیسین، درې میاشتې ریفیمپیسین د آیسونیازید سره، یا نهه میاشتې آیسونیازید اختیارونه دي. انتخاب د نورو درملو، شته ناروغیو او د باکتریاوو د ممکنې درملو پر وړاندې مقاومت پورې اړه لري. ګټې او ممکنه اړخیزې اغېزې به له تاسو سره وڅېړل شي.</p>
 <p>درمل هغسې وکاروئ چې موافقه شوې ده او د تعقیبي لیدنو ته راشئ. که د درملنې پر مهال غیر عادي نښې ولیدې، د درملنې ټیم سره اړیکه ونیسئ. حتی که تاسو مخنیوی کوونکې درملنه ونه کړئ، اړین تعقیبي معاینې به له تاسو سره وڅېړو.</p>
 </section>
@@ -5306,16 +5174,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Odebírá se krev ze žíly. V laboratoři se vzorek zkoumá, zda imunitní buňky reagují na určité součásti tuberkulózních bakterií. Takové krevní testy se nazývají IGRA. Do Vašeho těla se nevpravují žádné bakterie a test neprokazuje bakterie přímo v krvi. Dřívější očkování proti tuberkulóze (BCG) tento test pozitivním nedělá.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Načasování je důležité</h2>
-<p>Po nákaze může trvat až osm týdnů, než test zareaguje. Kontaktní osoby ve věku 15 let a starší bez zvláštních rizik se proto testují osm týdnů po posledním možném infekčním kontaktu. Negativní test provedený dříve může být nutné zopakovat.</p>
-<p>Pokud máte příznaky, jste dítě nebo máte oslabený imunitní systém, je nutné lékařské posouzení dříve. Centrum pro tuberkulózu pak provede odběr krve dříve. Děti do pěti let mohou potřebovat preventivní léky ještě předtím, než lze nákazu prokázat.</p>
-
-<p><strong>Blízké kontakty (osoby ze stejné domácnosti):</strong> U blízkých kontaktů, například osob ze stejné domácnosti, se rentgenový snímek plic na zdravotním úřadě provádí také ihned.</p>
+<p>Po nákaze může trvat až osm týdnů, než test zareaguje. Kontaktní osoby ve věku 15 let a starší bez zvláštních rizik se proto přednostně testují osm týdnů po posledním možném infekčním kontaktu. Negativní test provedený dříve může být nutné zopakovat.</p>
+<p>Pokud máte příznaky, jste dítě nebo máte oslabený imunitní systém, je nutné lékařské posouzení dříve. V těchto případech nečekejte na plánovaný odběr krve. Děti do pěti let mohou potřebovat preventivní léky ještě předtím, než lze nákazu prokázat.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Co Váš výsledek znamená</h2>
-<p><strong>Negativní:</strong></p>
-<ul class="result-list"><li>Pokud od posledního kontaktu uplynulo alespoň 8 týdnů, nejsou nutná žádná další opatření.</li><li>Pokud od posledního kontaktu uplynulo méně než 8 týdnů, provede se po uplynutí 8 týdnů druhý test QuantiFERON®.</li></ul>
-<p><strong>Pozitivní:</strong> To ještě neznamená, že máte tuberkulózu. Pro jistotu je však třeba před zahájením preventivní léčby rentgenovým snímkem vyloučit již existující onemocnění.</p>
-<ul class="result-list"><li>Následuje rentgenový snímek plic na zdravotním úřadě a podle potřeby vyšetření sputa.</li><li>Poté se doporučuje preventivní léčba u plicního lékaře (pneumologa) v ambulantní praxi.</li><li>Kontrolní rentgenový snímek se doporučuje po ukončení preventivní léčby nebo do jednoho roku od posledního kontaktu.</li><li>Pokud tato kontrola nebyla provedena ambulantně, může vás zdravotní úřad znovu pozvat.</li></ul>
+<p><strong>Negativní:</strong> Nebyla zjištěna odpovídající imunitní reakce. Pokud byl test proveden ve správný čas a nejsou přítomna zvláštní rizika, další vyšetření obvykle nejsou nutná. Samotný negativní test však nemůže spolehlivě vyloučit velmi čerstvou nákazu ani onemocnění tuberkulózou.</p>
+<p><strong>Pozitivní:</strong> Nákaza je pravděpodobná. Test neukazuje, kdy ani od koho jste se nakazil(a), ani zda jste nemocný(á) nebo nakažlivý(á). Následuje lékařské vyšetření a obvykle rentgen hrudníku; abnormální nálezy vyžadují další vyšetření.</p>
 <p><strong>Neurčitý:</strong> Test neposkytuje spolehlivou odpověď. Příčinou může být vzorek krve nebo oslabená imunitní odpověď. Obvykle se vyšetří nový vzorek krve; někdy jsou nutná jiná vyšetření.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Nakažení neznamená onemocnění</h2>
@@ -5323,7 +5187,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Většina nakažených lidí tuberkulózou neonemocní. Riziko je nejvyšší během prvních dvou let po nákaze. Malé děti a lidé s oslabeným imunitním systémem mají zvláště vysoké riziko onemocnění.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Léčba může onemocnění předejít</h2>
-<p>Pokud byla nákaza potvrzena při epidemiologickém šetření kontaktů, doporučuje se obecně preventivní léčba, pokud nejsou důvody proti ní. Nejprve je nutné vyloučit onemocnění tuberkulózou. Léčba výrazně snižuje riziko onemocnění. Preventivní léčbu obvykle zajišťuje plicní lékař v ambulanci.</p>
+<p>Pokud byla nákaza potvrzena při epidemiologickém šetření kontaktů, doporučuje se obecně preventivní léčba, pokud nejsou důvody proti ní. Nejprve je nutné vyloučit onemocnění tuberkulózou. Léčba výrazně snižuje riziko onemocnění, ale neposkytuje úplnou ochranu. Preventivní léčbu obvykle zajišťuje plicní lékař v ambulanci.</p>
 <p>Podle Vaší individuální situace přicházejí v úvahu například rifampicin po dobu čtyř měsíců, rifampicin společně s isoniazidem po dobu tří měsíců nebo isoniazid po dobu devíti měsíců. Volba závisí mimo jiné na dalších lécích, stávajících onemocněních a možné lékové rezistenci bakterií. Přínosy a možné nežádoucí účinky s Vámi probereme.</p>
 <p>Užívejte léky, jak bylo dohodnuto, a docházejte na kontroly. Pokud během léčby zaznamenáte neobvyklé příznaky, obraťte se na ošetřující tým. I když preventivní léčbu nedostanete, potřebná následná vyšetření s Vámi probereme.</p>
 </section>
@@ -5469,16 +5333,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Odoberá sa krv zo žily. V laboratóriu sa vzorka skúma, či imunitné bunky reagujú na určité súčasti tuberkulóznych baktérií. Takéto krvné testy sa nazývajú IGRA. Do Vášho tela sa nevpravujú žiadne baktérie a test nepreukazuje baktérie priamo v krvi. Predchádzajúce očkovanie proti tuberkulóze (BCG) tento test pozitívnym nerobí.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Načasovanie je dôležité</h2>
-<p>Po nákaze môže trvať až osem týždňov, kým test zareaguje. Kontaktné osoby vo veku 15 rokov a staršie bez osobitných rizík sa preto testujú osem týždňov po poslednom možnom infekčnom kontakte. Negatívny test vykonaný skôr môže byť potrebné zopakovať.</p>
-<p>Ak máte príznaky, ste dieťa alebo máte oslabený imunitný systém, je potrebné lekárske posúdenie skôr. Centrum pre tuberkulózu potom vykoná odber krvi skôr. Deti do piatich rokov môžu potrebovať preventívne lieky ešte predtým, ako sa dá nákaza preukázať.</p>
-
-<p><strong>Blízke kontakty (osoby z rovnakej domácnosti):</strong> U blízkych kontaktov, napríklad osôb z rovnakej domácnosti, sa röntgenová snímka pľúc na zdravotnom úrade vykonáva aj ihneď.</p>
+<p>Po nákaze môže trvať až osem týždňov, kým test zareaguje. Kontaktné osoby vo veku 15 rokov a staršie bez osobitných rizík sa preto prednostne testujú osem týždňov po poslednom možnom infekčnom kontakte. Negatívny test vykonaný skôr môže byť potrebné zopakovať.</p>
+<p>Ak máte príznaky, ste dieťa alebo máte oslabený imunitný systém, je potrebné lekárske posúdenie skôr. V týchto prípadoch nečakajte na plánovaný odber krvi. Deti do piatich rokov môžu potrebovať preventívne lieky ešte predtým, ako sa dá nákaza preukázať.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Čo Váš výsledok znamená</h2>
-<p><strong>Negatívny:</strong></p>
-<ul class="result-list"><li>Ak od posledného kontaktu uplynulo aspoň 8 týždňov, nie sú potrebné žiadne ďalšie opatrenia.</li><li>Ak od posledného kontaktu uplynulo menej ako 8 týždňov, vykoná sa po uplynutí 8 týždňov druhý test QuantiFERON®.</li></ul>
-<p><strong>Pozitívny:</strong> To ešte neznamená, že máte tuberkulózu. Pre istotu je však potrebné pred začatím preventívnej liečby röntgenovou snímkou vylúčiť už existujúce ochorenie.</p>
-<ul class="result-list"><li>Nasleduje röntgenová snímka pľúc na zdravotnom úrade a podľa potreby vyšetrenie spúta.</li><li>Potom sa odporúča preventívna liečba u pľúcneho lekára (pneumológa) v ambulantnej praxi.</li><li>Kontrolná röntgenová snímka sa odporúča po ukončení preventívnej liečby alebo do jedného roka od posledného kontaktu.</li><li>Ak sa táto kontrola nevykonala ambulantne, môže vás zdravotný úrad opäť pozvať.</li></ul>
+<p><strong>Negatívny:</strong> Nezistila sa zodpovedajúca imunitná reakcia. Ak sa test vykonal vo správnom čase a nie sú prítomné osobitné riziká, ďalšie vyšetrenia zvyčajne nie sú potrebné. Samotný negatívny test však nemôže spoľahlivo vylúčiť veľmi čerstvú nákazu ani ochorenie na tuberkulózu.</p>
+<p><strong>Pozitívny:</strong> Nákaza je pravdepodobná. Test neukazuje, kedy ani od koho ste sa nakazili, ani či ste chorý(á) alebo nákazlivý(á). Nasleduje lekárske vyšetrenie a zvyčajne röntgen hrudníka; abnormálne nálezy vyžadujú ďalšie vyšetrenia.</p>
 <p><strong>Neurčitý:</strong> Test neposkytuje spoľahlivú odpoveď. Príčinou môže byť vzorka krvi alebo oslabená imunitná odpoveď. Zvyčajne sa vyšetrí nová vzorka krvi; niekedy sú potrebné iné vyšetrenia.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Nakazenie neznamená ochorenie</h2>
@@ -5486,7 +5346,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Väčšina nakazených ľudí na tuberkulózu neochorie. Riziko je najvyššie počas prvých dvoch rokov po nákaze. Malé deti a ľudia s oslabeným imunitným systémom majú osobitne vysoké riziko ochorenia.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Liečba môže ochoreniu predísť</h2>
-<p>Ak sa nákaza potvrdila pri epidemiologickom vyšetrovaní kontaktov, vo všeobecnosti sa odporúča preventívna liečba, pokiaľ nie sú dôvody proti nej. Najprv je potrebné vylúčiť ochorenie na tuberkulózu. Liečba výrazne znižuje riziko ochorenia. Preventívnu liečbu zvyčajne zabezpečuje pľúcny lekár v ambulancii.</p>
+<p>Ak sa nákaza potvrdila pri epidemiologickom vyšetrovaní kontaktov, vo všeobecnosti sa odporúča preventívna liečba, pokiaľ nie sú dôvody proti nej. Najprv je potrebné vylúčiť ochorenie na tuberkulózu. Liečba výrazne znižuje riziko ochorenia, ale neposkytuje úplnú ochranu. Preventívnu liečbu zvyčajne zabezpečuje pľúcny lekár v ambulancii.</p>
 <p>Podľa Vašej individuálnej situácie prichádzajú do úvahy napríklad rifampicín počas štyroch mesiacov, rifampicín spolu s izoniazidom počas troch mesiacov alebo izoniazid počas deviatich mesiacov. Voľba závisí okrem iného od ďalších liekov, existujúcich ochorení a možnej liekovej rezistencie baktérií. Prínosy a možné nežiaduce účinky s Vami prebereme.</p>
 <p>Užívajte lieky podľa dohody a choďte na kontroly. Ak počas liečby zaznamenáte nezvyčajné príznaky, obráťte sa na ošetrujúci tím. Aj keď preventívnu liečbu nedostanete, potrebné následné vyšetrenia s Vami prebereme.</p>
 </section>
@@ -5632,16 +5492,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>Viene prelevato sangue da una vena. In laboratorio si verifica se le cellule immunitarie del campione reagiscono a determinati componenti dei batteri della tubercolosi. Questi esami del sangue si chiamano IGRA. Nel suo corpo non vengono introdotti batteri e il test non rileva direttamente i batteri nel sangue. Una precedente vaccinazione contro la tubercolosi (BCG) non rende positivo questo test.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>Il momento è importante</h2>
-<p>Dopo l’infezione possono passare fino a otto settimane prima che il test reagisca. Per questo le persone in contatto di 15 anni o più, senza rischi particolari, vengono testate otto settimane dopo l’ultimo possibile contatto a rischio di contagio. Un test negativo eseguito prima potrebbe dover essere ripetuto.</p>
-<p>Se ha sintomi, se è un bambino o se ha un sistema immunitario indebolito, è necessaria una valutazione medica più precoce. In questo caso il Centro per la tubercolosi esegue il prelievo di sangue prima. I bambini sotto i cinque anni possono aver bisogno di un trattamento preventivo già prima che un’infezione sia rilevabile.</p>
-
-<p><strong>Contatti stretti (persone dello stesso nucleo familiare):</strong> Per i contatti stretti, ad esempio le persone che vivono nello stesso nucleo familiare, viene eseguita subito anche una radiografia dei polmoni presso l’ufficio di sanità pubblica.</p>
+<p>Dopo l’infezione possono passare fino a otto settimane prima che il test reagisca. Per questo le persone in contatto di 15 anni o più, senza rischi particolari, vengono testate preferibilmente otto settimane dopo l’ultimo possibile contatto a rischio di contagio. Un test negativo eseguito prima potrebbe dover essere ripetuto.</p>
+<p>Se ha sintomi, se è un bambino o se ha un sistema immunitario indebolito, è necessaria una valutazione medica più precoce. In questi casi non aspetti il prelievo di sangue programmato. I bambini sotto i cinque anni possono aver bisogno di un trattamento preventivo già prima che un’infezione sia rilevabile.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>Cosa significa il risultato</h2>
-<p><strong>Negativo:</strong></p>
-<ul class="result-list"><li>Se l’ultimo contatto risale ad almeno 8 settimane fa, non sono necessarie ulteriori misure.</li><li>Se l’ultimo contatto risale a meno di 8 settimane fa, trascorse le 8 settimane viene eseguito un secondo test QuantiFERON®.</li></ul>
-<p><strong>Positivo:</strong> Questo non significa ancora che lei abbia la tubercolosi. Per sicurezza, prima di iniziare una terapia preventiva occorre però escludere con una radiografia una malattia già in atto.</p>
-<ul class="result-list"><li>Segue una radiografia dei polmoni presso l’ufficio di sanità pubblica e, se necessario, un esame dell’espettorato.</li><li>Dopo di che si raccomanda una terapia preventiva presso uno pneumologo in regime ambulatoriale.</li><li>Si raccomanda una radiografia di controllo al termine della terapia preventiva o entro un anno dall’ultimo contatto.</li><li>Se questo controllo non è stato eseguito in regime ambulatoriale, l’ufficio di sanità pubblica potrebbe invitarla di nuovo.</li></ul>
+<p><strong>Negativo:</strong> Non è stata rilevata alcuna reazione immunitaria corrispondente. Se il test è stato eseguito al momento giusto e non ci sono rischi particolari, di solito non sono necessari ulteriori accertamenti. Tuttavia, un test negativo da solo non può escludere con certezza un’infezione molto recente o una malattia tubercolare.</p>
+<p><strong>Positivo:</strong> È probabile un’infezione. Il test non indica quando né da chi è stata contratta l’infezione, né se lei sia malato/a o contagioso/a. Seguono una visita medica e di solito una radiografia del torace; risultati anomali richiedono ulteriori accertamenti.</p>
 <p><strong>Indeterminato:</strong> Il test non fornisce una risposta affidabile. Ciò può dipendere dal campione di sangue o da una risposta immunitaria indebolita. Di solito viene esaminato un nuovo campione di sangue; talvolta sono necessari altri accertamenti.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>Essere infetti non significa essere malati</h2>
@@ -5649,7 +5505,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>La maggior parte delle persone infette non sviluppa la tubercolosi. Il rischio è più alto nei primi due anni dopo l’infezione. I bambini piccoli e le persone con un sistema immunitario indebolito hanno un rischio particolarmente alto di ammalarsi.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>Il trattamento può prevenire la malattia</h2>
-<p>Dopo che l’infezione è stata confermata durante un’indagine sui contatti, si raccomanda in genere un trattamento preventivo, a meno che non vi siano motivi contrari. Occorre prima escludere la tubercolosi attiva. Il trattamento riduce notevolmente il rischio di ammalarsi. Il trattamento preventivo viene di solito effettuato da uno pneumologo in ambulatorio.</p>
+<p>Dopo che l’infezione è stata confermata durante un’indagine sui contatti, si raccomanda in genere un trattamento preventivo, a meno che non vi siano motivi contrari. Occorre prima escludere la tubercolosi attiva. Il trattamento riduce notevolmente il rischio di ammalarsi, ma non offre una protezione completa. Il trattamento preventivo viene di solito effettuato da uno pneumologo in ambulatorio.</p>
 <p>A seconda della sua situazione individuale, le opzioni includono, ad esempio, rifampicina per quattro mesi, rifampicina insieme a isoniazide per tre mesi oppure isoniazide per nove mesi. La scelta dipende, tra l’altro, da altri farmaci, da malattie preesistenti e da possibili resistenze dei batteri ai farmaci. I benefici e i possibili effetti collaterali saranno discussi con lei.</p>
 <p>Assuma i farmaci come concordato e si presenti ai controlli. Se durante il trattamento nota sintomi insoliti, contatti il team curante. Anche se non riceve un trattamento preventivo, concorderemo con lei i controlli necessari.</p>
 </section>
@@ -5795,16 +5651,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>정맥에서 혈액을 채취합니다. 검사실에서 면역 세포가 결핵균의 특정 성분에 반응하는지 확인합니다. 이러한 혈액 검사를 IGRA라고 합니다. 몸에 세균이 들어가는 것이 아니며, 이 검사가 혈액 속의 세균을 직접 찾아내는 것도 아닙니다. 이전에 결핵 예방접종(BCG)을 받았더라도 이 검사가 양성으로 나오지 않습니다.</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>검사 시기가 중요합니다</h2>
-<p>감염 후 검사가 반응하기까지 최대 8주가 걸릴 수 있습니다. 그래서 특별한 위험 요인이 없는 만 15세 이상의 접촉자는 마지막으로 감염 가능성이 있었던 접촉 후 8주째에 검사합니다. 그보다 일찍 시행한 음성 검사는 다시 해야 할 수 있습니다.</p>
-<p>증상이 있거나, 어린이이거나, 면역 체계가 약한 경우에는 더 일찍 진료를 받아야 합니다. 이 경우 결핵센터에서 혈액 검사를 더 일찍 시행합니다. 5세 미만 어린이는 감염이 확인되기 전에도 예방 약물이 필요할 수 있습니다.</p>
-
-<p><strong>밀접 접촉자(같은 가구 구성원):</strong> 밀접 접촉자, 예를 들어 같은 가구에 사는 사람은 보건소에서 흉부 엑스레이도 즉시 촬영합니다.</p>
+<p>감염 후 검사가 반응하기까지 최대 8주가 걸릴 수 있습니다. 그래서 특별한 위험 요인이 없는 만 15세 이상의 접촉자는 마지막으로 감염 가능성이 있었던 접촉 후 8주째에 검사하는 것이 바람직합니다. 그보다 일찍 시행한 음성 검사는 다시 해야 할 수 있습니다.</p>
+<p>증상이 있거나, 어린이이거나, 면역 체계가 약한 경우에는 더 일찍 진료를 받아야 합니다. 이런 경우에는 예정된 혈액 검사까지 기다리지 마십시오. 5세 미만 어린이는 감염이 확인되기 전에도 예방 약물이 필요할 수 있습니다.</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>검사 결과의 의미</h2>
-<p><strong>음성:</strong></p>
-<ul class="result-list"><li>마지막 접촉으로부터 8주 이상 지났다면 추가 조치는 필요하지 않습니다.</li><li>마지막 접촉으로부터 8주가 지나지 않았다면 8주가 지난 후 두 번째 QuantiFERON® 검사를 합니다.</li></ul>
-<p><strong>양성:</strong> 이것이 아직 결핵에 걸렸다는 뜻은 아닙니다. 다만 안전을 위해 예방 치료를 시작하기 전에 엑스레이로 이미 질환이 있는지 먼저 배제해야 합니다.</p>
-<ul class="result-list"><li>이어서 보건소에서 흉부 엑스레이를 촬영하고, 필요하면 가래 검사를 합니다.</li><li>그 후 개인 병원의 호흡기내과 전문의(폐 전문의)에게서 예방 치료를 받을 것을 권합니다.</li><li>예방 치료를 마친 후 또는 마지막 접촉 후 1년 이내에 추적 엑스레이 검사를 한 번 더 받을 것을 권합니다.</li><li>이 추적 검사를 외래로 받지 않았다면 보건소가 필요에 따라 다시 안내드릴 수 있습니다.</li></ul>
+<p><strong>음성:</strong> 해당하는 면역 반응이 확인되지 않았습니다. 검사가 적절한 시기에 시행되었고 특별한 위험 요인이 없다면 보통 추가 검사는 필요하지 않습니다. 다만 음성이라는 결과만으로는 매우 최근의 감염이나 결핵 질환을 확실히 배제할 수 없습니다.</p>
+<p><strong>양성:</strong> 감염되었을 가능성이 높습니다. 이 검사는 언제, 누구에게서 감염되었는지, 또 질환이 있는지 또는 전염성이 있는지는 알려 주지 않습니다. 이어서 진찰과 대개 흉부 X선 촬영이 이루어지며, 이상 소견이 있으면 추가 검사가 필요합니다.</p>
 <p><strong>판정 불가:</strong> 검사가 신뢰할 만한 답을 주지 못합니다. 혈액 검체 문제이거나 면역 반응이 약해서일 수 있습니다. 보통 새 혈액 검체로 다시 검사하며, 경우에 따라 다른 검사가 필요합니다.</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>감염되었다고 해서 발병한 것은 아닙니다</h2>
@@ -5812,7 +5664,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>감염된 사람 대부분은 결핵 질환이 발병하지 않습니다. 위험은 감염 후 첫 2년 동안 가장 높습니다. 어린 아이와 면역 체계가 약한 사람은 발병 위험이 특히 높습니다.</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>치료로 발병을 예방할 수 있습니다</h2>
-<p>접촉자 조사에서 감염이 확인된 뒤에는 반대할 이유가 없는 한 일반적으로 예방 치료를 권장합니다. 먼저 활동성 결핵이 없다는 것을 확인해야 합니다. 치료는 발병 위험을 크게 낮춥니다. 예방 치료는 보통 외래 진료를 하는 호흡기 전문의가 시행합니다.</p>
+<p>접촉자 조사에서 감염이 확인된 뒤에는 반대할 이유가 없는 한 일반적으로 예방 치료를 권장합니다. 먼저 활동성 결핵이 없다는 것을 확인해야 합니다. 치료는 발병 위험을 크게 낮추지만 완벽한 보호를 제공하지는 않습니다. 예방 치료는 보통 외래 진료를 하는 호흡기 전문의가 시행합니다.</p>
 <p>개인의 상황에 따라 예를 들어 리팜피신 4개월, 리팜피신과 이소니아지드 병용 3개월, 또는 이소니아지드 9개월 요법을 선택할 수 있습니다. 선택은 다른 약물, 기존 질환, 균의 약제 내성 가능성 등에 따라 달라집니다. 이점과 가능한 부작용에 대해서는 충분히 설명해 드립니다.</p>
 <p>약은 합의한 대로 복용하시고 추적 진료 일정에 참석해 주십시오. 치료 중 평소와 다른 증상이 나타나면 치료 팀에 연락하십시오. 예방 치료를 받지 않는 경우에도 필요한 추적 검사에 대해 함께 상의해 드립니다.</p>
 </section>
@@ -5958,16 +5810,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>从静脉抽取血液。实验室会检测样本中的免疫细胞是否对结核杆菌的某些成分产生反应。这类血液检测称为IGRA。检测不会把细菌放入您的身体，也不是直接在血液中查找细菌。以前接种过结核病疫苗（卡介苗，BCG）不会使该检测呈阳性。</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>检测时间很重要</h2>
-<p>感染后，检测可能需要最长八周才会出现反应。因此，15岁及以上、没有特殊风险的接触者，在最后一次可能的传染性接触后八周进行检测。较早进行的阴性检测可能需要重复。</p>
-<p>如果您有症状、是儿童或免疫系统较弱，则需要更早接受医学评估。这种情况下，结核病中心会提前进行抽血检测。五岁以下儿童可能在能检测出感染之前就需要预防性药物。</p>
-
-<p><strong>密切接触者（同住家庭成员）：</strong> 对于密切接触者，例如同住的家庭成员，也会立即在卫生局拍胸部X光片。</p>
+<p>感染后，检测可能需要最长八周才会出现反应。因此，15岁及以上、没有特殊风险的接触者，最好在最后一次可能的传染性接触后八周进行检测。较早进行的阴性检测可能需要重复。</p>
+<p>如果您有症状、是儿童或免疫系统较弱，则需要更早接受医学评估。这些情况下请不要等到预定的抽血检测。五岁以下儿童可能在能检测出感染之前就需要预防性药物。</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>检测结果意味着什么</h2>
-<p><strong>阴性：</strong></p>
-<ul class="result-list"><li>如果距离最后一次接触已至少8周，则无需采取其他措施。</li><li>如果距离最后一次接触不足8周，则在满8周后再进行第二次QuantiFERON®检测。</li></ul>
-<p><strong>阳性：</strong> 这还不意味着您患有结核病。但为了安全起见，在开始预防性治疗之前，必须通过X光片排除已经存在的疾病。</p>
-<ul class="result-list"><li>接下来在卫生局拍胸部X光片，必要时还要检查痰液。</li><li>之后建议在执业的肺科医生（呼吸科医生）处接受预防性治疗。</li><li>建议在预防性治疗结束后，或在最后一次接触后一年内，再做一次X光复查。</li><li>如果这次复查没有以门诊方式完成，卫生局可能会再次邀请您前来检查。</li></ul>
+<p><strong>阴性：</strong> 未检测到相应的免疫反应。如果检测时间适当且没有特殊风险，通常不需要进一步检查。不过，仅凭一次阴性结果，不能可靠地排除非常近期的感染或结核病。</p>
+<p><strong>阳性：</strong> 很可能已被感染。检测不能显示您是何时、被谁感染的，也不能显示您是否患病或具有传染性。接下来会进行医学检查，通常还要拍胸部X光片；如有异常发现，则需要进一步检查。</p>
 <p><strong>无法判定：</strong> 检测未能提供可靠的结果。原因可能是血液样本问题，或免疫反应减弱。通常会重新检测新的血液样本，有时还需要做其他检查。</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>被感染不等于患病</h2>
@@ -5975,7 +5823,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>大多数被感染的人不会发展为结核病。感染后的头两年风险最高。幼儿和免疫系统较弱的人发病风险特别高。</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>治疗可以预防发病</h2>
-<p>在接触者调查中确认感染后，除非有不宜治疗的原因，一般建议进行预防性治疗。必须先排除结核病。治疗可显著降低发病风险。预防性治疗通常由门诊的肺科医生进行。</p>
+<p>在接触者调查中确认感染后，除非有不宜治疗的原因，一般建议进行预防性治疗。必须先排除结核病。治疗可显著降低发病风险，但不能提供完全的保护。预防性治疗通常由门诊的肺科医生进行。</p>
 <p>根据您的具体情况，可选方案包括：例如利福平四个月、利福平加异烟肼三个月，或异烟肼九个月。选择取决于您正在使用的其他药物、既往疾病以及细菌可能的耐药情况等。我们会与您讨论治疗的益处和可能的副作用。</p>
 <p>请按约定服药并按时复诊。如果治疗期间出现不寻常的症状，请联系治疗团队。即使您不接受预防性治疗，我们也会与您商定必要的随访检查。</p>
 </section>
@@ -6121,16 +5969,12 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>會從靜脈抽取血液。化驗室會檢測樣本中的免疫細胞是否對結核桿菌的某些成分產生反應。這類驗血檢測稱為IGRA。檢測不會將細菌放入您的身體，也不是直接在血液中尋找細菌。以往接種過結核病疫苗（卡介苗，BCG）不會令這項檢測呈陽性。</p>
 </section>
 <section class="info-section" data-info-section="3"><h2>檢測時間很重要</h2>
-<p>感染後，檢測最長可能需要八星期才會出現反應。因此，15歲或以上、沒有特殊風險的接觸者，會在最後一次可能具傳染性的接觸後八星期進行檢測。較早進行而呈陰性的檢測，可能需要重複。</p>
-<p>如果您有症狀、是兒童或免疫系統較弱，便需要更早接受醫學評估。在這種情況下，結核病中心會提早進行驗血檢測。五歲以下兒童可能在尚未能檢測出感染之前，已需要預防性藥物。</p>
-
-<p><strong>密切接觸者（同住家庭成員）：</strong> 對於密切接觸者，例如同住嘅家庭成員，亦會即刻喺衞生局照胸部X光。</p>
+<p>感染後，檢測最長可能需要八星期才會出現反應。因此，15歲或以上、沒有特殊風險的接觸者，最好在最後一次可能具傳染性的接觸後八星期進行檢測。較早進行而呈陰性的檢測，可能需要重複。</p>
+<p>如果您有症狀、是兒童或免疫系統較弱，便需要更早接受醫學評估。在這些情況下，請不要等到預定的驗血日期。五歲以下兒童可能在尚未能檢測出感染之前，已需要預防性藥物。</p>
 </section>
 <section class="info-section" data-info-section="4"><h2>檢測結果的意思</h2>
-<p><strong>陰性：</strong></p>
-<ul class="result-list"><li>如果距離最後一次接觸已經至少8個星期，就唔需要採取其他措施。</li><li>如果距離最後一次接觸未夠8個星期，等滿8個星期之後會再做第二次QuantiFERON®檢測。</li></ul>
-<p><strong>陽性：</strong> 呢個結果未代表您患有結核病。不過為咗安全，喺開始預防性治療之前，必須用X光片排除已經存在嘅疾病。</p>
-<ul class="result-list"><li>跟住喺衞生局照胸部X光，有需要嘅話仲會檢查痰液。</li><li>之後建議喺執業嘅肺科醫生（呼吸科醫生）度接受預防性治療。</li><li>建議喺預防性治療完成之後，或者喺最後一次接觸後一年內，再照多一次X光覆查。</li><li>如果呢次覆查冇以門診方式完成，衞生局可能會再邀請您嚟檢查。</li></ul>
+<p><strong>陰性：</strong> 未有檢測到相應的免疫反應。如果檢測時間適當而且沒有特殊風險，通常不需要進一步檢查。不過，單靠一次陰性結果，並不能可靠地排除非常近期的感染或結核病。</p>
+<p><strong>陽性：</strong> 很可能已受感染。檢測不能顯示您是何時、被誰感染，也不能顯示您是否患病或具傳染性。接着會進行醫學檢查，通常還會照胸部X光；如有異常發現，則需要進一步檢查。</p>
 <p><strong>無法判定：</strong> 檢測未能提供可靠的答案。原因可能是血液樣本的問題，或是免疫反應減弱。通常會用新的血液樣本重新檢測，有時還需要做其他檢查。</p>
 </section>
 <section class="info-section" data-info-section="5"><h2>受感染不等於患病</h2>
@@ -6138,7 +5982,7 @@ Keine Erfassung von Fragebogenantworten. Bei HTTPS-Aufruf wird GoatCounter für 
 <p>大部分受感染的人不會發展成結核病。感染後首兩年風險最高。幼兒和免疫系統較弱的人發病風險特別高。</p>
 </section>
 <section class="info-section" data-info-section="6"><h2>治療可以預防發病</h2>
-<p>在接觸者調查中確認受感染後，除非有不宜治療的原因，一般建議進行預防性治療。必須先排除結核病。治療可大幅降低發病風險。預防性治療通常由門診的肺科醫生負責。</p>
+<p>在接觸者調查中確認受感染後，除非有不宜治療的原因，一般建議進行預防性治療。必須先排除結核病。治療可大幅降低發病風險，但不能提供完全的保護。預防性治療通常由門診的肺科醫生負責。</p>
 <p>視乎您的個人情況，可選方案包括：例如利福平四個月、利福平加異煙肼三個月，或異煙肼九個月。選擇取決於您正在使用的其他藥物、現有疾病，以及細菌可能出現的抗藥性等。我們會與您討論治療的好處和可能出現的副作用。</p>
 <p>請按約定服藥並按時覆診。如果治療期間出現不尋常的症狀，請聯絡治療團隊。即使您不接受預防性治療，我們也會與您商定所需的跟進檢查。</p>
 </section>
@@ -9623,6 +9467,11 @@ function showLanguage(){
  document.getElementById('language-picker').hidden=!!info;
  pages.forEach(p=>p.hidden=!info||p.id!==activeId);
  document.querySelectorAll('.topic-page').forEach(p=>p.hidden=!info||p.id!==activeId);
+ const TOPIC_PICK={fragebogen:['#','die Übersetzungshilfe zum Fragebogen für Kontaktpersonen'],information:['#information/','die Informationen zum QuantiFERON®-Test (Bluttest) und zur vorbeugenden Behandlung'],screening:['#screening/','die Informationen zum Tuberkulosescreening (Röntgenuntersuchung der Lunge)'],infoblatt:['#infoblatt/','die Informationen zur Tuberkulose']};
+ const topicPick=!info&&Object.prototype.hasOwnProperty.call(TOPIC_PICK,route)?TOPIC_PICK[route]:null;
+ document.querySelectorAll('#language-picker .language-button').forEach(a=>a.setAttribute('href',(topicPick?topicPick[0]:'#topics/')+a.dataset.language));
+ const pickerIntro=document.querySelector('#language-picker .intro');
+ if(pickerIntro){if(!pickerIntro.dataset.defaultText)pickerIntro.dataset.defaultText=pickerIntro.textContent;pickerIntro.textContent=topicPick?'Wählen Sie eine Sprache. Danach finden Sie '+topicPick[1]+'.':pickerIntro.dataset.defaultText;}
  document.documentElement.lang=info?code:'de';
  document.documentElement.dir=info?info.dir:'ltr';
  document.getElementById('brand-title').textContent=info?info.center:UI.de.center;
@@ -9673,6 +9522,8 @@ function exportHTML(){
  copy.querySelectorAll('.editor-tools').forEach(e=>e.hidden=true);
  copy.querySelectorAll('.editor-link').forEach(e=>e.hidden=false);
  copy.querySelectorAll('.language-page').forEach(e=>e.hidden=true);copy.querySelector('#landing').hidden=true;copy.querySelector('#language-picker').hidden=false;copy.querySelectorAll('.topic-page').forEach(e=>e.hidden=true);
+ copy.querySelectorAll('#language-picker .language-button').forEach(e=>e.setAttribute('href','#topics/'+e.dataset.language));
+ const copyIntro=copy.querySelector('#language-picker .intro');if(copyIntro&&copyIntro.dataset.defaultText){copyIntro.textContent=copyIntro.dataset.defaultText;copyIntro.removeAttribute('data-default-text');}
  copy.querySelector('title').textContent='Tuberkulose · Fragebogen und Informationen · 36 Sprachen';
  copy.querySelector('#brand-title').textContent=UI.de.center;copy.querySelector('#brand-sub').textContent=UI.de.dept;copy.querySelector('#footer-center').textContent=UI.de.center;
  copy.querySelector('#status').hidden=true;
