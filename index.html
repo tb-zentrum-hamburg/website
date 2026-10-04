@@ -334,6 +334,10 @@ body:has(article[id^="screening-"]:not([hidden])) .hh-header,body:has(article[id
 /* Version 3.04: Gemeinsamer mehrsprachiger Hinweisbereich */
 #language-picker .picker-intro{background:#f3f5f7;border:0;border-left:4px solid #2d6fb7;border-radius:0;padding:20px 24px;margin:20px 0 32px;gap:14px 30px;box-shadow:none}
 @media(max-width:640px){#language-picker .picker-intro{grid-template-columns:1fr;padding:16px 18px;gap:12px;margin-bottom:28px}}
+
+/* Version 3.05: Dezenter Schatten unter den Sprachkacheln */
+#language-picker .language-button{box-shadow:0 2px 6px rgba(11,45,82,.10)}
+#language-picker .language-button:hover,#language-picker .language-button:focus-visible{box-shadow:0 4px 12px rgba(11,45,82,.15)}
 </style>
 </head><body>
 <!-- Icon ic-cough: Coughing aus Health Icons (github.com/resolvetosavelives/healthicons), MIT-Lizenz, Copyright 2021 Resolve to Save Lives --><svg aria-hidden="true" focusable="false" height="0" style="position:absolute" width="0"><defs>
@@ -347,6 +351,7 @@ body:has(article[id^="screening-"]:not([hidden])) .hh-header,body:has(article[id
 <symbol id="ic-occupational-health" viewBox="0 0 24 24"><path d="M4 8.5h16v10.5H4z"></path><path d="M8.5 8.5V6.5h7v2"></path><path d="M12 11v5M9.5 13.5h5"></path></symbol> <symbol id="ic-workplace" viewBox="0 0 24 24"><path d="M3.5 20.5V4h10.5v7"></path><path d="M3.5 20.5h5"></path><path d="M6 7h2v2H6zM10 7h2v2h-2zM6 11.5h2v2H6z"></path><path d="M6 20.5v-3.2h2.4v3.2"></path><circle cx="17" cy="16.5" r="5" style="fill:var(--tci,#e8eef5)"></circle><path d="M17 14v5M14.5 16.5h5"></path></symbol>
 </defs></svg>
 <!--
+VERSION 3.05 (04.10.2026): Dezenter Schatten unter Sprachkacheln, beim Hover und Tastaturfokus leicht verstaerkt.
 VERSION 3.04 (04.10.2026): Mehrsprachige Hinweise in gemeinsamem hellgrauen Bereich mit blauem Balken links.
 VERSION 3.03 (04.10.2026): Sprach- und Themenkacheln einheitlich weiss, beim Hover und Tastaturfokus hellblau.
 VERSION 3.02 (04.10.2026): Mehrsprachige Hinweise ohne Kacheloptik und ohne redundante Sprachueberschriften; schlichter Textbereich mit Trennlinie vor den anklickbaren Sprachkacheln.
