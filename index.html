@@ -35,12 +35,17 @@
 @media(max-width:700px){.topic-grid{grid-template-columns:1fr;gap:16px;margin:24px 0}.topic-card{padding:22px}.topic-card h2{font-size:24px}.info-section h2{font-size:23px}.information-page h1{font-size:30px;overflow-wrap:anywhere}}
 @media print{#language-picker{display:none!important}.info-section{break-inside:avoid;page-break-inside:avoid;margin-top:14px;padding-top:12px}.info-section h2{font-size:13pt;break-after:avoid;page-break-after:avoid}.info-section p{font-size:11pt;line-height:1.45;orphans:3;widows:3;break-inside:avoid;page-break-inside:avoid}.info-section ul,.info-section li{break-inside:avoid;page-break-inside:avoid}.info-byline{font-size:9pt}.info-subtitle{font-size:12pt}.source-reference{font-size:8pt}.information-page h1{font-size:22pt}}
 .document-letterhead{display:none}.document-letterhead img{width:70px;height:auto;margin-bottom:10px}.document-letterhead p{margin:0;line-height:1.3}.letterhead-line1{font-size:14pt}.letterhead-line2{font-size:11pt;color:var(--muted)}@media print{.document-letterhead{display:block;text-align:center;margin-bottom:14px}body:has(article[id^="infoblatt-"]:not([hidden])) .brand{display:none}}
+/* ===== Hamburg Sans (Hausschrift der Stadt Hamburg) ===== */
+@font-face{font-family:"Hamburg Sans";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/HamburgSans-Regular.woff2") format("woff2")}
+@font-face{font-family:"Hamburg Sans";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/HamburgSans-Bold.woff2") format("woff2")}
+@font-face{font-family:"Hamburg Sans";font-style:italic;font-weight:400;font-display:swap;src:url("fonts/HamburgSans-Italic.woff2") format("woff2")}
+@font-face{font-family:"Hamburg Sans";font-style:italic;font-weight:700;font-display:swap;src:url("fonts/HamburgSans-BoldItalic.woff2") format("woff2")}
 /* ===== Gestaltung angelehnt an das hamburg.de-Portal (Bezirksamt-Themenseiten Hamburg-Mitte) ===== */
 :root{--blue:#003063;--ink:#1a1a1a;--red:#e10019;--link:#0b5ea8;--muted:#5c6b78;--line:#d5dbe0;--tint:#f2f5f7;--bg:#fff}
 html{background:var(--bg)}
-body{background:var(--bg);color:var(--ink);font:16px/1.6 Arial,"Helvetica Neue",Helvetica,"Noto Sans",sans-serif}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 "Hamburg Sans",Arial,"Helvetica Neue",Helvetica,"Noto Sans",sans-serif}
 a{color:var(--link)}:focus-visible{outline-color:#8ec7ff}
-h2{font-family:Arial,"Noto Sans",sans-serif;color:var(--blue);font-weight:700;letter-spacing:0;font-size:19px;line-height:1.35}
+h2{font-family:"Hamburg Sans",Arial,"Noto Sans",sans-serif;color:var(--blue);font-weight:700;letter-spacing:0;font-size:19px;line-height:1.35}
 .brand{background:var(--blue);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.22)}
 .brand-inner{max-width:1100px;margin:0 auto;padding:clamp(18px,2.6vh,26px) clamp(20px,3.4vw,30px);display:flex;align-items:center;gap:18px}
 .brand-inner>div{min-width:0}
@@ -53,7 +58,7 @@ h2{font-family:Arial,"Noto Sans",sans-serif;color:var(--blue);font-weight:700;le
 .app{width:100%;max-width:900px;margin:0 auto;padding:0 20px 40px}
 .sheet{border:0;border-radius:0;box-shadow:none;background:transparent;padding:28px 0 40px}
 .kicker{display:none}
-h1{font-family:Arial,"Noto Sans",sans-serif;color:var(--blue);font-weight:700;letter-spacing:0;font-size:clamp(22px,3vw,28px);line-height:1.3;margin:4px 0 20px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+h1{font-family:"Hamburg Sans",Arial,"Noto Sans",sans-serif;color:var(--blue);font-weight:700;letter-spacing:0;font-size:clamp(22px,3vw,28px);line-height:1.3;margin:4px 0 20px;padding-bottom:14px;border-bottom:1px solid var(--line)}
 .toolbar{border-bottom-color:var(--line)}
 .toolbar button,.toolbar a,.editor-tools button{border-radius:2px;background:#fff;color:var(--link);border-color:var(--line);font-weight:600}
 .toolbar button:hover,.toolbar a:hover{background:var(--tint)}
@@ -197,7 +202,7 @@ dialog::backdrop{background:rgba(17,31,52,.56);backdrop-filter:blur(3px)}
 .page-photo[data-topic="faq"]{padding:0 15px;background-origin:content-box}
 </style><style>
 /* Shared header and footer. Namespaced to avoid older compact-layout rules. */
-.hh-header{display:block;position:sticky;top:0;z-index:50;background:#003063;color:#fff;border:0;border-radius:0;box-shadow:0 2px 8px #0003;padding:0;margin:0;width:100%;font-family:Arial,sans-serif}
+.hh-header{display:block;position:sticky;top:0;z-index:50;background:#003063;color:#fff;border:0;border-radius:0;box-shadow:0 2px 8px #0003;padding:0;margin:0;width:100%;font-family:"Hamburg Sans",Arial,sans-serif}
 .hh-header-inner{box-sizing:border-box;width:100%;max-width:1100px;margin:0 auto;padding:24px 30px;display:flex;align-items:center;gap:18px}
 .hh-header-inner>img{display:block;width:78px;height:auto;flex:0 0 78px;object-fit:contain}
 .hh-header-inner>div{min-width:0;flex:1 1 auto}
@@ -207,7 +212,7 @@ dialog::backdrop{background:rgba(17,31,52,.56);backdrop-filter:blur(3px)}
 .hh-header-nav a{color:#fff;text-decoration:none;font-size:14px;line-height:1.4;font-weight:600;border:1px solid #ffffff73;border-radius:20px;padding:9px 16px;display:inline-flex;align-items:center;gap:7px;max-width:170px;width:100%;justify-content:center}
 .hh-header-nav a:hover{background:#ffffff24;border-color:#fff}
 .hh-header a:focus-visible,.hh-harbor-footer a:focus-visible,.hh-harbor-footer button:focus-visible{outline:3px solid white;outline-offset:4px}
-.hh-harbor-footer{box-sizing:border-box;position:relative;display:block;clear:both;width:100%;margin:40px 0 0;padding:0;background:#003063;color:white;border:0;border-radius:0;overflow:visible;font-family:Arial,sans-serif}
+.hh-harbor-footer{box-sizing:border-box;position:relative;display:block;clear:both;width:100%;margin:40px 0 0;padding:0;background:#003063;color:white;border:0;border-radius:0;overflow:visible;font-family:"Hamburg Sans",Arial,sans-serif}
 .hh-footer-inner{box-sizing:border-box;max-width:1180px;width:100%;margin:0 auto;padding:34px 30px 24px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"center logo" "links links";gap:18px 28px;align-items:center}
 .hh-ship-bow{position:absolute;left:0;top:-19px;width:133px;height:38px;pointer-events:none;z-index:2}
 .hh-ship-bow svg{display:block;width:100%;height:100%}
@@ -225,7 +230,7 @@ dialog::backdrop{background:rgba(17,31,52,.56);backdrop-filter:blur(3px)}
 .page-photo[data-topic="faq"]{padding:0 15px;background-origin:content-box}
 </style><style>
 /* Shared landing-page heading, identical on quiz and information pages. */
-#language-picker .language-selection-header,#startScreen .language-selection-header{font-family:Arial,"Helvetica Neue",Helvetica,"Noto Sans",sans-serif;line-height:1.6}
+#language-picker .language-selection-header,#startScreen .language-selection-header{font-family:"Hamburg Sans",Arial,"Helvetica Neue",Helvetica,"Noto Sans",sans-serif;line-height:1.6}
 #language-picker .kicker,#startScreen .kicker{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.08em;line-height:1.6;text-transform:uppercase;color:#e10019}
 #language-picker .kicker::before,#startScreen .kicker::before{content:"";display:block;flex:none;width:28px;height:3px;margin:0;background:#e10019}
 #language-picker h1,#startScreen h1{font-family:inherit;font-size:clamp(30px,4.4vw,46px);font-weight:800;line-height:1.12;letter-spacing:-.025em;color:#003063;margin:8px 0 10px;padding:0;border:0}
