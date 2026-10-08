@@ -482,6 +482,16 @@ body:has(article[id^="screening-"]:not([hidden])) .hh-header,body:has(article[id
 }
 
 </style>
+<style id="typography-style">
+/* Typografie nach Online-Styleguide Hamburg: HamburgSans für Navigation/Headlines/Kopf-/Fußbereich, Arial für Content; Fließtext 18 px */
+body{font:18px/1.6 Arial,"Helvetica Neue",Helvetica,"Noto Sans",sans-serif}
+.paper-notice,.card-subtitle,.topic-card p,.topic-action{font-size:18px}
+.translation-notice,.external-notice,.privacy-notice,.analytics-notice,.info-byline{font-size:16px}
+.hh-text-button{font-size:16px}
+.hh-footer-notice{font-size:14px;font-family:Arial,"Helvetica Neue",Helvetica,"Noto Sans",sans-serif}
+@media(max-width:640px){body{font-size:17px}.paper-notice,.card-subtitle,.topic-card p,.topic-action{font-size:17px}}
+@media print{body{font-size:11pt}.paper-notice,.card-subtitle,.topic-card p,.topic-action{font-size:10pt}.translation-notice,.external-notice,.privacy-notice,.analytics-notice,.info-byline{font-size:9pt}}
+</style>
 </head><body>
 <!-- Icon ic-cough: Coughing aus Health Icons (github.com/resolvetosavelives/healthicons), MIT-Lizenz, Copyright 2021 Resolve to Save Lives --><svg aria-hidden="true" focusable="false" height="0" style="position:absolute" width="0"><defs>
 <symbol id="ic-factory" viewbox="0 0 24 24"><path d="M2 20V10H7V6L11 10L15 6V10H22V20H2Z"></path><path d="M7 20V16H9V20H7Z"></path><path d="M13 20V16H15V20H13Z"></path></symbol>
