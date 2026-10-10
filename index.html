@@ -504,6 +504,7 @@ body{font:18px/1.6 Arial,"Helvetica Neue",Helvetica,"Noto Sans",sans-serif}
 <symbol id="ic-occupational-health" viewbox="0 0 24 24"><path d="M4 8.5h16v10.5H4z"></path><path d="M8.5 8.5V6.5h7v2"></path><path d="M12 11v5M9.5 13.5h5"></path></symbol> <symbol id="ic-workplace" viewbox="0 0 24 24"><path d="M3.5 20.5V4h10.5v7"></path><path d="M3.5 20.5h5"></path><path d="M6 7h2v2H6zM10 7h2v2h-2zM6 11.5h2v2H6z"></path><path d="M6 20.5v-3.2h2.4v3.2"></path><circle cx="17" cy="16.5" r="5" style="fill:var(--tci,#e8eef5)"></circle><path d="M17 14v5M14.5 16.5h5"></path></symbol>
 </defs></svg>
 <!--
+VERSION 3.41 (10.10.2026): Vorlesefunktion auf den Stand von 3.39 zurueckgesetzt (die Aenderungen aus 3.40 funktionierten in Firefox auf dem Mac nicht).
 VERSION 3.40 (10.10.2026): Vorlesefunktion robuster (Firefox auf dem Mac): kurze Pause nach dem Stoppen, Warten auf die Stimmenliste, automatischer zweiter Versuch mit anderer Stimme derselben Sprache, Fehlermeldung statt Stille.
 VERSION 3.39 (08.10.2026): Feinkorrekturen Umgebungsuntersuchung in Betrieben: Testergebnisse ergaenzt (Litauisch, Tagalog, Portugiesisch, Spanisch), Behoerdenbegriff (Portugiesisch, Spanisch), Bulgarisch und Tuerkisch auf idiomatische Formulierung zurueckgesetzt, formelle Anrede im polnischen Informationsblatt.
 VERSION 3.38 (08.10.2026): Sprachliche Korrekturen nach zweitem Gegenlesen (Umgebungsuntersuchung in Betrieben): Lettisch, Tigrinya, Hindi, Thai, Rumaenisch, Somali, Tagalog, Ungarisch, Hausa, Tuerkisch, Chinesisch, Kantonesisch, Russisch, Ukrainisch, Kroatisch, Serbisch, Italienisch, Griechisch, Estnisch, Persisch.
@@ -12917,9 +12918,8 @@ showLanguage();
       if(code==='zh'&&(tag.includes('-hk')||tag.startsWith('yue')))return false;
       return aliases.some(a=>tag===a||tag.startsWith(a+'-'));
     });
-    // Prefer device voices, then installed network voices; keep all candidates for a retry.
-    const seen=new Set(),ordered=[...matches.filter(v=>v.localService),...matches.filter(v=>!v.localService)];
-    return ordered.filter(v=>{const k=v.name+'|'+v.lang;if(seen.has(k))return false;seen.add(k);return true;});
+    // Prefer a device voice where one exists, while still permitting installed network voices.
+    return matches.find(v=>v.localService)||matches[0]||null;
   }
   function textToRead(target){
     const clone=target.cloneNode(true);
@@ -12953,59 +12953,31 @@ showLanguage();
     if(!current||current.paused)return;
     if(current.index>=current.chunks.length){stop();return;}
     const token=generation;
-    const voice=current.voices[current.voiceIndex];
     const utterance=new SpeechSynthesisUtterance(current.chunks[current.index]);
-    utterance.lang=voice.lang;utterance.voice=voice;utterance.rate=0.9;
+    utterance.lang=current.voice.lang;utterance.voice=current.voice;utterance.rate=0.9;
     // Retain a reference throughout playback for browser implementations using weak references.
     current.utterance=utterance;current.offset=0;
-    let started=false;
-    // Some browsers (notably Firefox on macOS) drop an utterance silently. If nothing starts, retry with another voice.
-    const watchdog=setTimeout(()=>{
-      if(started||generation!==token||session!==current)return;
-      try{synth.cancel();}catch(_){}
-      if(current.voiceIndex+1<current.voices.length){current.voiceIndex++;setTimeout(()=>{if(generation===token&&session===current)speakNext();},150);}
-      else if(!current.retried){current.retried=true;setTimeout(()=>{if(generation===token&&session===current)speakNext();},300);}
-      else report(current.control,6);
-    },3000);
-    utterance.onstart=()=>{started=true;clearTimeout(watchdog);};
-    utterance.onboundary=event=>{started=true;if(generation===token&&session===current)current.offset=event.charIndex;};
-    utterance.onend=()=>{started=true;clearTimeout(watchdog);if(generation!==token||session!==current)return;current.index++;speakNext();};
+    utterance.onboundary=event=>{if(generation===token&&session===current)current.offset=event.charIndex;};
+    utterance.onend=()=>{if(generation!==token||session!==current)return;current.index++;speakNext();};
     utterance.onerror=event=>{
-      clearTimeout(watchdog);
       if(generation!==token||session!==current||['canceled','interrupted'].includes(event.error))return;
-      if(current.voiceIndex+1<current.voices.length){current.voiceIndex++;setTimeout(()=>{if(generation===token&&session===current)speakNext();},150);return;}
       report(current.control,6);
     };
-    try{synth.resume();synth.speak(utterance);}catch(_){clearTimeout(watchdog);report(current.control,6);}
-  }
-  function whenVoices(callback){
-    const list=synth.getVoices();
-    if(list.length){callback(list);return;}
-    // Firefox fills the voice list late: wait for it (max. 1.5 s).
-    let done=false;
-    const finish=()=>{if(done)return;done=true;synth.removeEventListener('voiceschanged',finish);callback(synth.getVoices());};
-    synth.addEventListener('voiceschanged',finish);setTimeout(finish,1500);
+    try{synth.speak(utterance);}catch(_){report(current.control,6);}
   }
   function start(c){
     stop();
     if(!supported){report(c,5);return;}
-    const myGeneration=generation;
-    whenVoices(list=>{
-      if(generation!==myGeneration)return;
-      const voices=chooseVoice(list,c.code);
-      if(!voices.length){report(c,5);return;}
-      const chunks=splitText(textToRead(c.target));
-      if(!chunks.length)return;
-      session={control:c,page:c.page,voices,voiceIndex:0,voice:voices[0],chunks,index:0,paused:false,utterance:null,retried:false};
-      sync();
-      // Short pause after cancel(): Firefox on macOS otherwise swallows the new utterance.
-      const current=session,token=generation;
-      setTimeout(()=>{if(session===current&&generation===token)speakNext();},200);
-    });
+    const voice=chooseVoice(synth.getVoices(),c.code);
+    if(!voice){report(c,5);return;}
+    const chunks=splitText(textToRead(c.target));
+    if(!chunks.length)return;
+    session={control:c,page:c.page,voice,chunks,index:0,paused:false,utterance:null};
+    sync();speakNext();
   }
   function togglePause(){
     if(!session)return;
-    if(session.paused){session.paused=false;sync();setTimeout(speakNext,200);}
+    if(session.paused){session.paused=false;sync();speakNext();}
     else{
       // Cancel the current short chunk, restart it on resume. Native pause/resume is unreliable on some mobiles.
       session.paused=true;generation++;
